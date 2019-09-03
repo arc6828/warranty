@@ -20,7 +20,7 @@
 <div class="form-group {{ $errors->has('category') ? 'has-error' : ''}}">
     <label for="category" class="control-label">{{ 'Category' }}</label>
     <select name="category" class="form-control" id="category" required >
-    @foreach (json_decode('{"heat":"Heat","electricity":"Electricity"}', true) as $optionKey => $optionValue)
+    @foreach (json_decode('{"electricity":"Electricity","heat":"Heat"}', true) as $optionKey => $optionValue)
         <option value="{{ $optionKey }}" {{ (isset($hardware->category) && $hardware->category == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
     @endforeach
 </select>
@@ -43,12 +43,14 @@
 </div>
 <div class="form-group {{ $errors->has('watts') ? 'has-error' : ''}}">
     <label for="watts" class="control-label">{{ 'Watts' }}</label>
-    <input class="form-control" name="watts" type="number" step="any" id="watts" value="{{ isset($hardware->watts) ? $hardware->watts : '0'}}" >
+    <input class="form-control" name="watts" type="number" step="any" id="watts" value="{{ isset($hardware->watts) ? $hardware->watts : '0'}}"
+    onkeypress="document.querySelector('#joules').value = this.value * 3600;">
     {!! $errors->first('watts', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('joules') ? 'has-error' : ''}}">
     <label for="joules" class="control-label">{{ 'Joules' }}</label>
-    <input class="form-control" name="joules" type="number"  step="any" id="joules" value="{{ isset($hardware->joules) ? $hardware->joules : '0'}}" >
+    <input class="form-control" name="joules" type="number"  step="any" id="joules" value="{{ isset($hardware->joules) ? $hardware->joules : '0'}}"
+    onkeypress="document.querySelector('#watts').value = this.value / 3600;">
     {!! $errors->first('joules', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('hours_per_day') ? 'has-error' : ''}}">

@@ -3,9 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
 
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Hardware</div>
                     <div class="card-body">
@@ -30,14 +29,28 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Title</th><th>Content</th><th>Place Type</th><th>Category</th><th>Date Begin</th><th>Date End</th><th>Quantity</th><th>Watts</th><th>Joules</th><th>Hours Per Day</th><th>Day Per Week</th><th>User Id</th><th>Photo</th><th>Actions</th>
+                                        <th>#</th><th>Title</th><th>Content</th><th>Place Type</th><th>Category</th><th>Date Begin</th><th>Date End</th><th>Quantity</th><th>Watts</th><th>Joules</th><th>Hours Per Day</th><th>Day Per Week</th><th>User Id</th>
+                                        <th class="d-none">Photo</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($hardware as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title }}</td><td>{{ $item->content }}</td><td>{{ $item->place_type }}</td><td>{{ $item->category }}</td><td>{{ $item->date_begin }}</td><td>{{ $item->date_end }}</td><td>{{ $item->quantity }}</td><td>{{ $item->watts }}</td><td>{{ $item->joules }}</td><td>{{ $item->hours_per_day }}</td><td>{{ $item->day_per_week }}</td><td>{{ $item->user_id }}</td><td>{{ $item->photo }}</td>
+                                        <td>{{ $item->title }}</td>
+                                        <td>{{ $item->content }}</td>
+                                        <td>{{ $item->place_type }}</td>
+                                        <td>{{ $item->category }}</td>
+                                        <td>{{ $item->date_begin }}</td>
+                                        <td>{{ $item->date_end }}</td>
+                                        <td>{{ $item->quantity }}</td>
+                                        <td>{{ $item->watts }}</td>
+                                        <td>{{ $item->joules }}</td>
+                                        <td>{{ $item->hours_per_day }}</td>
+                                        <td>{{ $item->day_per_week }}</td>
+                                        <td>{{ $item->user_id }}</td>
+                                        <td class="d-none">{{ $item->photo }}</td>
                                         <td>
                                             <a href="{{ url('/hardware/' . $item->id) }}" title="View Hardware"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/hardware/' . $item->id . '/edit') }}" title="Edit Hardware"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
