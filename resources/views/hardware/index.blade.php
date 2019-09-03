@@ -59,9 +59,15 @@
                 </div>
 
                 <div class="card mt-4">
-                    <div class="card-header">Hardware</div>
+                    <div class="card-header">Heat</div>
                     <div class="card-body">
-                      <div id="chart_div"></div>
+                      <div id="chart_heat_div"></div>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header">Electricity</div>
+                    <div class="card-body">
+                      <div id="chart_electricity_div"></div>
                     </div>
                 </div>
             </div>
@@ -70,37 +76,64 @@
 @endsection
 
 @section('script')
-<!--Load the AJAX API-->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
 
-google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawBasic);
+  google.charts.load('current', {packages: ['corechart', 'bar']});
+  google.charts.setOnLoadCallback(drawBasic);
 
-function drawBasic() {
+  function drawBasic() {
+    drawHeat();
+    drawElectricity();
+  }
 
+  function drawHeat(){
     var data = google.visualization.arrayToDataTable([
-      ['City', '2010 Population',],
-      ['New York City, NY', 8175000],
-      ['Los Angeles, CA', 3792000],
-      ['Chicago, IL', 2695000],
-      ['Houston, TX', 2099000],
-      ['Philadelphia, PA', 1526000]
+      ['Title', 'Heat',],
+      @foreach($hardware as $item)
+      ["{{ $item->title }}",{{ $item->joules }}],
+      @endforeach
     ]);
 
     var options = {
-      title: 'Population of Largest U.S. Cities',
+      title: 'Heat',
       chartArea: {width: '50%'},
       hAxis: {
-        title: 'Total Population',
+        title: 'MJoules',
         minValue: 0
       },
       vAxis: {
-        title: 'City'
+        title: 'Title'
       }
     };
 
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+    var chart = new google.visualization.BarChart(document.getElementById('chart_heat_div'));
+
+    chart.draw(data, options);
+  }
+
+  function drawElectricity(){
+    var data = google.visualization.arrayToDataTable([
+      ['Title', 'Watts',],
+      @foreach($hardware as $item)
+      ["{{ $item->title }}",{{ $item->watts }}],
+      @endforeach
+    ]);
+
+    var options = {
+      title: 'Electricity',
+      chartArea: {width: '50%'},
+      hAxis: {
+        title: 'Watts',
+        minValue: 0
+      },
+      vAxis: {
+        title: 'Title'
+      }
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('chart_electricity_div'));
 
     chart.draw(data, options);
   }
