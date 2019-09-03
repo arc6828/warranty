@@ -92,7 +92,7 @@
     var data = google.visualization.arrayToDataTable([
       ['Title', 'Heat',],
       @foreach($hardware as $item)
-      ["{{ $item->title }}","{{ $item->joules }}"],
+      ["{{ $item->title }}",{{ !empty($item->joules)? $item->joules : 0 }} ],
       @endforeach
     ]);
 
@@ -117,7 +117,7 @@
     var data = google.visualization.arrayToDataTable([
       ['Title', 'Watts',],
       @foreach($hardware as $item)
-      ["{{ $item->title }}","{{ $item->watts }}"],
+      ["{{ $item->title }}",{{ !empty($item->watts)? $item->watts : 0 }} ],
       @endforeach
     ]);
 
