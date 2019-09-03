@@ -1,0 +1,71 @@
+{
+    "fields": [
+        {
+            "name": "title",
+            "type": "string"
+        },
+        {
+            "name": "content",
+            "type": "text"
+        },
+        {
+            "name": "place_type",
+            "type": "select",
+            "options": {
+                "factory": "Factory",
+                "office": "Office"
+            }
+        },
+        {
+            "name": "category",
+            "type": "select",
+            "options": {
+                "heat": "Heat",
+                "electricity": "Electricity"
+            }
+        },
+        {
+            "name": "date_begin",
+            "type": "date"
+        },
+        {
+            "name": "date_end",
+            "type": "date"
+        },
+        {
+            "name": "quantity",
+            "type": "integer"
+        },
+        {
+            "name": "watts",
+            "type": "float"
+        },
+        {
+            "name": "joules",
+            "type": "float"
+        },
+        {
+            "name": "hours_per_day",
+            "type": "float"
+        },
+        {
+            "name": "day_per_week",
+            "type": "float"
+        },
+        {
+            "name": "user_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "photo",
+            "type": "file"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "user",
+            "type": "belongsTo",
+            "class": "App\\User"
+        }
+    ]
+}
