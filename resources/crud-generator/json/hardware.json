@@ -1,56 +1,44 @@
 {
     "fields": [
         {
-            "name": "title",
+            "name": "name",
             "type": "string"
         },
         {
-            "name": "content",
+            "name": "detail",
             "type": "text"
         },
         {
-            "name": "place_type",
-            "type": "select",
-            "options": {
-                "factory": "Factory",
-                "office": "Office"
-            }
+            "name": "tags",
+            "type": "string"
         },
         {
-            "name": "category",
-            "type": "select",
-            "options": {
-                "heat": "Heat",
-                "electricity": "Electricity"
-            }
-        },
-        {
-            "name": "date_begin",
+            "name": "date_purchase",
             "type": "date"
         },
         {
-            "name": "date_end",
+            "name": "date_warranty_expire",
             "type": "date"
+        },
+        {
+            "name": "warranty_duration",
+            "type": "float"
         },
         {
             "name": "quantity",
             "type": "integer"
         },
         {
-            "name": "watts",
+            "name": "price",
             "type": "float"
         },
         {
-            "name": "joules",
-            "type": "float"
+            "name": "vendor",
+            "type": "string"
         },
         {
-            "name": "hours_per_day",
-            "type": "float"
-        },
-        {
-            "name": "day_per_week",
-            "type": "float"
+            "name": "about_vendor",
+            "type": "text"
         },
         {
             "name": "user_id",

@@ -1,0 +1,3 @@
+php artisan crud:generate Hardware --fields_from_file="resources/crud-generator/json/hardware.json"
+
+php artisan crud:generate EnergyUsage --fields_from_file="resources/crud-generator/json/energy_usage.json"

@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Hardware;
+use App\EnergyUsage;
 use Illuminate\Http\Request;
 
-class HardwareController extends Controller
+class EnergyUsageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,24 +21,25 @@ class HardwareController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $hardware = Hardware::where('name', 'LIKE', "%$keyword%")
-                ->orWhere('detail', 'LIKE', "%$keyword%")
-                ->orWhere('tags', 'LIKE', "%$keyword%")
-                ->orWhere('date_purchase', 'LIKE', "%$keyword%")
-                ->orWhere('date_warranty_expire', 'LIKE', "%$keyword%")
-                ->orWhere('warranty_duration', 'LIKE', "%$keyword%")
+            $energyusage = EnergyUsage::where('title', 'LIKE', "%$keyword%")
+                ->orWhere('content', 'LIKE', "%$keyword%")
+                ->orWhere('place_type', 'LIKE', "%$keyword%")
+                ->orWhere('category', 'LIKE', "%$keyword%")
+                ->orWhere('date_begin', 'LIKE', "%$keyword%")
+                ->orWhere('date_end', 'LIKE', "%$keyword%")
                 ->orWhere('quantity', 'LIKE', "%$keyword%")
-                ->orWhere('price', 'LIKE', "%$keyword%")
-                ->orWhere('vendor', 'LIKE', "%$keyword%")
-                ->orWhere('about_vendor', 'LIKE', "%$keyword%")
+                ->orWhere('watts', 'LIKE', "%$keyword%")
+                ->orWhere('joules', 'LIKE', "%$keyword%")
+                ->orWhere('hours_per_day', 'LIKE', "%$keyword%")
+                ->orWhere('day_per_week', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
                 ->orWhere('photo', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
-            $hardware = Hardware::latest()->paginate($perPage);
+            $energyusage = EnergyUsage::latest()->paginate($perPage);
         }
 
-        return view('hardware.index', compact('hardware'));
+        return view('energy-usage.index', compact('energyusage'));
     }
 
     /**
@@ -48,7 +49,7 @@ class HardwareController extends Controller
      */
     public function create()
     {
-        return view('hardware.create');
+        return view('energy-usage.create');
     }
 
     /**
@@ -67,9 +68,9 @@ class HardwareController extends Controller
                 ->store('uploads', 'public');
         }
 
-        Hardware::create($requestData);
+        EnergyUsage::create($requestData);
 
-        return redirect('hardware')->with('flash_message', 'Hardware added!');
+        return redirect('energy-usage')->with('flash_message', 'EnergyUsage added!');
     }
 
     /**
@@ -81,9 +82,9 @@ class HardwareController extends Controller
      */
     public function show($id)
     {
-        $hardware = Hardware::findOrFail($id);
+        $energyusage = EnergyUsage::findOrFail($id);
 
-        return view('hardware.show', compact('hardware'));
+        return view('energy-usage.show', compact('energyusage'));
     }
 
     /**
@@ -95,9 +96,9 @@ class HardwareController extends Controller
      */
     public function edit($id)
     {
-        $hardware = Hardware::findOrFail($id);
+        $energyusage = EnergyUsage::findOrFail($id);
 
-        return view('hardware.edit', compact('hardware'));
+        return view('energy-usage.edit', compact('energyusage'));
     }
 
     /**
@@ -117,10 +118,10 @@ class HardwareController extends Controller
                 ->store('uploads', 'public');
         }
 
-        $hardware = Hardware::findOrFail($id);
-        $hardware->update($requestData);
+        $energyusage = EnergyUsage::findOrFail($id);
+        $energyusage->update($requestData);
 
-        return redirect('hardware')->with('flash_message', 'Hardware updated!');
+        return redirect('energy-usage')->with('flash_message', 'EnergyUsage updated!');
     }
 
     /**
@@ -132,8 +133,8 @@ class HardwareController extends Controller
      */
     public function destroy($id)
     {
-        Hardware::destroy($id);
+        EnergyUsage::destroy($id);
 
-        return redirect('hardware')->with('flash_message', 'Hardware deleted!');
+        return redirect('energy-usage')->with('flash_message', 'EnergyUsage deleted!');
     }
 }

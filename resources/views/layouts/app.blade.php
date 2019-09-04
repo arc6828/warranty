@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    @yield('script')
+    @yield('head')
 </head>
 <body>
     <div id="app">
@@ -34,8 +34,9 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
+                    <ul class="navbar-nav mx-auto">
+                      <li class="mx-4"><a href="{{ url('/') }}/hardware">Hardware</a></li>
+                      <li class="mx-4"><a href="{{ url('/') }}/energy-usage">Energy usage</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

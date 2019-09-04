@@ -21,16 +21,17 @@ class HardwareController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $hardware = Hardware::where('name', 'LIKE', "%$keyword%")
-                ->orWhere('detail', 'LIKE', "%$keyword%")
-                ->orWhere('tags', 'LIKE', "%$keyword%")
-                ->orWhere('date_purchase', 'LIKE', "%$keyword%")
-                ->orWhere('date_warranty_expire', 'LIKE', "%$keyword%")
-                ->orWhere('warranty_duration', 'LIKE', "%$keyword%")
+            $hardware = Hardware::where('title', 'LIKE', "%$keyword%")
+                ->orWhere('content', 'LIKE', "%$keyword%")
+                ->orWhere('place_type', 'LIKE', "%$keyword%")
+                ->orWhere('category', 'LIKE', "%$keyword%")
+                ->orWhere('date_begin', 'LIKE', "%$keyword%")
+                ->orWhere('date_end', 'LIKE', "%$keyword%")
                 ->orWhere('quantity', 'LIKE', "%$keyword%")
-                ->orWhere('price', 'LIKE', "%$keyword%")
-                ->orWhere('vendor', 'LIKE', "%$keyword%")
-                ->orWhere('about_vendor', 'LIKE', "%$keyword%")
+                ->orWhere('watts', 'LIKE', "%$keyword%")
+                ->orWhere('joules', 'LIKE', "%$keyword%")
+                ->orWhere('hours_per_day', 'LIKE', "%$keyword%")
+                ->orWhere('day_per_week', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
                 ->orWhere('photo', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);

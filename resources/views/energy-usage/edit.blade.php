@@ -6,9 +6,9 @@
 
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Create New Hardware</div>
+                    <div class="card-header">Edit EnergyUsage #{{ $energyusage->id }}</div>
                     <div class="card-body">
-                        <a href="{{ url('/hardware') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-usage') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -20,10 +20,11 @@
                             </ul>
                         @endif
 
-                        <form method="POST" action="{{ url('/hardware') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/energy-usage/' . $energyusage->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                            {{ method_field('PATCH') }}
                             {{ csrf_field() }}
 
-                            @include ('hardware.form', ['formMode' => 'create'])
+                            @include ('energy-usage.form', ['formMode' => 'edit'])
 
                         </form>
 

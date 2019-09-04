@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Hardware extends Model
+class EnergyUsage extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'hardwares';
+    protected $table = 'energy_usages';
 
     /**
     * The database primary key value.
@@ -25,11 +25,11 @@ class Hardware extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'detail', 'tags', 'date_purchase', 'date_warranty_expire', 'warranty_duration', 'quantity', 'price', 'vendor', 'about_vendor', 'user_id', 'photo'];
+    protected $fillable = ['title', 'content', 'place_type', 'category', 'date_begin', 'date_end', 'quantity', 'watts', 'joules', 'hours_per_day', 'day_per_week', 'user_id', 'photo'];
 
     public function user()
     {
         return $this->belongsTo('App\User');
     }
-
+    
 }
