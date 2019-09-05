@@ -29,14 +29,22 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Name</th><th>Detail</th><th>Tags</th><th>Date Purchase</th><th>Date Warranty Expire</th><th>Warranty Duration</th><th>Quantity</th><th>Price</th><th>Vendor</th><th>About Vendor</th><th>User Id</th><th>Photo</th><th>Actions</th>
+                                        <th>#</th><th>Name</th>
+                                        <th class="d-none">Detail</th>
+                                        <th class="d-none">Tags</th>
+                                        <th>Date Purchase</th><th>Date Warranty Expire</th><th>Warranty Duration</th><th>Quantity</th><th>Price</th><th>Vendor</th><th>About Vendor</th><th>User Id</th><th>Photo</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($hardware as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->name }}</td><td>{{ $item->detail }}</td><td>{{ $item->tags }}</td><td>{{ $item->date_purchase }}</td><td>{{ $item->date_warranty_expire }}</td><td>{{ $item->warranty_duration }}</td><td>{{ $item->quantity }}</td><td>{{ $item->price }}</td><td>{{ $item->vendor }}</td><td>{{ $item->about_vendor }}</td><td>{{ $item->user_id }}</td><td>{{ $item->photo }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td class="d-none">{{ $item->detail }}</td>
+                                        <td class="d-none">{{ $item->tags }}</td>
+                                        <td>{{ $item->date_purchase }}</td><td>{{ $item->date_warranty_expire }}</td><td>{{ $item->warranty_duration }}</td><td>{{ $item->quantity }}</td><td>{{ $item->price }}</td><td>{{ $item->vendor }}</td><td>{{ $item->about_vendor }}</td>
+                                        <td>{{ $item->user->name }}</td>
+                                        <td>{{ $item->photo }}</td>
                                         <td>
                                             <a href="{{ url('/hardware/' . $item->id) }}" title="View Hardware"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/hardware/' . $item->id . '/edit') }}" title="Edit Hardware"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

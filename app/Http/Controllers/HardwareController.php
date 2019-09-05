@@ -60,7 +60,7 @@ class HardwareController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $requestData = $request->all();
                 if ($request->hasFile('photo')) {
             $requestData['photo'] = $request->file('photo')
@@ -110,7 +110,7 @@ class HardwareController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         $requestData = $request->all();
                 if ($request->hasFile('photo')) {
             $requestData['photo'] = $request->file('photo')

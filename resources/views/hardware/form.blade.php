@@ -24,7 +24,7 @@
     {!! $errors->first('date_warranty_expire', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('warranty_duration') ? 'has-error' : ''}}">
-    <label for="warranty_duration" class="control-label">{{ 'Warranty Duration' }}</label>
+    <label for="warranty_duration" class="control-label">{{ 'Warranty Duration (days)' }}</label>
     <input class="form-control" name="warranty_duration" type="number" id="warranty_duration" value="{{ isset($hardware->warranty_duration) ? $hardware->warranty_duration : ''}}" >
     {!! $errors->first('warranty_duration', '<p class="help-block">:message</p>') !!}
 </div>
@@ -50,7 +50,8 @@
 </div>
 <div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
     <label for="user_id" class="control-label">{{ 'User Id' }}</label>
-    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($hardware->user_id) ? $hardware->user_id : ''}}" >
+    <input class="form-control" name="user_name" type="text" id="user_name" value="{{ isset($hardware->user->name) ? $hardware->user->name : Auth::user()->name }}"  disabled>
+    <input class="form-control" name="user_id" type="hidden" id="user_id" value="{{ isset($hardware->user_id) ? $hardware->user_id : Auth::id() }}" >
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('photo') ? 'has-error' : ''}}">

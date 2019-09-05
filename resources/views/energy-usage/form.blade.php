@@ -69,8 +69,8 @@
 </div>
 <div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
     <label for="user_id" class="control-label">{{ 'User Id' }}</label>
-    <input class="form-control" name="user_name" type="text" id="user_name" value="{{ isset($hardware->user_id) ? $hardware->user_id : Auth::user()->name }}" disabled>
-    <input class="form-control" name="user_id" type="hidden" id="user_id" value="{{ isset($energyusage->user_id) ? $energyusage->user_id : ''}}" >
+    <input class="form-control" name="user_name" type="text" id="user_name" value="{{ isset($energyusage->user->name) ? $energyusage->user->name : Auth::user()->name }}" disabled>
+    <input class="form-control" name="user_id" type="hidden" id="user_id" value="{{ isset($energyusage->user_id) ? $energyusage->user_id : Auth::id() }}" >
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('photo') ? 'has-error' : ''}}">

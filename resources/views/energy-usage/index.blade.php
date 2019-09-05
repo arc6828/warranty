@@ -36,7 +36,8 @@
                                 @foreach($energyusage as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title }}</td><td>{{ $item->content }}</td><td>{{ $item->place_type }}</td><td>{{ $item->category }}</td><td>{{ $item->date_begin }}</td><td>{{ $item->date_end }}</td><td>{{ $item->quantity }}</td><td>{{ $item->watts }}</td><td>{{ $item->joules }}</td><td>{{ $item->hours_per_day }}</td><td>{{ $item->day_per_week }}</td><td>{{ $item->user_id }}</td>
+                                        <td>{{ $item->title }}</td><td>{{ $item->content }}</td><td>{{ $item->place_type }}</td><td>{{ $item->category }}</td><td>{{ $item->date_begin }}</td><td>{{ $item->date_end }}</td><td>{{ $item->quantity }}</td><td>{{ $item->watts }}</td><td>{{ $item->joules }}</td><td>{{ $item->hours_per_day }}</td><td>{{ $item->day_per_week }}</td>
+                                        <td>{{ $item->user->name }}</td>
                                         <td>
                                           @if(!empty($item->photo))
                                           <a href="{{ url('/') }}/storage/{{ $item->photo }}" target="_blank">Link</a>
