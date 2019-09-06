@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Hardware extends Model
+class Hardware0 extends Model
 {
     /**
      * The database table used by the model.
@@ -31,5 +31,5 @@ class Hardware extends Model
     {
         return $this->belongsTo('App\User');
     }
-    
+
 }
