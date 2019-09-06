@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Hardware;
 use Illuminate\Http\Request;
 
-class HardwareController extends Controller
+class HardwareController0 extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -61,7 +61,7 @@ class HardwareController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $requestData = $request->all();
                 if ($request->hasFile('photo')) {
             $requestData['photo'] = $request->file('photo')
@@ -111,7 +111,7 @@ class HardwareController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         $requestData = $request->all();
                 if ($request->hasFile('photo')) {
             $requestData['photo'] = $request->file('photo')
