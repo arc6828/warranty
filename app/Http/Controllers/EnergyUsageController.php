@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\EnergyUsage;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class EnergyUsageController extends Controller
@@ -34,9 +35,10 @@ class EnergyUsageController extends Controller
                 ->orWhere('day_per_week', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
                 ->orWhere('photo', 'LIKE', "%$keyword%")
+                ->where('user_id', Auth::id())
                 ->latest()->paginate($perPage);
         } else {
-            $energyusage = EnergyUsage::latest()->paginate($perPage);
+            $energyusage = EnergyUsage::where('user_id', Auth::id())->latest()->paginate($perPage);
         }
 
         return view('energy-usage.index', compact('energyusage'));
@@ -61,7 +63,7 @@ class EnergyUsageController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $requestData = $request->all();
                 if ($request->hasFile('photo')) {
             $requestData['photo'] = $request->file('photo')
@@ -111,7 +113,7 @@ class EnergyUsageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         $requestData = $request->all();
                 if ($request->hasFile('photo')) {
             $requestData['photo'] = $request->file('photo')

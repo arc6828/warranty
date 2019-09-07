@@ -6,6 +6,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Hardware;
+
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Http\Request;
 
 class HardwareController extends Controller
@@ -31,11 +34,11 @@ class HardwareController extends Controller
                 ->orWhere('price', 'LIKE', "%$keyword%")
                 ->orWhere('vendor', 'LIKE', "%$keyword%")
                 ->orWhere('about_vendor', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
                 ->orWhere('photo', 'LIKE', "%$keyword%")
+                ->where('user_id', Auth::id())
                 ->latest()->paginate($perPage);
         } else {
-            $hardware = Hardware::latest()->paginate($perPage);
+            $hardware = Hardware::where('user_id', Auth::id())->latest()->paginate($perPage);
         }
 
         return view('hardware.index', compact('hardware'));

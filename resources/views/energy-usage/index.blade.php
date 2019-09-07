@@ -66,17 +66,30 @@
                 <div class="card mt-4">
                     <div class="card-header">Electricity</div>
                     <div class="card-body">
-                      <div id="chart_electricity_div"></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div id="chart_electricity_factory_div"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="chart_electricity_office_div"></div>
+                            </div>
+                        </div>
+                      </div>
                 </div>
 
                 <div class="card mt-4">
                     <div class="card-header">Heat</div>
                     <div class="card-body">
-                      <div id="chart_heat_div"></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div id="chart_heat_factory_div"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="chart_heat_office_div"></div>
+                            </div>
+                        </div>
+                      </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -92,20 +105,24 @@
   google.charts.setOnLoadCallback(drawBasic);
 
   function drawBasic() {
-    drawHeat();
-    drawElectricity();
+    drawHeat("factory");
+    drawHeat("office");
+    drawElectricity("factory");
+    drawElectricity("office");
   }
 
-  function drawHeat(){
-    var data = google.visualization.arrayToDataTable([
-      ['Title', 'Heat',],
-      @foreach($energyusage as $item)
-      ["{{ $item->title }}",{{ !empty($item->joules)? $item->joules : 0 }} ],
-      @endforeach
-    ]);
+  function drawHeat(place_type){
+    var big_array = JSON.parse('@json($energyusage)');
+    var target_array = [['Title', 'Joules',]];
+    big_array.data.forEach(function(element){
+      if(element.place_type == place_type){
+        target_array.push([element.title, element.joules!=""?element.joules:0 ]);
+      }
+    });
+    var data = google.visualization.arrayToDataTable(target_array);
 
     var options = {
-      title: 'Heat',
+      title: 'Heat '+place_type,
       chartArea: {width: '50%'},
       hAxis: {
         title: 'MJoules',
@@ -116,21 +133,23 @@
       }
     };
 
-    var chart = new google.visualization.BarChart(document.getElementById('chart_heat_div'));
+    var chart = new google.visualization.BarChart(document.getElementById('chart_heat_'+place_type+'_div'));
 
     chart.draw(data, options);
   }
 
-  function drawElectricity(){
-    var data = google.visualization.arrayToDataTable([
-      ['Title', 'Watts',],
-      @foreach($energyusage as $item)
-      ["{{ $item->title }}",{{ !empty($item->watts)? $item->watts : 0 }} ],
-      @endforeach
-    ]);
+  function drawElectricity(place_type){
+    var big_array = JSON.parse('@json($energyusage)');
+    var target_array = [['Title', 'Watts',]];
+    big_array.data.forEach(function(element){
+      if(element.place_type == place_type){
+        target_array.push([element.title, element.watts!=""?element.watts:0 ]);
+      }
+    });
+    var data = google.visualization.arrayToDataTable(target_array);
 
     var options = {
-      title: 'Electricity',
+      title: 'Electricity '+place_type,
       chartArea: {width: '50%'},
       hAxis: {
         title: 'Watts',
@@ -141,7 +160,7 @@
       }
     };
 
-    var chart = new google.visualization.BarChart(document.getElementById('chart_electricity_div'));
+    var chart = new google.visualization.BarChart(document.getElementById('chart_electricity_'+place_type+'_div'));
 
     chart.draw(data, options);
   }
