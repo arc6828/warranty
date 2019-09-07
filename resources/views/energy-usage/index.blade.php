@@ -116,7 +116,7 @@
     var target_array = [['Title', 'Joules',]];
     big_array.data.forEach(function(element){
       if(element.place_type == place_type){
-        target_array.push([element.title, element.joules!=""?element.joules:0 ]);
+        //target_array.push([element.title, element.joules!==""?element.joules:0 ]);
       }
     });
     var data = google.visualization.arrayToDataTable(target_array);
@@ -135,7 +135,9 @@
 
     var chart = new google.visualization.BarChart(document.getElementById('chart_heat_'+place_type+'_div'));
 
-    chart.draw(data, options);
+    if(target_array.length > 1 ){
+      chart.draw(data, options);
+    }
   }
 
   function drawElectricity(place_type){
@@ -143,7 +145,7 @@
     var target_array = [['Title', 'Watts',]];
     big_array.data.forEach(function(element){
       if(element.place_type == place_type){
-        target_array.push([element.title, element.watts!=""?element.watts:0 ]);
+        target_array.push([element.title, element.watts!==""?element.watts:0 ]);
       }
     });
     var data = google.visualization.arrayToDataTable(target_array);
@@ -162,7 +164,9 @@
 
     var chart = new google.visualization.BarChart(document.getElementById('chart_electricity_'+place_type+'_div'));
 
-    chart.draw(data, options);
+    if(target_array.length > 1 ){
+      chart.draw(data, options);
+    }
   }
 </script>
 @endsection
