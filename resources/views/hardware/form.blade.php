@@ -35,7 +35,7 @@
 </div>
 <div class="form-group {{ $errors->has('price') ? 'has-error' : ''}}">
     <label for="price" class="control-label">{{ 'Price' }}</label>
-    <input class="form-control" name="price" type="number" id="price" value="{{ isset($hardware->price) ? $hardware->price : ''}}" >
+    <input class="form-control" name="price" type="number" step="any" id="price" value="{{ isset($hardware->price) ? $hardware->price : ''}}" >
     {!! $errors->first('price', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('vendor') ? 'has-error' : ''}}">
