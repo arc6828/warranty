@@ -10,14 +10,3 @@
 ----------------------------------------------------------------------------------------------
 **********************************************************************************************
 
-https://medium.com/cs-vru/laravel-5-6-course-da9ec23cfe35
-
-SELECT * FROM tb_drugr_order_detail WHERE drugOrder_id ORDER BY drug_order_detail_id DESC
-
-
-https://stackoverflow.com/questions/49645879/laravel-authuser-relationship
-
-https://laravel.com/docs/5.7/hashing
-
-http://www.sqlservertutorial.net/sql-server-aggregate-functions/sql-server-sum/
-
