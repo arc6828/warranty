@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\EnergyUsage;
+use App\Hardware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -22,8 +23,7 @@ class EnergyUsageController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $energyusage = EnergyUsage::where('title', 'LIKE', "%$keyword%")
-                ->orWhere('content', 'LIKE', "%$keyword%")
+            $energyusage = EnergyUsage::where('hardware_id', 'LIKE', "%$keyword%")
                 ->orWhere('place_type', 'LIKE', "%$keyword%")
                 ->orWhere('category', 'LIKE', "%$keyword%")
                 ->orWhere('date_begin', 'LIKE', "%$keyword%")
@@ -51,7 +51,11 @@ class EnergyUsageController extends Controller
      */
     public function create()
     {
-        return view('energy-usage.create');
+        $hardware = Hardware::getAll();
+        $data = [
+            "hardware" => $hardware 
+            ];          
+        return view('energy-usage.create',$data);
     }
 
     /**
@@ -97,10 +101,14 @@ class EnergyUsageController extends Controller
      * @return \Illuminate\View\View
      */
     public function edit($id)
-    {
+    {   
+        $hardware = Hardware::getAll();
+        $data = [
+            "hardware" => $hardware 
+            ];
         $energyusage = EnergyUsage::findOrFail($id);
 
-        return view('energy-usage.edit', compact('energyusage'));
+        return view('energy-usage.edit', compact('energyusage'),$data);
     }
 
     /**

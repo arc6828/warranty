@@ -31,5 +31,8 @@ class Hardware extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public static function getAll(){
+		return self::get();
+	}
 
 }

@@ -25,11 +25,15 @@ class EnergyUsage extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'content', 'place_type', 'category', 'date_begin', 'date_end', 'quantity', 'watts', 'joules', 'hours_per_day', 'day_per_week', 'user_id', 'photo'];
+    protected $fillable = ['title', 'place_type', 'category', 'date_begin', 'date_end', 'quantity', 'watts', 'joules', 'hours_per_day', 'day_per_week', 'user_id', 'photo','hardware_id'];
 
     public function user()
     {
         return $this->belongsTo('App\User');
     }
+    public function hardware(){
+        return $this->belongsTo('App\Hardware', 'id');
+    }
+ 
     
 }

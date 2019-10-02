@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 
             <div class="col-md-12">
@@ -29,16 +29,37 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Title</th><th>Content</th><th>Place Type</th><th>Category</th><th>Date Begin</th><th>Date End</th><th>Quantity</th><th>Watts</th><th>Joules</th><th>Hours Per Day</th><th>Day Per Week</th>
+                                        <th>#</th>
+                                        <th>hardware_id</th>
+                                        <th>Place Type</th>
+                                        <th>Category</th>
+                                        <th>Date Begin</th>
+                                        <th>Date End</th>
+                                        <th>Quantity</th>
+                                        <th>Watts</th>
+                                        <th>Joules</th>
+                                        <th>Hours Per Day</th>
+                                        <th>Day Per Week</th>
                                         <th class="d-none">User Id</th>
-                                        <th>Photo</th><th>Actions</th>
+                                        <th>Photo</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($energyusage as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title }}</td><td>{{ $item->content }}</td><td>{{ $item->place_type }}</td><td>{{ $item->category }}</td><td>{{ $item->date_begin }}</td><td>{{ $item->date_end }}</td><td>{{ $item->quantity }}</td><td>{{ $item->watts }}</td><td>{{ $item->joules }}</td><td>{{ $item->hours_per_day }}</td><td>{{ $item->day_per_week }}</td>
+                                        <td class="d-none">{{ $item->hardware_id }}</td>
+                                        <td>{{$item->hardware->name}}</td>
+                                        <td>{{ $item->place_type }}</td>
+                                        <td>{{ $item->category }}</td>
+                                        <td>{{ $item->date_begin }}</td>
+                                        <td>{{ $item->date_end }}</td>
+                                        <td>{{ $item->quantity }}</td>
+                                        <td>{{ $item->watts }}</td>
+                                        <td>{{ $item->joules }}</td>
+                                        <td>{{ $item->hours_per_day }}</td>
+                                        <td>{{ $item->day_per_week }}</td>
                                         <td class="d-none">{{ $item->user->name }}</td>
                                         <td>
                                           @if(!empty($item->photo))

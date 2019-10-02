@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">Create New EnergyUsage</div>
                     <div class="card-body">

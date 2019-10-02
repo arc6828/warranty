@@ -1,13 +1,18 @@
-<div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
-    <label for="title" class="control-label">{{ 'Title' }}</label>
-    <input class="form-control" name="title" type="text" id="title" value="{{ isset($energyusage->title) ? $energyusage->title : ''}}" required>
-    {!! $errors->first('title', '<p class="help-block">:message</p>') !!}
+
+
+<div class="form-group {{ $errors->has('hardware_id') ? 'has-error' : ''}}">
+    <label for="hardware_id" class="control-label">{{ 'hardware_id' }}</label>
+   
+    <select class="custom-select" id="hardware_id" name="hardware_id" >
+        
+            <option selected value="{{ isset($energyusage->hardware->id) ? $energyusage->hardware->id : '' }}">{{ isset($energyusage->hardware->name) ? $energyusage->hardware->name : 'Choose...' }}</option>
+        @foreach ($hardware as $item_hardware)
+            <option value="{{ $item_hardware->id }}">{{ $item_hardware->name }}</option>
+        @endforeach
+      </select>
+    {!! $errors->first('hardware_id', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('content') ? 'has-error' : ''}}">
-    <label for="content" class="control-label">{{ 'Content' }}</label>
-    <textarea class="form-control" rows="5" name="content" type="textarea" id="content" >{{ isset($energyusage->content) ? $energyusage->content : ''}}</textarea>
-    {!! $errors->first('content', '<p class="help-block">:message</p>') !!}
-</div>
+
 <div class="form-group {{ $errors->has('place_type') ? 'has-error' : ''}}">
     <label for="place_type" class="control-label">{{ 'Place Type' }}</label>
     <select name="place_type" class="form-control" id="place_type" required>

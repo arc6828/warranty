@@ -51,6 +51,7 @@ class HardwareController extends Controller
      */
     public function create()
     {
+        
         return view('hardware.create');
     }
 
