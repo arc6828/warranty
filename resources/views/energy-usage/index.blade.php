@@ -30,7 +30,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>hardware_id</th>
+                                        <th>hardware name</th>
                                         <th>Place Type</th>
                                         <th>Category</th>
                                         <th>Date Begin</th>

@@ -32,7 +32,7 @@ class EnergyUsage extends Model
         return $this->belongsTo('App\User');
     }
     public function hardware(){
-        return $this->belongsTo('App\Hardware', 'id');
+        return $this->belongsTo('App\Hardware', 'hardware_id');
     }
  
     
