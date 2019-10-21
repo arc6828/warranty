@@ -31,13 +31,9 @@
                                     <tr>
                                         <th>#</th>
                                         <th>hardware name</th>
-                                        <th>Place Type</th>
-                                        <th>Category</th>
-                                        <th>Date Begin</th>
-                                        <th>Date End</th>
-                                        <th>Quantity</th>
-                                        <th>Watts</th>
-                                        <th>Joules</th>
+                                        <th>Type</th>
+                                        <th>Date </th>
+                                        <th>Watts - Joules</th>
                                         <th>Hours Per Day</th>
                                         <th>Day Per Week</th>
                                         <th class="d-none">User Id</th>
@@ -50,14 +46,52 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td class="d-none">{{ $item->hardware_id }}</td>
-                                        <td>{{$item->hardware->name}}</td>
-                                        <td>{{ $item->place_type }}</td>
-                                        <td>{{ $item->category }}</td>
-                                        <td>{{ $item->date_begin }}</td>
-                                        <td>{{ $item->date_end }}</td>
-                                        <td>{{ $item->quantity }}</td>
-                                        <td>{{ $item->watts }}</td>
-                                        <td>{{ $item->joules }}</td>
+                                        <td>{{$item->hardware->name}} x {{ $item->quantity }}</td>
+                                        <td>
+                                          @switch($item->place_type)
+                                            @case("factory")
+                                              <span class="badge badge-pill  badge-primary">
+                                                <i class="fa fa-industry"></i>
+                                              </span>
+                                              @break
+                                            @case("office")
+                                            
+                                              <span class="badge badge-pill  badge-success">
+                                                <i class="fa fa-building"></i>
+                                              </span>
+                                              @break
+                                          @endswitch
+                                       
+                                          @switch($item->category)
+                                            @case("electricity")
+                                              <span class="badge badge-pill  badge-warning">
+                                                <i class="fa fa-bolt"></i>
+                                              </span>
+                                            
+                                              @break
+                                            @case("heat")
+                                            
+                                              <span class="badge badge-pill  badge-danger">
+                                                <i class="fa fa-fire"></i>
+                                              </span>
+                                              @break
+                                          @endswitch
+                                        </td>
+                                        <td>
+                                          {{ $item->date_begin }} - 
+                                          {{ $item->date_end }}
+                                        </td>
+                                        <td>
+                                          <span class="badge badge-pill  badge-warning">
+                                            <i class="fa fa-bolt"></i>
+                                            {{ $item->watts }}
+                                          </span>
+                                        
+                                          <span class="badge badge-pill  badge-danger">
+                                            <i class="fa fa-fire"></i>
+                                            {{ $item->joules }}
+                                          </span>
+                                        </td>
                                         <td>{{ $item->hours_per_day }}</td>
                                         <td>{{ $item->day_per_week }}</td>
                                         <td class="d-none">{{ $item->user->name }}</td>
