@@ -27,3 +27,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/test', function () {
     return view('test');
 });
+Route::resource('table_a', 'Table_aController');
+Route::resource('table_b', 'Table_bController');
+
+Route::get('/pdf_1-1', 'ExampleController@index');
