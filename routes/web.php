@@ -23,4 +23,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['auth'])->group(function () {
     Route::resource('hardware', 'HardwareController');
     Route::resource('energy-usage', 'EnergyUsageController');
+
+
+
+
 });
+
+
+
+
+
+Route::resource('duration', 'DurationController');
+
+Route::resource('schedule', 'ScheduleController');
+
+
+Route::get('/pdf_3-1', 'TestController@index');
+
+
