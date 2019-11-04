@@ -29,6 +29,7 @@ Route::get('/test', function () {
 });
 Route::resource('table_a', 'Table_aController');
 Route::resource('table_b', 'Table_bController');
+Route::resource('table_c', 'Table_cController');
 
 Route::get('/pdf_1-1', 'ExampleController@index');
 
@@ -40,3 +41,6 @@ Route::resource('schedule', 'ScheduleController');
 Route::get('/pdf_3-1', 'TestController@index');
 
 Route::get('/pdf', 'PDFController@index');
+Route::resource('table_c', 'Table_cController');
+
+Route::get('/pdf_2-1', 'Ex_cController@index');
