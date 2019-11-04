@@ -1,0 +1,30 @@
+{
+    "fields": [
+        {
+            "name": "menu",
+            "type": "integer"
+            
+        },
+        {
+            "name": "cost_cons",
+            "type": "integer"
+        },
+        {
+            "name": "cost_tool",
+            "type": "integer"
+        },       
+        {
+            "name": "cost_install",
+            "type": "integer"
+        },
+        {
+            "name": "cost_test",
+            "type": "integer"
+        },
+        {
+            "name": "investment",
+            "type": "integer"
+        }
+    ]
+ }
+ 
