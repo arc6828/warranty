@@ -163,10 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-
         Barryvdh\DomPDF\ServiceProvider::class,
-
-
 
         /*
          * Package Service Providers...
