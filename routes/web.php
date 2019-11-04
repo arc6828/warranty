@@ -32,8 +32,11 @@ Route::resource('table_b', 'Table_bController');
 
 Route::get('/pdf_1-1', 'ExampleController@index');
 
+Route::resource('sumpdf', 'SumpdfController');
 
 Route::resource('duration', 'DurationController');
 Route::resource('schedule', 'ScheduleController');
 
 Route::get('/pdf_3-1', 'TestController@index');
+
+Route::get('/pdf', 'PDFController@index');
