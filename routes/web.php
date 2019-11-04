@@ -40,3 +40,8 @@ Route::resource('schedule', 'ScheduleController');
 Route::get('/pdf_3-1', 'TestController@index');
 
 Route::get('/pdf', 'PDFController@index');
+
+Route::resource('table_f', 'Table_fController');
+Route::resource('table_f', 'Table_fController');
+
+Route::get('/pdf_4-1', 'Pdf_fController@index');

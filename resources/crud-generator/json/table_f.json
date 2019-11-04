@@ -1,0 +1,37 @@
+{
+    "fields": [
+        {
+            "name": "country",
+            "type": "string"
+        },
+ {
+            "name": "number",
+            "type": "integer"
+        },
+        {
+            "name": "cost",
+            "type": "integer"
+        },       
+        {
+            "name": "connect",
+            "type": "string"
+        },       
+        {
+            "name": "wage_company",
+            "type": "string"
+        },       
+        {
+            "name": "machinery_Imported",
+            "type": "string"
+        },       
+        {
+            "name": "other",
+            "type": "string"
+        },
+        {
+            "name": "total",
+            "type": "integer"
+        }
+    ]
+ }
+ 
