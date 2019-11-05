@@ -1,0 +1,41 @@
+{
+    "fields": [
+        {
+            "name": "peetharn",
+            "type": "integer"
+        },
+ {
+            "name": "cost",
+            "type": "integer"
+        },
+        {
+            "name": "yield",
+            "type": "integer"
+        },       
+        {
+            "name": "amount",
+            "type": "integer"
+        },       
+        {
+            "name": "efficiency",
+            "type": "integer"
+        },       
+        {
+            "name": "overall",
+            "type": "integer"
+        },       
+        {
+            "name": "equipment",
+            "type": "integer"
+        },
+        {
+            "name": "mean",
+            "type": "integer"
+        },
+        {
+            "name": "actual",
+            "type": "integer"
+        }
+    ]
+ }
+ 

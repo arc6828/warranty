@@ -1,15 +1,14 @@
-@extends('layouts.app')
+@extends('layout.main')
 
 @section('content')
     <div class="container">
-        <div class="row">
-            @include('admin.sidebar')
+        <div class="row justify-content-center">
 
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">Table_a {{ $table_a->id }}</div>
                     <div class="card-body">
-
+ 
                         <a href="{{ url('/table_a') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <a href="{{ url('/table_a/' . $table_a->id . '/edit') }}" title="Edit Table_a"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
