@@ -11,17 +11,14 @@
     @include('layout.navbar')
       <div id="content">
       
-      <div class="container-fluid">
-      @yield('content')
+        <div class="container-fluid">
+          @yield('content')
         </div>
-        @include('layout.footer')
       </div>
-     
+      @include('layout.footer')     
     </div>
-
-   
   </div>
-    @include('layout.js')
+  @include('layout.js')
     
 </body>
 

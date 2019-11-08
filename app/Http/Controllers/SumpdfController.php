@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Sumpdf;
 use Illuminate\Http\Request;
+use PDF;
 
 class SumpdfController extends Controller
 
@@ -66,6 +67,15 @@ class SumpdfController extends Controller
         $sumpdf = Sumpdf::findOrFail($id);
 
         return view('sumpdf.show', compact('sumpdf'));
+    }
+
+    public function pdf($id)
+    {
+        $sumpdf = Sumpdf::findOrFail($id);
+        
+        //return view('sumpdf.pdf', compact('sumpdf'));
+        $pdf = PDF::loadView('pdf', compact('sumpdf'));
+        return $pdf->stream('test.pdf');
     }
 
     /**

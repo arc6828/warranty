@@ -25,7 +25,7 @@ class Table_f extends Model
      *
      * @var array
      */
-    protected $fillable = ['country', 'number', 'cost', 'connect', 'wage_company', 'machinery_Imported', 'other', 'total'];
+    protected $fillable = ['country', 'number', 'cost', 'connect', 'wage_company', 'machinery_Imported', 'other', 'total','sumpdf_id'];
 
     
 }

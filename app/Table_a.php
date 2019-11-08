@@ -25,7 +25,7 @@ class Table_a extends Model
      *
      * @var array
      */
-    protected $fillable = ['request_number', 'registration_date', 'fullname', 'company', 'production', 'promotion_certificate_number', 'promotion_date'];
+    protected $fillable = ['request_number', 'registration_date', 'fullname', 'company', 'production', 'promotion_certificate_number', 'promotion_date','sumpdf_id'];
 
     
 }

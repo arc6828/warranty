@@ -25,6 +25,6 @@ class Schedule extends Model
      *
      * @var array
      */
-    protected $fillable = ['menu', 'cost_cons', 'cost_tool', 'cost_install', 'cost_test', 'investment'];
+    protected $fillable = ['menu', 'cost_cons', 'cost_tool', 'cost_install', 'cost_test', 'investment','sumpdf_id'];
 
 }

@@ -25,6 +25,6 @@ class Table_c extends Model
      *
      * @var array
      */
-    protected $fillable = ['peetharn', 'cost', 'yield', 'amount', 'efficiency', 'overall', 'equipment', 'mean', 'actual'];
+    protected $fillable = ['peetharn', 'cost', 'yield', 'amount', 'efficiency', 'overall', 'equipment', 'mean', 'actual','sumpdf_id'];
 
 }

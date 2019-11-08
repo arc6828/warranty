@@ -29,26 +29,18 @@ Route::get('/test', function () {
     return view('test');
 });
 
+Route::resource('sumpdf', 'SumpdfController');
 Route::resource('table_a', 'Table_aController');
 Route::resource('table_b', 'Table_bController');
 Route::resource('table_c', 'Table_cController');
-
-Route::get('/pdf_1-1', 'ExampleController@index');
-
-Route::resource('sumpdf', 'SumpdfController');
-
 Route::resource('duration', 'DurationController');
 Route::resource('schedule', 'ScheduleController');
-
-Route::get('/pdf_3-1', 'TestController@index');
-
-Route::get('/pdf', 'PDFController@index');
-
 Route::resource('table_f', 'Table_fController');
 
-Route::get('/pdf_4-1', 'Pdf_fController@index');
+Route::get('sumpdf/{id}/pdf', 'SumpdfController@pdf');
 
-Route::resource('table_c', 'Table_cController');
-
+Route::get('/pdf_1-1', 'ExampleController@index');
 Route::get('/pdf_2-1', 'Ex_cController@index');
+Route::get('/pdf_3-1', 'TestController@index');
+Route::get('/pdf_4-1', 'Pdf_fController@index');
 

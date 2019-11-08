@@ -25,7 +25,7 @@ class Duration extends Model
      *
      * @var array
      */
-    protected $fillable = ['duration', 'order_m', 'install_m', 'generate'];
+    protected $fillable = ['duration', 'order_m', 'install_m', 'generate','sumpdf_id'];
 
     
 }

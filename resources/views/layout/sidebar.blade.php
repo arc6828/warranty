@@ -1,5 +1,5 @@
 <div class="wrapper">
-        <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
+        <div class="sidebar" data-image="{{ url('img/sidebar-5.jpg')}}">
             <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
@@ -13,7 +13,7 @@
                 </div>
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/') }}">
+                        <a class="nav-link" href="{{ url('/sumpdf') }}">
                             <i class="nc-icon nc-icon nc-paper-2"></i>
                             <p>Summary</p>
                         </a>
@@ -40,16 +40,16 @@
                     </li>
                     
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('table_d') }}">
+                        <a class="nav-link" href="{{ url('duration') }}">
                             <i class="nc-icon nc-icon nc-paper-2"></i>
-                            <p>Table D</p>
+                            <p>Table Duration</p>
                         </a>
                     </li>
                     
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('table_e') }}">
+                        <a class="nav-link" href="{{ url('schedule') }}">
                             <i class="nc-icon nc-icon nc-paper-2"></i>
-                            <p>Table E</p>
+                            <p>schedule</p>
                         </a>
                     </li>
                     <li class="nav-item active">

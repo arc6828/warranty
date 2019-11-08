@@ -15,7 +15,7 @@ class PDFController extends Controller
     {
         $data = [ ];
         $pdf = PDF::loadView('pdf',$data);
-      return $pdf->stream('pdf.pdf');
+        return $pdf->stream('pdf.pdf');
     }
 
     /**
