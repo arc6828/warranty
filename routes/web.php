@@ -24,9 +24,11 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('hardware', 'HardwareController');
     Route::resource('energy-usage', 'EnergyUsageController');
 });
+
 Route::get('/test', function () {
     return view('test');
 });
+
 Route::resource('table_a', 'Table_aController');
 Route::resource('table_b', 'Table_bController');
 Route::resource('table_c', 'Table_cController');

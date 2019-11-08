@@ -13,9 +13,49 @@
                 </div>
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="dashboard.html">
+                        <a class="nav-link" href="{{ url('/') }}">
                             <i class="nc-icon nc-icon nc-paper-2"></i>
-                            <p>First example</p>
+                            <p>Summary</p>
+                        </a>
+                    </li>                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('table_a') }}">
+                            <i class="nc-icon nc-icon nc-paper-2"></i>
+                            <p>Table A</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('table_b') }}">
+                            <i class="nc-icon nc-icon nc-paper-2"></i>
+                            <p>Table B</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('table_c') }}">
+                            <i class="nc-icon nc-icon nc-paper-2"></i>
+                            <p>Table C</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('table_d') }}">
+                            <i class="nc-icon nc-icon nc-paper-2"></i>
+                            <p>Table D</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('table_e') }}">
+                            <i class="nc-icon nc-icon nc-paper-2"></i>
+                            <p>Table E</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('table_f') }}">
+                            <i class="nc-icon nc-icon nc-paper-2"></i>
+                            <p>Table F</p>
                         </a>
                     </li>
                     <li>
