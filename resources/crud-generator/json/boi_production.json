@@ -1,0 +1,44 @@
+{
+   "fields": [
+        {
+           "name": "base_year",
+           "type": "integer"
+        },
+        {
+           "name": "base_product",
+           "type": "string"
+        },
+        {
+           "name": "base_capacity",
+           "type": "string"
+        },       
+        {
+           "name": "base_working_hour_per_day",
+           "type": "integer"
+        },       
+        {
+           "name": "base_working_day_per_year",
+           "type": "integer"
+        },       
+        {
+           "name": "evaluation_year",
+           "type": "integer"
+        },       
+        {
+           "name": "evaluation_product",
+           "type": "string"
+        },       
+        {
+           "name": "evaluation_capacity",
+           "type": "string"
+        },
+        {
+           "name": "evaluation_working_hour_per_day",
+           "type": "integer"
+        },
+        {
+           "name": "evaluation_working_day_per_year",
+           "type": "integer"
+        }
+   ]
+}

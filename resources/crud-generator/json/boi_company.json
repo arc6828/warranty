@@ -1,0 +1,32 @@
+{
+   "fields": [        
+        {
+           "name": "fullname",
+           "type": "string"
+        },       
+        {
+           "name": "company",
+           "type": "string"
+        },       
+        {
+           "name": "production",
+           "type": "string"
+        },       
+        {
+           "name": "promotion",
+           "type": "string"
+        },       
+        {
+           "name": "promotion_certificate_number",
+           "type": "integer"
+        },       
+        {
+           "name": "promotion_date",
+           "type": "date"
+        },
+        {
+            "name": "is_auto_machine",
+            "type": "string"
+        }
+   ]
+}

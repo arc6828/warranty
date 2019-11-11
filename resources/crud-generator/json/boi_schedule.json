@@ -1,29 +1,29 @@
 {
     "fields": [
         {
-            "name": "menu",
+            "name": "year",
             "type": "integer"
             
         },
         {
             "name": "cost_cons",
-            "type": "integer"
+            "type": "float"
         },
         {
             "name": "cost_tool",
-            "type": "integer"
+            "type": "float"
         },       
         {
             "name": "cost_install",
-            "type": "integer"
+            "type": "float"
         },
         {
             "name": "cost_test",
-            "type": "integer"
+            "type": "float"
         },
         {
             "name": "investment",
-            "type": "integer"
+            "type": "float"
         }
     ]
  }

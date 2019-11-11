@@ -1,0 +1,79 @@
+{
+    "fields": [
+        {
+            "name": "base_year",
+            "type": "integer"
+        },
+        {
+            "name": "base_cost",
+            "type": "float"
+        },
+        {
+            "name": "base_yield",
+            "type": "float"
+        },       
+        {
+            "name": "base_amount",
+            "type": "float"
+        },       
+        {
+            "name": "base_efficiency",
+            "type": "float"
+        },       
+        {
+            "name": "base_overall",
+            "type": "float"
+        },       
+        {
+            "name": "base_equipment",
+            "type": "float"
+        },
+        {
+            "name": "base_mean",
+            "type": "float"
+        },
+        {
+            "name": "base_actual",
+            "type": "float"
+        },
+
+        
+        {
+            "name": "evaluation_year",
+            "type": "integer"
+        },
+        {
+            "name": "evaluation_cost",
+            "type": "float"
+        },
+        {
+            "name": "evaluation_yield",
+            "type": "float"
+        },       
+        {
+            "name": "evaluation_amount",
+            "type": "float"
+        },       
+        {
+            "name": "evaluation_efficiency",
+            "type": "float"
+        },       
+        {
+            "name": "evaluation_overall",
+            "type": "float"
+        },       
+        {
+            "name": "evaluation_equipment",
+            "type": "float"
+        },
+        {
+            "name": "evaluation_mean",
+            "type": "float"
+        },
+        {
+            "name": "evaluation_actual",
+            "type": "float"
+        }
+    ]
+ }
+ 
