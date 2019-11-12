@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Sumpdf;
+use App\Table_a;
+use App\Table_b;
+use App\Table_c;
+use App\Duration;
+use App\Schedule;
+use App\Table_f;
 use Illuminate\Http\Request;
 use PDF;
 
@@ -51,7 +57,20 @@ class SumpdfController extends Controller
     {
         $requestData = $request->all();
         
-        Sumpdf::create($requestData);
+        $sumpdf = Sumpdf::create($requestData);
+
+        //CREATE TABLE A
+        Table_a::create(["sumpdf_id" => $sumpdf->id]);
+        //CREATE TABLE B
+        Table_b::create(["sumpdf_id" => $sumpdf->id]);
+        //CREATE TABLE C
+        Table_c::create(["sumpdf_id" => $sumpdf->id]);
+        //CREATE TABLE Duration
+        Duration::create(["sumpdf_id" => $sumpdf->id]);
+        //CREATE TABLE Schedule
+        Schedule::create(["sumpdf_id" => $sumpdf->id]);
+        //CREATE TABLE F
+        Table_f::create(["sumpdf_id" => $sumpdf->id]);
 
         return redirect('sumpdf')->with('flash_message', 'sumpdf added!');
     }

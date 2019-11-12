@@ -11,7 +11,7 @@
     @include('layout.navbar')
       <div id="content">
       
-        <div class="container-fluid">
+        <div class="container-fluid pt-4">
           @yield('content')
         </div>
       </div>
