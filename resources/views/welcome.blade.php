@@ -62,6 +62,7 @@
                 margin-bottom: 30px;
             }
         </style>
+        <script src="https://kit.fontawesome.com/d59a8a2721.js"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -85,13 +86,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ url('/energy-usage') }}"><i class="fa fa-bolt"></i> Energy</a>
+                    <a href="{{ url('/') }}"><i class="fa fa-leaf"></i> Environment</a>
+                    <a href="{{ url('/sumpdf') }}"><i class="fa fa-sign-in-alt"></i> BOI</a>
+                    <a href="{{ url('/') }}"><i class="fa fa-industry"></i> Factory</a>
                 </div>
 
                 
