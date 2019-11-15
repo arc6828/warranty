@@ -38,6 +38,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mx-auto">
+                      <li class="mx-4"><a href="{{ url('/') }}/branch">Branch</a></li>
+                      <li class="mx-4"><a href="{{ url('/') }}/building">Building</a></li>
                       <li class="mx-4"><a href="{{ url('/') }}/hardware">Hardware</a></li>
                       <li class="mx-4"><a href="{{ url('/') }}/energy-usage">Energy usage</a></li>
                     </ul>

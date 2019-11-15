@@ -1,0 +1,16 @@
+{
+    "fields": [
+        {
+            "name": "code",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "user_id",
+            "type": "integer"
+        }
+    ]
+}

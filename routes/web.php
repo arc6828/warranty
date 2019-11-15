@@ -44,3 +44,7 @@ Route::get('/pdf_2-1', 'Ex_cController@index');
 Route::get('/pdf_3-1', 'TestController@index');
 Route::get('/pdf_4-1', 'Pdf_fController@index');
 
+
+Route::resource('branch', 'BranchController');
+Route::resource('buildings', 'BuildingsController');
+Route::resource('building', 'BuildingController');

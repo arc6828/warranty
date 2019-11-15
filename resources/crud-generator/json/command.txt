@@ -1,3 +1,7 @@
 php artisan crud:generate Hardware --fields_from_file="resources/crud-generator/json/hardware.json"
 
 php artisan crud:generate EnergyUsage --fields_from_file="resources/crud-generator/json/energy_usage.json"
+
+php artisan crud:generate Buildings --fields_from_file="resources/crud-generator/json/building.json"
+
+php artisan crud:generate Branch --fields_from_file="resources/crud-generator/json/branch.json"

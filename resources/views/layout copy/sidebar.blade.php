@@ -12,34 +12,34 @@ Tip 2: you can also add an image using data-image tag
             </a>
         </div>
         <ul class="nav">
-            <li class="active">
+            <li class="nav-item active">
                 <a class="nav-link" href="{{ url('/sumpdf') }}">
                     <i class="nc-icon nc-icon nc-paper-2"></i>
                     <p>Summary</p>
                 </a>
             </li>                    
-            <li class="">
+            <li class="nav-item">
                 <a class="nav-link" href="{{ url('table_a') }}">
                     <i class="nc-icon nc-icon nc-paper-2"></i>
                     <p>Table A</p>
                 </a>
             </li>
             
-            <li class="">
+            <li class="nav-item ">
                 <a class="nav-link" href="{{ url('table_b') }}">
                     <i class="nc-icon nc-icon nc-paper-2"></i>
                     <p>Table B</p>
                 </a>
             </li>
             
-            <li class="">
+            <li class="nav-item ">
                 <a class="nav-link" href="{{ url('table_c') }}">
                     <i class="nc-icon nc-icon nc-paper-2"></i>
                     <p>Table C</p>
                 </a>
             </li>
             
-            <li class="">
+            <li class="nav-item ">
                 <a class="nav-link" href="{{ url('duration') }}">
                     <i class="nc-icon nc-icon nc-paper-2"></i>
                     <p>Table Duration</p>

@@ -29,12 +29,17 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Name</th>
+                                        <th>ลำดับ</th><th>ชื่อเครื่องจักร/รุ่น/ยี่ห้อ</th>
                                         <th class="d-none">Detail</th>
                                         <th class="d-none">Tags</th>
-                                        <th>Date Purchase</th><th>Date Warranty Expire</th><th>Warranty Duration</th><th>Quantity</th><th>Price</th><th>Vendor</th><th>About Vendor</th>
+                                        <th>วันที่ซื้อเครื่องจักร</th>
+                                        <th>Date Warranty Expire</th>
+                                        <th>Warranty Duration</th><th>จำนวน</th>
+                                        <th>ราคา</th><th>Vendor</th><th>About Vendor</th>
                                         <th class="d-none">User Id</th>
-                                        <th>Photo</th><th>Actions</th>
+                                        <th>Photo</th>
+                                        <th>หมายเหตุ</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -47,6 +52,7 @@
                                         <td>{{ $item->date_purchase }}</td><td>{{ $item->date_warranty_expire }}</td><td>{{ $item->warranty_duration }}</td><td>{{ $item->quantity }}</td><td>{{ $item->price }}</td><td>{{ $item->vendor }}</td><td>{{ $item->about_vendor }}</td>
                                         <td class="d-none">{{ $item->user->name }}</td>
                                         <td>{{ $item->photo }}</td>
+                                        <td>...</td>
                                         <td>
                                             <a href="{{ url('/hardware/' . $item->id) }}" title="View Hardware"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/hardware/' . $item->id . '/edit') }}" title="Edit Hardware"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

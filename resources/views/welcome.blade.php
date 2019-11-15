@@ -89,7 +89,7 @@
                     <a href="{{ url('/energy-usage') }}"><i class="fa fa-bolt"></i> Energy</a>
                     <a href="{{ url('/') }}"><i class="fa fa-leaf"></i> Environment</a>
                     <a href="{{ url('/sumpdf') }}"><i class="fa fa-sign-in-alt"></i> BOI</a>
-                    <a href="{{ url('/') }}"><i class="fa fa-industry"></i> Factory</a>
+                    <a href="{{ url('/hardware') }}"><i class="fa fa-industry"></i> Factory</a>
                 </div>
 
                 
