@@ -12,3 +12,4 @@
 <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/light-bootstrap-dashboard.css?v=2.0.1') }}" rel="stylesheet" />
 <link href="{{ asset('css/animate.min.css')}}" rel="stylesheet"/>
+@yield('head')

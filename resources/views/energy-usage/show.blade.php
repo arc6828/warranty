@@ -1,11 +1,13 @@
-@extends('layouts.app')
+@extends('layout.main')
+
+@section('title','EnergyUsage')
 
 @section('content')
     <div class="container">
         <div class="row">
 
             <div class="col-md-12">
-                <div class="card">
+                <div class="card mb-4">
                     <div class="card-header">EnergyUsage {{ $energyusage->id }}</div>
                     <div class="card-body">
 
@@ -34,6 +36,9 @@
 
                     </div>
                 </div>
+
+
+                
             </div>
         </div>
     </div>

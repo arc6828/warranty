@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('layout.main')
+
+@section('title','Create New EnergyUsage')
 
 @section('content')
     <div class="container">

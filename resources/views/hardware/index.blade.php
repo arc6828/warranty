@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('layout.main')
+
+@section('title','เครื่องจักร')
 
 @section('content')
     <div class="container">
@@ -6,7 +8,7 @@
 
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Hardware</div>
+                    <div class="card-header">@yield('title')</div>
                     <div class="card-body">
                         <a href="{{ url('/hardware/create') }}" class="btn btn-success btn-sm" title="Add New Hardware">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
@@ -29,31 +31,23 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>ลำดับ</th><th>ชื่อเครื่องจักร/รุ่น/ยี่ห้อ</th>
-                                        <th class="d-none">Detail</th>
-                                        <th class="d-none">Tags</th>
+                                        <th>ลำดับ</th>
+                                        <th>ชื่อเครื่องจักร/รุ่น/ยี่ห้อ</th>
                                         <th>วันที่ซื้อเครื่องจักร</th>
-                                        <th>Date Warranty Expire</th>
-                                        <th>Warranty Duration</th><th>จำนวน</th>
-                                        <th>ราคา</th><th>Vendor</th><th>About Vendor</th>
-                                        <th class="d-none">User Id</th>
-                                        <th>Photo</th>
-                                        <th>หมายเหตุ</th>
-                                        <th>Actions</th>
+                                        <th>มูลค่า</th>
+                                        <th class="d-none">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($hardware as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->name }}</td>
-                                        <td class="d-none">{{ $item->detail }}</td>
-                                        <td class="d-none">{{ $item->tags }}</td>
-                                        <td>{{ $item->date_purchase }}</td><td>{{ $item->date_warranty_expire }}</td><td>{{ $item->warranty_duration }}</td><td>{{ $item->quantity }}</td><td>{{ $item->price }}</td><td>{{ $item->vendor }}</td><td>{{ $item->about_vendor }}</td>
-                                        <td class="d-none">{{ $item->user->name }}</td>
-                                        <td>{{ $item->photo }}</td>
-                                        <td>...</td>
-                                        <td>
+                                        <td><a href="{{ url('/hardware/' . $item->id) }}">{{ $item->name }} x {{ $item->quantity }}</a></td>
+                                        
+                                        <td>{{ $item->date_purchase }}</td>
+                                        <td>{{ number_format($item->price,2) }}</td>                                      
+                                        
+                                        <td class="d-none">
                                             <a href="{{ url('/hardware/' . $item->id) }}" title="View Hardware"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/hardware/' . $item->id . '/edit') }}" title="Edit Hardware"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 

@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('layout.main')
+
+@section('title','EnergyUsage')
 
 @section('content')
     <div class="container">
@@ -171,9 +173,19 @@
   }
 
   function drawHeat(place_type){
-    var big_array = JSON.parse('@json($energyusage)');
+    @php
+      $a = [];
+      foreach($energyusage as $row){
+        $a[] = [
+          "title"=>$row->hardware->name , 
+          "joules"=>$row->joules ,
+          "place_type"=>$row->place_type ,
+        ];
+      }
+    @endphp
+    var big_array = JSON.parse('@json($a)');
     var target_array = [['Title', 'Joules',]];
-    big_array.data.forEach(function(element){
+    big_array.forEach(function(element){
       if(element.place_type == place_type){
         target_array.push([element.title, element.joules!==""?element.joules:0 ]);
       }
@@ -200,9 +212,19 @@
   }
 
   function drawElectricity(place_type){
-    var big_array = JSON.parse('@json($energyusage)');
+    @php
+      $b = [];
+      foreach($energyusage as $row){
+        $b[] = [
+          "title"=>$row->hardware->name , 
+          "watts"=>$row->watts ,
+          "place_type"=>$row->place_type ,
+        ];
+      }
+    @endphp
+    var big_array = JSON.parse('@json($b)');
     var target_array = [['Title', 'Watts',]];
-    big_array.data.forEach(function(element){
+    big_array.forEach(function(element){
       if(element.place_type == place_type){
         target_array.push([element.title, element.watts!==""?element.watts:0 ]);
       }

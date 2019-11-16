@@ -1,5 +1,5 @@
 // =========================================================
-//  Light Bootstrap Dashboard - v2.0.1
+//  Light Bootstrap Dashboard - v2.0.1 (HACK BY ARC6828)
 // =========================================================
 //
 //  Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
@@ -28,6 +28,8 @@ var mobile_menu_visible = 0,
 
 $(document).ready(function() {
     window_width = $(window).width();
+    //HACK
+    $('.navbar').css('flex-wrap', 'nowrap');
 
     // check if there is an image set for the sidebar's background
     lbd.checkSidebarImage();
@@ -61,6 +63,22 @@ $(document).ready(function() {
 $(window).resize(function() {
     if ($(window).width() <= 991) {
         lbd.initRightMenu();
+        //HACK
+        //$('.sidebar').addClass('d-none');
+        if (mobile_menu_visible == 1) {
+            console.log("if open then close drawer");
+            $toggle = $('.navbar-toggler');
+            
+            $toggle.click();
+        }
+    }else{
+        //HACK
+        $sidebar_wrapper = $('.sidebar-wrapper');
+        $sidebar_wrapper.find('.nav-mobile-menu').remove();
+        //console.log("bigger :" , $sidebar_wrapper.find('.nav-mobile-menu'));
+        mobile_menu_initialized = false;        
+        $('.sidebar').removeClass('d-none');
+        
     }
 });
 
@@ -88,6 +106,7 @@ lbd = {
         $sidebar_wrapper = $('.sidebar-wrapper');
 
         if (!mobile_menu_initialized) {
+            console.log("create mobile menu");
 
             $navbar = $('nav').find('.navbar-collapse').first().clone(true);
 
@@ -119,12 +138,13 @@ lbd = {
 
             mobile_menu_initialized = true;
         } else {
-            console.log('window with:' + $(window).width());
-            if ($(window).width() > 991) {
+            //console.log('window with:' + $(window).width());
+            //if ($(window).width() > 991) {
+            if ($(window).width() > 900) {
                 // reset all the additions that we made for the sidebar wrapper only if the screen is bigger than 991px
                 $sidebar_wrapper.find('.navbar-form').remove();
                 $sidebar_wrapper.find('.nav-mobile-menu').remove();
-
+                
                 mobile_menu_initialized = false;
             }
         }
@@ -135,6 +155,10 @@ lbd = {
             $toggle.click(function() {
 
                 if (mobile_menu_visible == 1) {
+                    console.log("if open, then close drawer");
+                    //HACK
+                    $('.sidebar').addClass('d-none');
+
                     $('html').removeClass('nav-open');
 
                     $('.close-layer').remove();
@@ -144,11 +168,16 @@ lbd = {
 
                     mobile_menu_visible = 0;
                 } else {
+                    console.log("if close, then open drawer");
+                    //HACK
+                    $('.sidebar').removeClass('d-none');
+
                     setTimeout(function() {
                         $toggle.addClass('toggled');
                     }, 430);
 
-
+                    //HACK  
+                    /*
                     main_panel_height = $('.main-panel')[0].scrollHeight;
                     $layer = $('<div class="close-layer"></div>');
                     $layer.css('height', main_panel_height + 'px');
@@ -170,7 +199,7 @@ lbd = {
 
                         }, 400);
                     });
-
+                    */
                     $('html').addClass('nav-open');
                     mobile_menu_visible = 1;
 

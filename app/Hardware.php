@@ -29,8 +29,14 @@ class Hardware extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User','user_id');
     }
+
+    public function energy_usages()
+    {
+        return $this->hasMany('App\EnergyUsage','hardware_id');
+    }
+
     public static function getAll(){
 		return self::get();
 	}
