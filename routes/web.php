@@ -48,3 +48,16 @@ Route::get('/pdf_4-1', 'Pdf_fController@index');
 Route::resource('branch', 'BranchController');
 Route::resource('buildings', 'BuildingsController');
 Route::resource('building', 'BuildingController');
+
+
+Route::get('energy/form1', function(){
+    return view('energy/form1');
+});
+
+Route::get('energy/form2', function(){
+    return view('energy/form2');
+});
+
+Route::get('energy/form3', function(){
+    return view('energy/form3');
+});
