@@ -30,17 +30,14 @@
 
                         <table class="table table-bordered table-hover">
                                 <tr class="table table-bordered table-dark">
-                                    <th scope="col" style="text-align: center;">เดือน</th>
-                                    <th scope="col" style="text-align: center;">ปริมาณผลผลิต(หน่วย)</th>
+                                    <th rowspan="2" style="text-align: center;">เดือน</th>
+                                    <th rowspan="2" style="text-align: center;">ปริมาณผลผลิต(หน่วย)</th>
                                     <th scope="col" colspan="2" style="text-align: center;">ปริมาณพลังงานที่ใช้</th>
-                                    <th scope="col" style="text-align: center;">ค่าการใช้พลังงานจำเพาะ</th>
+                                    <th rowspan="2" style="text-align: center;">ค่าการใช้พลังงานจำเพาะ<br>(SEC)(เมกะจูล/หน่วย)</th>
                                 </tr>
                                 <tr class="table table-bordered table-dark">
-                                    <th></th>
-                                    <th></th>
                                     <th scope="col" style="text-align: center;">ไฟฟ้า(กิโลวัต์/ชั่งโมง)</th>
                                     <th scope="col" style="text-align: center;">ความร้อน(เมกะจูน)</th>
-                                    <th></th>
                                 </tr>
                                 <tbody>
                                 <tr>
@@ -168,18 +165,16 @@
                        <table class="table table-bordered table-hover">
                           
                             <tr  class="table table-bordered table-dark">
-                              <th scope="col" style="text-align: center;">เครื่องจักร/อุปกรณ์หลัก</th>
-                              <th scope="col" style="text-align: center;">ประเภทพลังงาน</th>
+                              <th rowspan="2" style="text-align: center;">เครื่องจักร/อุปกรณ์หลัก</th>
+                              <th rowspan="2" style="text-align: center;">ประเภทพลังงาน</th>
                               <th scope="col" colspan="5" style="text-align: center;">(1)ขนาดการใช้พลังงาน</th>
                               <th scope="col" colspan="5" style="text-align: center;">(2)ชั่วโมงการใช้งาน</th>
                               <th scope="col" colspan="5" style="text-align: center;">(3)ศักยภาพการปรับปรุง</th>
-                              <th scope="col" style="text-align: center;">คะแนนรวม (1)*(2)*(3)</th>
-                              <th scope="col" style="text-align: center;">ลำดับความสำคัญ</th>
+                              <th rowspan="2" style="text-align: center;">คะแนนรวม (1)*(2)*(3)</th>
+                              <th rowspan="2" style="text-align: center;">ลำดับความสำคัญ</th>
                             </tr>
 
                             <tr  class="table-bordered table-dark">
-                                <th scope="col"></th>
-                                <th scope="col"></th>
                                 <th scope="col" style="text-align: center;">น้อยที่สุด</th>
                                 <th scope="col" style="text-align: center;">น้อย</th>
                                 <th scope="col" style="text-align: center;">ปานกลาง</th>
@@ -195,8 +190,6 @@
                                 <th scope="col" style="text-align: center;">ปานกลาง</th>
                                 <th scope="col" style="text-align: center;">มาก</th>
                                 <th scope="col" style="text-align: center;">มากที่สุด</th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
                             </tr>
                           
                           
@@ -286,32 +279,24 @@
                           <table  class="table table-bordered table-hover">
                               
                                 <tr class="table table-bordered table-dark">
-                                  <th scope="col" style="text-align: center;">ระบบที่ใช้พพลังงาน</th>
-                                  <th scope="col" style="text-align: center;">ชื่อเครื่องจักร/อุปกรณ์</th>
-                                  <th scope="col" colspan="2" style="text-align: center;">พิกัด</th>
-                                  <th scope="col" style="text-align: center;">จำนวน</th>
-                                  <th scope="col" style="text-align: center;">อายุการใช้งาน(ปี)</th>
-                                  <th scope="col" style="text-align: center;">ชั่วโมงใช้งานเฉลีย/ปี</th>
-                                  <th scope="col" style="text-align: center;">ปริมาณการใช้พลังงานไฟฟ้า(กิโลวัตต์-ชั่วโมง/ปี)</th>
-                                  <th scope="col" style="text-align: center;">สัดส่วนการใช้พลังงานในระบบ</th>
-                                  <th scope="col" colspan="4" style="text-align: center;">ค่าประสิทธ์ภาพหรือสมรรถนะ</th>
-                                  <th scope="col" style="text-align: center;">หมายเหตุ</th>
+                                  <th rowspan="2" style="text-align: center;">ระบบที่ใช้พลังงาน</th>
+                                  <th rowspan="2" style="text-align: center;">ชื่อเครื่องจักร/อุปกรณ์</th>
+                                  <th colspan="2" style="text-align: center;">พิกัด</th>
+                                  <th rowspan="2" style="text-align: center;">จำนวน</th>
+                                  <th rowspan="2" style="text-align: center;">อายุการใช้งาน(ปี)</th>
+                                  <th rowspan="2" style="text-align: center;">ชั่วโมงใช้งานเฉลีย/ปี</th>
+                                  <th rowspan="2" style="text-align: center;">ปริมาณการใช้พลังงานไฟฟ้า(กิโลวัตต์-ชั่วโมง/ปี)</th>
+                                  <th rowspan="2" style="text-align: center;">สัดส่วนการใช้พลังงานในระบบ</th>
+                                  <th colspan="4" style="text-align: center;">ค่าประสิทธ์ภาพหรือสมรรถนะ</th>
+                                  <th rowspan="2" style="text-align: center;">หมายเหตุ</th>
                                 </tr>
                                 <tr class="table table-bordered table-dark">
-                                  <th scope="col"></th>
-                                  <th scope="col"></th>
                                   <th scope="col" style="text-align: center;">ขนาด</th>
                                   <th scope="col" style="text-align: center;">หน่วย</th>
-                                  <th scope="col"></th>
-                                  <th scope="col"></th>
-                                  <th scope="col"></th>
-                                  <th scope="col"></th>
-                                  <th scope="col"></th>
                                   <th scope="col" style="text-align: center;">ค่าพิกัด</th>
                                   <th scope="col" style="text-align: center;">หน่วย</th>
                                   <th scope="col" style="text-align: center;">ใช้งานจริง</th>
                                   <th scope="col" style="text-align: center;">หน่วย</th>
-                                  <th scope="col" style="text-align: center;"></th>
                                 </tr>
                               
                                 <tr>
@@ -446,35 +431,27 @@
                           <table  class="table table-bordered table-hover">
                               
                                 <tr class="table table-bordered table-dark">
-                                  <th scope="col" style="text-align: center;">ระบบที่ใช้พพลังงาน</th>
-                                  <th scope="col" style="text-align: center;">ชื่อเครื่องจักร/อุปกรณ์</th>
-                                  <th scope="col" colspan="2" style="text-align: center;">พิกัด</th>
-                                  <th scope="col" style="text-align: center;">จำนวน</th>
-                                  <th scope="col" style="text-align: center;">อายุการใช้งาน(ปี)</th>
-                                  <th scope="col" style="text-align: center;">ชั่วโมงใช้งานเฉลีย/ปี</th>
-                                  <th scope="col" colspan="2" style="text-align: center;">การใช้เชื้อเพลิง</th>
-                                  <th scope="col">ปริมาณการใช้พลังงานความร้อน (เมกะจูล/ปี)</th>
-                                  <th scope="col" style="text-align: center;">สัดส่วนการใช้พลังงานในระบบ</th>
-                                  <th scope="col" colspan="4" style="text-align: center;">ค่าประสิทธ์ภาพหรือสมรรถนะ</th>
-                                  <th scope="col" style="text-align: center;">หมายเหตุ</th>
+                                  <th rowspan="2" style="text-align: center;">ระบบที่ใช้พพลังงาน</th>
+                                  <th rowspan="2" style="text-align: center;">ชื่อเครื่องจักร/อุปกรณ์</th>
+                                  <th colspan="2" style="text-align: center;">พิกัด</th>
+                                  <th rowspan="2" style="text-align: center;">จำนวน</th>
+                                  <th rowspan="2" style="text-align: center;">อายุการใช้งาน(ปี)</th>
+                                  <th rowspan="2" style="text-align: center;">ชั่วโมงใช้งานเฉลีย/ปี</th>
+                                  <th colspan="2" style="text-align: center;">การใช้เชื้อเพลิง</th>
+                                  <th rowspan="2" style="text-align: center;">ปริมาณการใช้พลังงานความร้อน (เมกะจูล/ปี)</th>
+                                  <th rowspan="2" style="text-align: center;">สัดส่วนการใช้พลังงานในระบบ</th>
+                                  <th colspan="4" style="text-align: center;">ค่าประสิทธ์ภาพหรือสมรรถนะ</th>
+                                  <th rowspan="2" style="text-align: center;">หมายเหตุ</th>
                                 </tr>
                                 <tr class="table table-bordered table-dark">
-                                  <th scope="col"></th>
-                                  <th scope="col"></th>
                                   <th scope="col" style="text-align: center;">ขนาด</th>
                                   <th scope="col" style="text-align: center;">หน่วย</th>
-                                  <th scope="col"></th>
-                                  <th scope="col"></th>
-                                  <th scope="col"></th>
                                   <th scope="col" style="text-align: center;">ชนิด</th>
                                   <th scope="col" style="text-align: center;">หน่วย</th>
-                                  <th scope="col"></th>
-                                  <th scope="col"></th>
                                   <th scope="col" style="text-align: center;">ค่าพิกัด</th>
                                   <th scope="col" style="text-align: center;">หน่วย</th>
                                   <th scope="col" style="text-align: center;">ใช้งานจริง</th>
                                   <th scope="col" style="text-align: center;">หน่วย</th>
-                                  <th scope="col" style="text-align: center;"></th>
                                 </tr>
                               
                                 <tr>
