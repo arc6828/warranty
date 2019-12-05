@@ -433,8 +433,205 @@
                 <div class="card mb-4">
                     <div class="card-header"></div>
                     <div class="card-body">
-                    ********
+                    <table class="table table-bordered table-hover">
                         
+                          <tr class="table table-bordered table-dark">
+                              <th scope="row">ระดับ<br>คะแนน </th>
+                              <th>นโยบายการอนุรักษ์พลังงาน </th>
+                              <th>การจัดองค์กร </th>
+                              <th>กระตุ้นและสร้างแรงจูงใจ </th>
+                              <th>ระบบข้อมูลข่าวสาร</th>
+                              <th>ประชาสัมพันธ์ </th>
+                              <th>การลงทุน </th>
+                             </tr>       
+
+                            <tr >
+                              <th scope="row">4 </th>
+                              <th>มีนโยบายการอนุรักษ์พลังงานจากฝ่ายบริหารและถือเป็นส่วนหนึ่งของนโยบายของบริษัท </th>
+                              <th>มีการจัดองค์กรและเป็นโครงสร้างส่วนหนึ่งของฝ่ายบริหารกำหนดหน้าที่ความรับผิดชอบไว้ชัดเจน </th>
+                              <th>มีการประสานงานระหว่างผู้รับผิดชอบด้านพลังงาน และทีมงานทุกระดับอย่งสม่ำเสมอ </th>
+                              <th>กำหนดเป้าหมายที่ครอบคลุม ติดตามผล หาข้อผิดพลาดประเมิณผล และควบคุมการใช้งบประมาณ</th>
+                              <th>ประชาสัมพันธ์คุณค่าของการประหยัดพลังงาน และผลการดำเนินงานของการจัดการพลังงาน </th>
+                              <th>จัดสรรงบประมาณโดยละเอียด โดยพิจารณาถึงความสำคัญของโครงการ </th>
+                             </tr>         
+                          
+                             <tr >
+                              <th scope="row">3 </th>
+                              <th>มีนโยบายและมีการสนับสนุนเป็นครั้งคราวจากฝ่ายบริหาร </th>
+                              <th>ผู้รับผิดชอบด้านพลังงานรายงานโดยตรงต่อคณะกรรมการการจัดการพลังงาน ซึ่งประกอบไปด้วย หัวหน้าฝ่ายต่าง ๆ </th>
+                              <th>คณะกรรมการอนุรักษ์พลังงานเป็นเป็นช่องทางหลักในการดำเนินงาน </th>
+                              <th>แจ้งผลการใช้พลังงานจากมิเตอร์ย่อยให้แต่ละฝ่ายทราบ แต่ไม่มีการแจ้งถึงผลการประหยัด</th>
+                              <th>ให้พนักงานที่บโครงการอนุรักษ์พลังงาน และให้มีการประชาสัมพันธ์อย่างสม่ำเสมอ </th>
+                              <th>ใช้ระยะเวลา คุ้มทุนเป็นหลักในการพิจารณาการลงทุน </th>
+                             </tr> 
+                              
+                             <tr >
+                              <th scope="row">2 </th>
+                              <th>ไม่มีการกำหนดนโยบายที่ัดเจนโดยผู้บริหารหรือผู้รับผิดชอบด้านพลังงาน </th>
+                              <th>ผู้รับผิดชอบด้านพลังงานรายงานต่อคณะกรรมการเฉพาะกิจ แต่สายงานบังคับบัญชาไม่ชัดเจน </th>
+                              <th>คณะกรรมการเฉพาะกิจเป็น้ดำเนินการ </th>
+                              <th>ทำรายงานติดตามประเมิณผล โดยดูจากมิเตอร์ให้คณะกรรมการเฉพาะกิจเข้ามาเกี่ยวข้องกับการตั้งงบประมาณ</th>
+                              <th>จัดฝึกอบรมให้พนังานรับราบเป็นครั้งคราว </th>
+                              <th>ลงทุนโดยดูมาตราการที่มีระยะคุ้มทุนเร็ว</th>
+                             </tr> 
+
+                             <tr >
+                              <th scope="row">1 </th>
+                              <th>ไม่มีแนวทางปฏิบัติที่ทำไว้เป็นลายลักษณ์อักษร </th>
+                              <th>ผู้รับผิดชอบด้านพลังงานมีขอบเขตหน้าที่รับผิดชอบชัดเจน </th>
+                              <th>มีการติดต่ออย่างไม่เป็นทางการระหว่างวิศวกรกับผู้ใช้ะลังงาน(พนักงาน) </th>
+                              <th>มีการสรุปรายงานด้านค่าใช้จ่ายการใช้พลังงานเพื่อใช้กันภายในวิศวกรรม</th>
+                              <th>แจ้งให้พนักงานทราบอย่างไม่เป็นทางการเพื่อส่งเสริมการใช้พลังงานอย่างมีประสิทธิภาพ </th>
+                              <th>พืจารณาเฉพาะมาตราการที่ลงทุนต่ำ </th>
+                             </tr> 
+
+                             <tr >
+                              <th scope="row">0 </th>
+                              <th>ไม่มีนโยบายที่ชัดเจน </th>
+                              <th>ไม่มีผู้รับผิดชอบด้านพลัง </th>
+                              <th>ไม่มีการติดต่อกับผู้ใช้งาน </th>
+                              <th>ไม่มีระบบรวบรวมข้อมูลและบัญชีการใช้พลังงาน</th>
+                              <th>ไม่มีการสนับสนุนการประหยัดพลังงาน </th>
+                              <th>ไม่มีการลงทุนใดๆ ในการปรับปรุงประสิทธิภาพการใช้พลังงาน</th>
+                             </tr> 
+                 </table>
+                 <form class="form-inline">
+                 <div class="form-group  mb-2" >หมายเหตุ : ข้อมูลการประเมินสถาณภาพการจัดการพลังงานเบื้องต้นประเมินจาก</div>
+                 <input type="text" class="form-control"  placeholder="">
+                 <input type="text" readonly class="form-control-plaintext" value="แผนก">
+                        <div class="form-group mb-2">
+                        <input type="text" readonly class="form-control-plaintext" value="ของจำนวนทั้งหมด">
+                        <input type="text" class="form-control"  placeholder="">
+                        <input type="text" readonly class="form-control-plaintext" value="แผนก  หรือบุคลากรจำนวน">
+                        <input type="text" class="form-control"  placeholder="">
+                        <input type="text" readonly class="form-control-plaintext" value="คน">
+                        </div><div class="form-group mb-2">
+                        <input type="text" readonly class="form-control-plaintext" value="จากทั้งหมด">
+                        <input type="text" class="form-control"  placeholder="">
+                        <input type="text" readonly class="form-control-plaintext" value="คน  คิดเป็นร้อยละ">
+                        <input type="text" class="form-control"  placeholder="">
+                        </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                    <div class="form-group mb-2 " >นโยบายอนุรักษ์พลังงานขององค์กร</div>
+                    <form>
+                    <div class="form-group mb-2">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+
+                    </form>
+                    <div><label for="exampleFormControlFile1" >( ใส่เอกสารแสดงประกาศนโยบายอนุรัษ์พลังงาน )</label></div>
+                    <div class="form-group mb-2"></div>
+                    <form class="form-inline ">
+                    <div class="checkbox">
+                    <input type="checkbox" value="">
+                    </div>
+                    <div class="form-group mb-2" >&nbsp;&nbsp; ติดประกาศ &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="form-group mb-2">
+                     <input type="text" readonly class="form-control-plaintext" value="จำนวนติดประกาศ">
+                    <input type="text" class="form-control"  placeholder="">
+                    <input type="text" readonly class="form-control-plaintext" value="แห่ง">
+                    </div></form>
+                    <form><div class="form-group mb-2">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    </form>
+
+                    <form class="form-inline">
+                    <div class="checkbox">
+                    <input type="checkbox" value="">
+                    </div>
+                    <div class="form-group mb-2" >&nbsp;&nbsp; โปสเตอร์ &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="form-group mb-2">
+                     <input type="text" readonly class="form-control-plaintext" value="จำนวนติดประกาศ">
+                    <input type="text" class="form-control"  placeholder="">
+                    <input type="text" readonly class="form-control-plaintext" value="แห่ง">
+                    </div></form>
+                    <form><div class="form-group mb-2">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    </form>
+
+                    <form class="form-inline">
+                    <div class="checkbox">
+                    <input type="checkbox" value="">
+                    </div>
+                    <div class="form-group mb-2" >&nbsp;&nbsp; เอกสารเผยแพร่ &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="form-group mb-2">
+                     <input type="text" readonly class="form-control-plaintext" value="แผ่นพับ/วารสาร">
+                    <input type="text" class="form-control"  placeholder="">
+                    <input type="text" readonly class="form-control-plaintext" value="ฉบับ">
+                    </div></form>
+                    <form><div class="form-group mb-2">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    </form>
+
+                    <form class="form-inline">
+                    <div class="checkbox">
+                    <input type="checkbox" value="">
+                    </div>
+                    <div class="form-group mb-2" >&nbsp;&nbsp; เสียงตามสาย &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="form-group mb-2">
+                     <input type="text" readonly class="form-control-plaintext" value="สัปดาห์ละ">
+                    <input type="text" class="form-control"  placeholder="">
+                    <input type="text" readonly class="form-control-plaintext" value="ครั้ง ช่วงเวลา">
+                    <input type="text" class="form-control"  placeholder="">
+                    </div></form>
+                    <form><div class="form-group mb-2">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    </form>
+
+                    <form class="form-inline">
+                    <div class="checkbox">
+                    <input type="checkbox" value="">
+                    </div>
+                    <div class="form-group mb-2" >&nbsp;&nbsp; จดหมายอิเล็กทรอนิกส์ &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="form-group mb-2">
+                     <input type="text" readonly class="form-control-plaintext" value="จำนวนผู้คนได้รับ">
+                    <input type="text" class="form-control"  placeholder="">
+                    <input type="text" readonly class="form-control-plaintext" value="คน      ระดับของผู้รับ">
+                    <input type="text" class="form-control"  placeholder="">
+                    </div></form>
+                    <form><div class="form-group mb-2">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    </form>
+
+
+                    <form class="form-inline">
+                    <div class="checkbox">
+                    <input type="checkbox" value="">
+                    </div>
+                    <div class="form-group mb-2" >&nbsp;&nbsp; การประชุมพนักงาน &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="form-group mb-2">
+                     <input type="text" readonly class="form-control-plaintext" value="สัปดาห์ละ">
+                    <input type="text" class="form-control"  placeholder="">
+                    <input type="text" readonly class="form-control-plaintext" value="ครั้ง">
+                    </div></form>
+                    <form><div class="form-group mb-2">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    </form>
+
+                    <form class="form-inline">
+                    <div class="checkbox">
+                    <input type="checkbox" value="">
+                    </div>
+                    <div class="form-group mb-2" >&nbsp;&nbsp; อื่นๆ &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="form-group mb-2">
+                    <input type="text" class="form-control"  placeholder="">
+                    </div></form>
+                    <form><div class="form-group mb-2">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    </form>
 
                     </div>
                 </div>
