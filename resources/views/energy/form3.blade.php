@@ -9,7 +9,7 @@
             <div class="col-md-12">
 
                 <div class="card mb-4">
-                    <div class="card-header"><b>ใส่แผนผังกระบวนการผลิต</b></div>
+                    <div class="card-header"><b>ใส่แผนผังกระบวนการผลิต (energy_production_diagram.json)</b></div>
                     <div class="card-body">
 
                             <div class="form-group">
@@ -25,19 +25,19 @@
                 </div>
 
                 <div class="card mb-4">
-                    <div class="card-header"><b>ปริมาณการใช้พลังงานต่อหน่วยผลผลิต</b></div>
+                    <div class="card-header"><b>ปริมาณการใช้พลังงานต่อหน่วยผลผลิต (energy_consumption_product.json)</b></div>
                     <div class="card-body">
 
                         <table class="table table-bordered table-hover">
                                 <tr class="table table-bordered table-dark">
-                                    <th rowspan="2" style="text-align: center;">เดือน</th>
-                                    <th rowspan="2" style="text-align: center;">ปริมาณผลผลิต(หน่วย)</th>
+                                    <th rowspan="2" style="text-align: center;">เดือน*</th>
+                                    <th rowspan="2" style="text-align: center;">ปริมาณผลผลิต(หน่วย)*</th>
                                     <th scope="col" colspan="2" style="text-align: center;">ปริมาณพลังงานที่ใช้</th>
-                                    <th rowspan="2" style="text-align: center;">ค่าการใช้พลังงานจำเพาะ<br>(SEC)(เมกะจูล/หน่วย)</th>
+                                    <th rowspan="2" style="text-align: center;">ค่าการใช้พลังงานจำเพาะ<br>(SEC)(เมกะจูล/หน่วย)*</th>
                                 </tr>
                                 <tr class="table table-bordered table-dark">
-                                    <th scope="col" style="text-align: center;">ไฟฟ้า(กิโลวัต์/ชั่งโมง)</th>
-                                    <th scope="col" style="text-align: center;">ความร้อน(เมกะจูน)</th>
+                                    <th scope="col" style="text-align: center;">ไฟฟ้า(กิโลวัต์/ชั่งโมง)*</th>
+                                    <th scope="col" style="text-align: center;">ความร้อน(เมกะจูน)*</th>
                                 </tr>
                                 <tbody>
                                 <tr>
@@ -159,19 +159,19 @@
                 </div>
 
                 <div class="card mb-4">
-                    <div class="card-header"><b>แบบประเมินการใช้พลังงานในเครื่องจักร/อุปกรณ์หลัก</b></div>
+                    <div class="card-header"><b>แบบประเมินการใช้พลังงานในเครื่องจักร/อุปกรณ์หลัก</b> (energy_evaluation_machine.json) </div>
                     <div class="card-body">
                        
                        <table class="table table-bordered table-hover">
                           
                             <tr  class="table table-bordered table-dark">
-                              <th rowspan="2" style="text-align: center;">เครื่องจักร/อุปกรณ์หลัก</th>
-                              <th rowspan="2" style="text-align: center;">ประเภทพลังงาน</th>
-                              <th scope="col" colspan="5" style="text-align: center;">(1)ขนาดการใช้พลังงาน</th>
-                              <th scope="col" colspan="5" style="text-align: center;">(2)ชั่วโมงการใช้งาน</th>
-                              <th scope="col" colspan="5" style="text-align: center;">(3)ศักยภาพการปรับปรุง</th>
-                              <th rowspan="2" style="text-align: center;">คะแนนรวม (1)*(2)*(3)</th>
-                              <th rowspan="2" style="text-align: center;">ลำดับความสำคัญ</th>
+                              <th rowspan="2" style="text-align: center;">เครื่องจักร/อุปกรณ์หลัก*</th>
+                              <th rowspan="2" style="text-align: center;">ประเภทพลังงาน*</th>
+                              <th scope="col" colspan="5" style="text-align: center;">(1)ขนาดการใช้พลังงาน*</th>
+                              <th scope="col" colspan="5" style="text-align: center;">(2)ชั่วโมงการใช้งาน*</th>
+                              <th scope="col" colspan="5" style="text-align: center;">(3)ศักยภาพการปรับปรุง*</th>
+                              <th rowspan="2" style="text-align: center;">คะแนนรวม (1)*(2)*(3) *</th>
+                              <th rowspan="2" style="text-align: center;">ลำดับความสำคัญ *</th>
                             </tr>
 
                             <tr  class="table-bordered table-dark">
@@ -274,29 +274,29 @@
                 </div>
 
                 <div class="card mb-4">
-                    <div class="card-header"><b>แบบบันทึกการใช้พลังงานไฟฟ้าที่มีนัยสำคัญของเครื่องจักร/อุปกรณ์หลัก ปี 25ww</b></div>
+                    <div class="card-header"><b>แบบบันทึกการใช้พลังงานไฟฟ้าที่มีนัยสำคัญของเครื่องจักร/อุปกรณ์หลัก ปี 25ww</b> (energy_electricity_machine.json) </div>
                     <div class="card-body">
                           <table  class="table table-bordered table-hover">
                               
                                 <tr class="table table-bordered table-dark">
-                                  <th rowspan="2" style="text-align: center;">ระบบที่ใช้พลังงาน</th>
-                                  <th rowspan="2" style="text-align: center;">ชื่อเครื่องจักร/อุปกรณ์</th>
+                                  <th rowspan="2" style="text-align: center;">ระบบที่ใช้พลังงาน *</th>
+                                  <th rowspan="2" style="text-align: center;">ชื่อเครื่องจักร/อุปกรณ์*</th>
                                   <th colspan="2" style="text-align: center;">พิกัด</th>
-                                  <th rowspan="2" style="text-align: center;">จำนวน</th>
-                                  <th rowspan="2" style="text-align: center;">อายุการใช้งาน(ปี)</th>
-                                  <th rowspan="2" style="text-align: center;">ชั่วโมงใช้งานเฉลีย/ปี</th>
-                                  <th rowspan="2" style="text-align: center;">ปริมาณการใช้พลังงานไฟฟ้า(กิโลวัตต์-ชั่วโมง/ปี)</th>
-                                  <th rowspan="2" style="text-align: center;">สัดส่วนการใช้พลังงานในระบบ</th>
+                                  <th rowspan="2" style="text-align: center;">จำนวน*</th>
+                                  <th rowspan="2" style="text-align: center;">อายุการใช้งาน(ปี)*</th>
+                                  <th rowspan="2" style="text-align: center;">ชั่วโมงใช้งานเฉลีย/ปี*</th>
+                                  <th rowspan="2" style="text-align: center;">ปริมาณการใช้พลังงานไฟฟ้า(กิโลวัตต์-ชั่วโมง/ปี)*</th>
+                                  <th rowspan="2" style="text-align: center;">สัดส่วนการใช้พลังงานในระบบ*</th>
                                   <th colspan="4" style="text-align: center;">ค่าประสิทธ์ภาพหรือสมรรถนะ</th>
-                                  <th rowspan="2" style="text-align: center;">หมายเหตุ</th>
+                                  <th rowspan="2" style="text-align: center;">หมายเหตุ*</th>
                                 </tr>
                                 <tr class="table table-bordered table-dark">
-                                  <th scope="col" style="text-align: center;">ขนาด</th>
-                                  <th scope="col" style="text-align: center;">หน่วย</th>
-                                  <th scope="col" style="text-align: center;">ค่าพิกัด</th>
-                                  <th scope="col" style="text-align: center;">หน่วย</th>
-                                  <th scope="col" style="text-align: center;">ใช้งานจริง</th>
-                                  <th scope="col" style="text-align: center;">หน่วย</th>
+                                  <th scope="col" style="text-align: center;">ขนาด*</th>
+                                  <th scope="col" style="text-align: center;">หน่วย*</th>
+                                  <th scope="col" style="text-align: center;">ค่าพิกัด*</th>
+                                  <th scope="col" style="text-align: center;">หน่วย*</th>
+                                  <th scope="col" style="text-align: center;">ใช้งานจริง*</th>
+                                  <th scope="col" style="text-align: center;">หน่วย*</th>
                                 </tr>
                               
                                 <tr>
@@ -426,7 +426,7 @@
                 </div>
 
                 <div class="card mb-4">
-                    <div class="card-header"><b>แบบบันทึกข้อมูลการใช้พลังงานความร้อนที่มีนัยสำคัญของเครื่องจักร/อุปกรณ์หลัก ปี 25ww</b></div>
+                    <div class="card-header"><b>แบบบันทึกข้อมูลการใช้พลังงานความร้อนที่มีนัยสำคัญของเครื่องจักร/อุปกรณ์หลัก ปี 25ww (energy_)</b></div>
                     <div class="card-body">
                           <table  class="table table-bordered table-hover">
                               

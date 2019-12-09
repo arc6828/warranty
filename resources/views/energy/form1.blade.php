@@ -9,136 +9,128 @@
             <div class="col-md-12">
             
             <div class="card mb-4">
-                    <div class="card-header">ประจำปี 25xx</div>
-                    <div class="card-body">
-                    <form class="form-inline">
-  <div class="form-group mb-2">
-    <input type="text" readonly class="form-control-plaintext" value="ชื่อนิติบุคคล">
-    <input type="text" readonly class="form-control-plaintext" value="บริษัท">
-    <input type="text" class="form-control"  placeholder="">
-    <input type="text" readonly class="form-control-plaintext" value="จำกัด">
-  </div>
-  <div class="form-group mb-2">
-    <input type="text" readonly class="form-control-plaintext" value="ชื่อโรงงาน">
-    <input type="text" readonly class="form-control-plaintext" value="โรงงาน">
-    <input type="text" class="form-control"  placeholder="">
-  </div>
-  <div class="form-group mb-2">
-    <input type="text" readonly class="form-control-plaintext" value="TSIC-ID">
-    <input type="text" readonly class="form-control-plaintext" value="">
-    <input type="text" class="form-control"  placeholder="">
-  </div>
-  
-
+                <div class="card-header">Card 1 : ประจำปี 25xx (energy_factory.json)</div>
+                <div class="card-body">
+                    <div class="form-group mb-2">
+                        <input type="text" readonly class="form-control-plaintext" value="ชื่อนิติบุคคล">
+                        <input type="text" readonly class="form-control-plaintext" value="บริษัท">
+                        <input type="text" class="form-control"  placeholder="">
+                        <input type="text" readonly class="form-control-plaintext" value="จำกัด">
                     </div>
-                </div>
-                <div class="card mb-4">
-                    <div class="card-header"></div>
-                    <div class="card-body">
-
-                    <div class="form-group " >ประธานคณะทำงานด้านการจัดการพลังงาน</div>
-                    <form class="form-inline">
-                        <div class="form-group mb-2">
-                     <input type="text" readonly class="form-control-plaintext" value="ลงชื่อ">
-                    <input type="text" class="form-control"  placeholder="">
-                        </div>
-                        </form>
-                        <form class="form-inline">
-                        <div class="form-group mb-2">
-                    <input type="text" readonly class="form-control-plaintext" value="วันที่">
-                    <input type="date" class="form-control"  placeholder="">
-                        </div> 
-                        </form>
-                    </div>
-
-
-                    <div class="card-body">
-
-
-                    <div class="form-group " > ผู้รับผิดชอบด้านพลังงาน</div>
-                    <form class="form-inline">
-                        <div class="form-group mb-2">
-                     <input type="text" readonly class="form-control-plaintext" value="ลงชื่อ">
-                    <input type="text" class="form-control"  placeholder="">
-                    </div></form>
-                    <form>
-                    <div class="form-group">
-                    <div class="form-group " >ตำแหน่ง ผู้รับผิดชอบดานพลังงานสามัญ ทะเบียนเลขที่</div>
+                    <div class="form-group mb-2">
+                        <input type="text" readonly class="form-control-plaintext" value="ชื่อโรงงาน">
+                        <input type="text" readonly class="form-control-plaintext" value="โรงงาน">
                         <input type="text" class="form-control"  placeholder="">
                     </div>
-                    </form>
-                    <form class="form-inline">
-                        <div class="form-group mb-2">
-                    <input type="text" readonly class="form-control-plaintext" value="วันที่">
-                    <input type="date" class="form-control"  placeholder="">
-                        </div> 
-                        </form>
-
-                        <form class="form-inline">
-                        <div class="form-group mb-2">
-                     <input type="text" readonly class="form-control-plaintext" value="ลงชื่อ">
-                    <input type="text" class="form-control"  placeholder="">
-                    </div></form>
-                    <form>
-                    <div class="form-group">
-                    <div class="form-group " >ตำแหน่ง ผู้รับผิดชอบดานพลังงานอาวุโส ทะเบียนเลขที่</div>
+                    <div class="form-group mb-2">
+                        <input type="text" readonly class="form-control-plaintext" value="TSIC-ID">
+                        <input type="text" readonly class="form-control-plaintext" value="">
                         <input type="text" class="form-control"  placeholder="">
                     </div>
-                    </form>
-                    <form class="form-inline">
-                        <div class="form-group mb-2">
-                    <input type="text" readonly class="form-control-plaintext" value="วันที่">
-                    <input type="date" class="form-control"  placeholder="">
-                        </div> 
-                        </form>
-                        
-                        
-                    </div>
-                    <div class="card-body">
-
-                    <div class="form-group " > เจ้าของโรงงาน</div>
-                    <form class="form-inline">
-                   <div class="form-group mb-2">
-                   <input type="text" readonly class="form-control-plaintext" value="ลงชื่อ">
-                   <input type="text" class="form-control"  placeholder="">
-                   </div>
-                   </form>
-                   <form class="form-inline">
-                   <div class="form-group mb-2">
-                   <input type="text" readonly class="form-control-plaintext" value="วันที่">
-                   <input type="date" class="form-control"  placeholder="">
-                   </div> 
-                   </form>
-                   </div>
-
                 </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">Card 2 : คำรับรองด้านการจัดการพลังงาน (energy_committee.json) </div>
+                <div class="card-body">
+
+                <div class="form-group " >ประธานคณะทำงานด้านการจัดการพลังงาน</div>
+                    <div class="form-inline form-group mb-2">
+                        <input type="text" readonly class="form-control-plaintext" value="ลงชื่อ">
+                        <input type="text" class="form-control"  placeholder="">
+                    </div>
+                    <div class="form-inline form-group mb-2">
+                        <input type="text" readonly class="form-control-plaintext" value="วันที่">
+                        <input type="date" class="form-control"  placeholder="">
+                    </div> 
+                </div>
+
+
+                <div class="card-body">
+
+
+                <div class="form-group " > ผู้รับผิดชอบด้านพลังงาน</div>
+                <form class="form-inline">
+                    <div class="form-group mb-2">
+                    <input type="text" readonly class="form-control-plaintext" value="ลงชื่อ">
+                <input type="text" class="form-control"  placeholder="">
+                </div></form>
+                <form>
+                <div class="form-group">
+                <div class="form-group " >ตำแหน่ง ผู้รับผิดชอบดานพลังงานสามัญ ทะเบียนเลขที่</div>
+                    <input type="text" class="form-control"  placeholder="">
+                </div>
+                </form>
+                <form class="form-inline">
+                    <div class="form-group mb-2">
+                <input type="text" readonly class="form-control-plaintext" value="วันที่">
+                <input type="date" class="form-control"  placeholder="">
+                    </div> 
+                    </form>
+
+                    <form class="form-inline">
+                    <div class="form-group mb-2">
+                    <input type="text" readonly class="form-control-plaintext" value="ลงชื่อ">
+                <input type="text" class="form-control"  placeholder="">
+                </div></form>
+                <form>
+                <div class="form-group">
+                <div class="form-group " >ตำแหน่ง ผู้รับผิดชอบดานพลังงานอาวุโส ทะเบียนเลขที่</div>
+                    <input type="text" class="form-control"  placeholder="">
+                </div>
+                </form>
+                <form class="form-inline">
+                    <div class="form-group mb-2">
+                <input type="text" readonly class="form-control-plaintext" value="วันที่">
+                <input type="date" class="form-control"  placeholder="">
+                    </div> 
+                    </form>
+                    
+                    
+                </div>
+                <div class="card-body">
+
+                <div class="form-group " > เจ้าของโรงงาน</div>
+                <form class="form-inline">
+                <div class="form-group mb-2">
+                <input type="text" readonly class="form-control-plaintext" value="ลงชื่อ">
+                <input type="text" class="form-control"  placeholder="">
+                </div>
+                </form>
+                <form class="form-inline">
+                <div class="form-group mb-2">
+                <input type="text" readonly class="form-control-plaintext" value="วันที่">
+                <input type="date" class="form-control"  placeholder="">
+                </div> 
+                </form>
+                </div>
+
+            </div>
             
 
              <div class="card mb-4">
-                    <div class="card-header"></div>
+                    <div class="card-header">Card 3 : ข้อมูลเบื้องต้น (energy_factory_information.json) </div>
                     <div class="card-body">
-                    <div class="form-group " >ระบุกลุ่มโรงงานควบคุม ดังนี้</div>
+                        <div class="form-group " >ระบุกลุ่มโรงงานควบคุม ดังนี้</div>
 
-                    <form class="form-inline">
-                    <div class="checkbox">
-                    <input type="checkbox" value="">
-                    </div>
-                    <div class="form-group mb-2" >&nbsp;&nbsp;&nbsp;&nbsp;กลุ่มที่ 1 ( ขนาดเล็ก ) : โรงงานควบคุมที่ใช้เครื่องวัดไฟฟ้าหรือติดตั้งหม้อแปลงไฟฟ้ารวมกันอย่างน้อยกว่าสามพันกิโลวัตต์หรือสามพันห้าร้อยสามสิบ
-                    <br>  &nbsp;&nbsp;&nbsp;&nbsp;  กิโลโวลต์แอมแปร์หรือโรงงานควบคุมที่ใช้พลังงานไฟฟ้า พลังงานจากไอน้ำ หรือพลังงานสิ้นเปลืองอื่นๆ โดยมีปริมาณพลังงานเทียบเท่า
-                    <br> &nbsp;&nbsp;&nbsp;&nbsp;   พลังงานไฟฟ้าต่ำกว่าหกสิบล้านเมกะจูล/ปี </div> 
-                     </form>
+                        <form class="form-inline">
+                        <div class="checkbox">
+                        <input type="checkbox" value="">
+                        </div>
+                        <div class="form-group mb-2" >&nbsp;&nbsp;&nbsp;&nbsp;กลุ่มที่ 1 ( ขนาดเล็ก ) : โรงงานควบคุมที่ใช้เครื่องวัดไฟฟ้าหรือติดตั้งหม้อแปลงไฟฟ้ารวมกันอย่างน้อยกว่าสามพันกิโลวัตต์หรือสามพันห้าร้อยสามสิบ
+                        <br>  &nbsp;&nbsp;&nbsp;&nbsp;  กิโลโวลต์แอมแปร์หรือโรงงานควบคุมที่ใช้พลังงานไฟฟ้า พลังงานจากไอน้ำ หรือพลังงานสิ้นเปลืองอื่นๆ โดยมีปริมาณพลังงานเทียบเท่า
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;   พลังงานไฟฟ้าต่ำกว่าหกสิบล้านเมกะจูล/ปี </div> 
+                        </form>
                     
-                     <form class="form-inline">
-                    <div class="checkbox">
-                    <input type="checkbox" value="">
-                    </div>
-                    <div class="form-group mb-2" >&nbsp;&nbsp;&nbsp;&nbsp;กลุ่มที่ 2 ( ขนาดใหญ่ ) : โรงงานควบคุมที่ใช้เครื่องวัดไฟฟ้าหรือติดตั้งหม้อแปลงไฟฟ้ารวมกันรวมกันตั้งแต่สามพันกิโลวัตต์หรือสามพันห้าร้อยสามสิบ
-                    <br>  &nbsp;&nbsp;&nbsp;&nbsp;  กิโลโวลต์แอมแปร์ขึ้นไปหรือโรงงานควบคุมที่ใช้พลังงานไฟฟ้า พลังงานจากไอน้ำ หรือพลังงานสิ้นเปลืองอื่นๆ โดยมีปริมาณพลังงานเทียบเท่า
-                    <br>  &nbsp;&nbsp;&nbsp;&nbsp;  พลังงานไฟฟ้าตั้งแต่หกสิบล้านเมกะจูล/ปี </div> 
-                     </form>
-                     </div>
-                     
-                     <div class="card-body">
+                        <form class="form-inline">
+                        <div class="checkbox">
+                        <input type="checkbox" value="">
+                        </div>
+                        <div class="form-group mb-2" >&nbsp;&nbsp;&nbsp;&nbsp;กลุ่มที่ 2 ( ขนาดใหญ่ ) : โรงงานควบคุมที่ใช้เครื่องวัดไฟฟ้าหรือติดตั้งหม้อแปลงไฟฟ้ารวมกันรวมกันตั้งแต่สามพันกิโลวัตต์หรือสามพันห้าร้อยสามสิบ
+                        <br>  &nbsp;&nbsp;&nbsp;&nbsp;  กิโลโวลต์แอมแปร์ขึ้นไปหรือโรงงานควบคุมที่ใช้พลังงานไฟฟ้า พลังงานจากไอน้ำ หรือพลังงานสิ้นเปลืองอื่นๆ โดยมีปริมาณพลังงานเทียบเท่า
+                        <br>  &nbsp;&nbsp;&nbsp;&nbsp;  พลังงานไฟฟ้าตั้งแต่หกสิบล้านเมกะจูล/ปี </div> 
+                        </form>
+                      
                      <div class="form-group  mb-2" >ที่อยู่โรงงาน</div>
                      <form class="form-inline">
                         <div class="form-group mb-2">
@@ -237,7 +229,6 @@
                         </form></div>
 
 
-                        <div class="card-body">
                         <form class="form-inline">
                         <div class="form-group  mb-2" >เวลาทำงาน</div>
                         <div class="form-group mb-2">
@@ -289,7 +280,8 @@
                         <input type="text" class="form-control"  placeholder="">
                         <input type="text" readonly class="form-control-plaintext" value="ถึง เดือน">
                         <input type="text" class="form-control"  placeholder="">
-                        </div><div class="form-group mb-2">
+                        </div>
+                        <div class="form-group mb-2">
                         <input type="text" readonly class="form-control-plaintext" value="รวมเป็น">
                         <input type="text" class="form-control"  placeholder="">
                         <input type="text" readonly class="form-control-plaintext" value="เดือน">
@@ -301,7 +293,7 @@
                 </div>
 
                 <div class="card mb-4">
-                    <div class="card-header"></div>
+                    <div class="card-header">Card 4 : คณะทำงาน (energy_organization_chart.json) </div>
                     <div class="card-body">
                     <div class="form-group mb-2 " >โครงสร้างคณะทำงานดานการจัดการพลังงาน</div>
                     <form>
@@ -431,7 +423,7 @@
                     </div>
                 </div>
                 <div class="card mb-4">
-                    <div class="card-header"></div>
+                    <div class="card-header">Card 5 : การประเมินสถาานภาพ (energy_evaluation.json) </div>
                     <div class="card-body">
                     <table class="table table-bordered table-hover">
                         
@@ -516,7 +508,7 @@
                 </div>
 
                 <div class="card mb-4">
-                    <div class="card-header"></div>
+                    <div class="card-header">Card 6 : นโยบายอนุรักษ์พลังงาน (energy_conservation_policy.json) </div>
                     <div class="card-body">
                     <div class="form-group mb-2 " >นโยบายอนุรักษ์พลังงานขององค์กร</div>
                     <form>
