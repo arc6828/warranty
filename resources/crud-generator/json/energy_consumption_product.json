@@ -1,0 +1,32 @@
+{
+   "fields": [
+             
+       {
+           "name": "month",
+           "type": "text"
+       },
+
+       {
+
+          "name": "yield_unit",
+          "type": "integer"
+       },
+
+       {
+           "name": "quantity_of_electricity",
+           "type": "integer"
+       },
+
+       {
+
+          "name": "quantity_of_heat",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "specific_energy_consumption",
+          "type": "integer"
+       }
+   ]
+}

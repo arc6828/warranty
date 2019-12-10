@@ -1,0 +1,99 @@
+{
+   "fields": [
+             
+       {
+           "name": "system_that_uses_energy",
+           "type": "text"
+       },
+
+       {
+
+          "name": "machine_name_tableenergy",
+          "type": "text"
+       },
+
+       {
+
+          "name": "size_rating_tableenergy",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "unit_rating_tableenergy",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "number_tableenergy",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "lifetime_tableenergy",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "average_hours_tableenergy",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "fuel_type",
+          "type": "text"
+       },
+
+       {
+
+          "name": "fuel_unit",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "heat_energy_consumption",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "energy_consumption_proportion_tableenergy",
+          "type": "integer"
+       },
+
+        {
+
+          "name": "coordinates_tableenergy",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "performance_unit_coordinates_tableenergy",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "actually_use_tableenergy",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "actually_use_unit_tableenergy",
+          "type": "integer"
+       },
+
+       {
+
+          "name": "note_tableenergy",
+          "type": "text"
+       }
+   ]
+}

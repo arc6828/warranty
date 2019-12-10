@@ -287,7 +287,7 @@
                                   <th rowspan="2" style="text-align: center;">ชั่วโมงใช้งานเฉลีย/ปี*</th>
                                   <th rowspan="2" style="text-align: center;">ปริมาณการใช้พลังงานไฟฟ้า(กิโลวัตต์-ชั่วโมง/ปี)*</th>
                                   <th rowspan="2" style="text-align: center;">สัดส่วนการใช้พลังงานในระบบ*</th>
-                                  <th colspan="4" style="text-align: center;">ค่าประสิทธ์ภาพหรือสมรรถนะ</th>
+                                  <th colspan="4" style="text-align: center;">ค่าประสิทธิภาพหรือสมรรถนะ</th>
                                   <th rowspan="2" style="text-align: center;">หมายเหตุ*</th>
                                 </tr>
                                 <tr class="table table-bordered table-dark">

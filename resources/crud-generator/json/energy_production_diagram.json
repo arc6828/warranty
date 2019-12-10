@@ -1,0 +1,15 @@
+{
+   "fields": [
+             
+       {
+           "name": "photo_diagram",
+           "type": "file"
+       },
+
+       {
+
+          "name": "production_process_description",
+          "type": "text"
+       }
+   ]
+}
