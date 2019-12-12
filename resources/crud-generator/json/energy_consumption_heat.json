@@ -1,0 +1,93 @@
+{
+    "fields": [
+              
+        {
+            "name": "fuel_oil_liter",
+            "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "fuel_oil_baht",
+           "type": "integer"
+        },
+ 
+        {
+            "name": "diesel_oil_liter",
+            "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "diesel_oil_baht",
+           "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "liquefied_petroleum_gas_kg",
+           "type": "integer"
+        },
+         
+        {
+            "name": "liquefied_petroleum_gas_baht",
+            "type": "integer"
+        },
+         
+        {
+            "name": "natural_gas_millionbtu",
+            "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "natural_gas_baht",
+           "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "coal_ton",
+           "type": "integer"
+        },
+         
+        {
+            "name": "coal_baht",
+            "type": "integer"
+        },
+                 
+        {
+            "name": "steam_purchased_ton",
+            "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "steam_purchased_baht",
+           "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "other_unit",
+           "type": "integer"
+        },
+         
+        {
+            "name": "other_baht",
+            "type": "integer"
+        },
+
+        {
+            "name": "renewable_energy_unit",
+            "type": "integer"
+         },
+          
+         {
+             "name": "renewable_energy_baht",
+             "type": "integer"
+         }
+        
+    ]
+ }
+ 

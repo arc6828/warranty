@@ -1,0 +1,33 @@
+{
+    "fields": [
+              
+        {
+            "name": "no_1",
+            "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "product_name",
+           "type": "text"
+        },
+ 
+        {
+            "name": "installed_capacity_1",
+            "type": "text"
+        },
+ 
+        {
+ 
+           "name": "actual_yield",
+           "type": "text"
+        },
+ 
+        {
+ 
+           "name": "percent_yield",
+           "type": "float"
+        }
+    ]
+ }
+ 

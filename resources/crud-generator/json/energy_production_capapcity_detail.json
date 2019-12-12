@@ -1,0 +1,45 @@
+{
+    "fields": [
+              
+        {
+            "name": "no_2",
+            "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "main_raw_material",
+           "type": "text"
+        },
+ 
+        {
+            "name": "production_month",
+            "type": "text"
+        },
+ 
+        {
+ 
+           "name": "working_hours",
+           "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "production_unit",
+           "type": "integer"
+        },
+
+        {
+ 
+            "name": "actual_yield",
+            "type": "integer"
+         },
+
+         {
+ 
+            "name": "installed_capacity_2",
+            "type": "integer"
+         }
+    ]
+ }
+ 

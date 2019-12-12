@@ -1,0 +1,42 @@
+{
+    "fields": [
+              
+        {
+            "name": "system_8",
+            "type": "text"
+        },
+
+        {
+            "name": "equipment",
+            "type": "text"
+        },
+ 
+        {
+ 
+           "name": "fuel_consumption_type",
+           "type": "text"
+        },
+ 
+        {
+            "name": "fuel_consumption_megajoule",
+            "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "fuel_consumption_percent",
+           "type": "float"
+        },
+        {
+            "name": "method_8_assessment",
+            "type": "text"
+        },
+ 
+        {
+ 
+           "name": "method_8_check",
+           "type": "text"
+        }
+    ]
+ }
+ 

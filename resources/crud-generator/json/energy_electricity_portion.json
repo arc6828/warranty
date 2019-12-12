@@ -1,0 +1,32 @@
+{
+    "fields": [
+              
+        {
+            "name": "system",
+            "type": "text"
+        },
+
+        {
+            "name": "electric_power_consumption_kilowatt",
+            "type": "integer"
+        },
+ 
+        {
+ 
+           "name": "electric_power_consumption_percent",
+           "type": "float"
+        },
+ 
+        {
+            "name": "method_assessment",
+            "type": "text"
+        },
+ 
+        {
+ 
+           "name": "method_check",
+           "type": "integer"
+        }
+    ]
+ }
+ 
