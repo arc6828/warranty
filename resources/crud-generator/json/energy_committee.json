@@ -1,0 +1,63 @@
+{
+    "fields": [
+              
+        {
+            "name": "name_president",
+            "type": "text"
+        },
+
+        {
+            "name": "date_president",
+            "type": "date"
+            
+        },
+
+        {
+            "name": "name_responsible_person_1",
+            "type": "text"
+        },
+
+        {
+ 
+            "name": "number_responsible_person_1",
+            "type": "integer"
+         },
+
+        {
+            "name": "date_responsible_person_1",
+            "type": "date"
+            
+        },
+
+        {
+            "name": "name_responsible_person_2",
+            "type": "text"
+        },
+
+        {
+ 
+            "name": "number_responsible_person_2",
+            "type": "integer"
+         },
+
+        {
+            "name": "date_responsible_person_2",
+            "type": "date"
+            
+        },
+
+        {
+            "name": "name_factory_owner",
+            "type": "text"
+        },
+
+        {
+            "name": "date_factory_owner",
+            "type": "date"
+            
+        }
+       
+
+    ]
+ }
+ 

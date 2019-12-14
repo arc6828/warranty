@@ -1,0 +1,33 @@
+{
+    "fields": [
+        {
+            "name": "year",
+            "type": "text"
+        },
+
+        {
+            "name": "name_department",
+            "type": "integer"
+        },
+                
+        {
+            "name": "number_department",
+            "type": "integer"
+        },
+         
+        {
+            "name": "number_staff",
+            "type": "integer"
+        },
+         
+        {
+            "name": "all_number_staff",
+            "type": "integer"
+        },
+
+        {
+            "name": "percent",
+            "type": "integer"
+        }
+    ]
+}

@@ -1,0 +1,155 @@
+{
+    "fields": [
+              
+        {
+            "name": "photo_structure",
+            "type": "file"
+        },
+                      
+        {
+            "name": "photo_responsible",
+            "type": "file"
+        },
+                      
+        {
+
+            "name": "factory_size",
+            "type": "select",
+              "options": {
+                  "ติดประกาศ": "ติดประกาศ"
+                }
+         },
+         
+         {
+ 
+            "name": "number_post_a_notice",
+            "type": "integer"
+         },
+                               
+        {
+            "name": "photo_post_a_notice",
+            "type": "file"
+        },
+                              
+        {
+
+            "name": "factory_size",
+            "type": "select",
+              "options": {
+                  "โปสเตอร์  ": "โปสเตอร์  "
+                }
+         },
+         
+         {
+ 
+            "name": "number_postter",
+            "type": "integer"
+         },
+                               
+        {
+            "name": "photo_postter",
+            "type": "file"
+        },
+                       
+        {
+
+            "name": "factory_size",
+            "type": "select",
+              "options": {
+                  "เอกสารเผยแพร่": "เอกสารเผยแพร่"
+                }
+         },
+         
+         {
+ 
+            "name": "number_publication",
+            "type": "integer"
+         },
+                               
+        {
+            "name": "photo_publication",
+            "type": "file"
+        },
+                       
+        {
+
+            "name": "factory_size",
+            "type": "select",
+              "options": {
+                  "publication": "publication"
+                }
+         },
+         
+         {
+ 
+            "name": "number_voic",
+            "type": "integer"
+         },
+                               
+        {
+            "name": "photo_voic",
+            "type": "file"
+        },
+                       
+        {
+
+            "name": "factory_size",
+            "type": "select",
+              "options": {
+                  "จดหมายอิเล็กทรอนิกส์": "จดหมายอิเล็กทรอนิกส์"
+                }
+         },
+         
+         {
+ 
+            "name": "number_email",
+            "type": "integer"
+         },
+                               
+        {
+            "name": "photo_email",
+            "type": "file"
+        },
+                       
+        {
+
+            "name": "factory_size",
+            "type": "select",
+              "options": {
+                  "การประชุมพนักงาน": "การประชุมพนักงาน"
+                }
+         },
+         
+         {
+ 
+            "name": "number_staff_meeting",
+            "type": "integer"
+         },
+                               
+        {
+            "name": "photo_staff_meeting",
+            "type": "file"
+        },
+                       
+        {
+
+            "name": "factory_size",
+            "type": "select",
+              "options": {
+                  "อื่นๆ ": "อื่นๆ "
+                }
+         },
+         
+         {
+ 
+            "name": "number_other",
+            "type": "integer"
+         },
+                               
+        {
+            "name": "photo_other",
+            "type": "file"
+        }
+    ]
+ }
+ 

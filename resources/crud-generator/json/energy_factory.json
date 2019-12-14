@@ -1,0 +1,22 @@
+{
+    "fields": [
+              
+        {
+            "name": "name_legal_entity",
+            "type": "text"
+        },
+
+        {
+            "name": "name_factory",
+            "type": "text"
+        },
+ 
+        {
+ 
+           "name": "tsic_id",
+           "type": "text"
+        }
+
+    ]
+ }
+ 
