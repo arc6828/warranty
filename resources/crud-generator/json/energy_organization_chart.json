@@ -13,7 +13,7 @@
                       
         {
 
-            "name": "factory_size",
+            "name": "factory_size1",
             "type": "select",
               "options": {
                   "ติดประกาศ": "ติดประกาศ"
@@ -33,7 +33,7 @@
                               
         {
 
-            "name": "factory_size",
+            "name": "factory_size2",
             "type": "select",
               "options": {
                   "โปสเตอร์  ": "โปสเตอร์  "
@@ -53,7 +53,7 @@
                        
         {
 
-            "name": "factory_size",
+            "name": "factory_size3",
             "type": "select",
               "options": {
                   "เอกสารเผยแพร่": "เอกสารเผยแพร่"
@@ -73,7 +73,7 @@
                        
         {
 
-            "name": "factory_size",
+            "name": "factory_size4",
             "type": "select",
               "options": {
                   "publication": "publication"
@@ -93,7 +93,7 @@
                        
         {
 
-            "name": "factory_size",
+            "name": "factory_size5",
             "type": "select",
               "options": {
                   "จดหมายอิเล็กทรอนิกส์": "จดหมายอิเล็กทรอนิกส์"
@@ -113,7 +113,7 @@
                        
         {
 
-            "name": "factory_size",
+            "name": "factory_size6",
             "type": "select",
               "options": {
                   "การประชุมพนักงาน": "การประชุมพนักงาน"
@@ -133,7 +133,7 @@
                        
         {
 
-            "name": "factory_size",
+            "name": "factory_size7",
             "type": "select",
               "options": {
                   "อื่นๆ ": "อื่นๆ "
