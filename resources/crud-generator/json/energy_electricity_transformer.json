@@ -1,0 +1,42 @@
+{
+    "fields": [              
+         {
+               "name": "user_serial",
+               "type": "string"
+         },
+         {
+               "name": "transformer_serial",
+               "type": "string"
+         }, 
+         {
+               "name": "user_type",
+               "type": "string"
+         }, 
+         { 
+            "name": "usage_rate",
+            "type": "select",
+               "options": {
+                  "ปกติ": "ปกติ",
+                  "TOD": "TOD",
+                  "TOU": "TOU"
+            }
+         }, 
+         { 
+            "name": "transformer_size",
+            "type": "float"
+         },
+         {
+            "name": "transformer_quantity",
+            "type": "integer"
+         },
+         { 
+             "name": "user_id",
+             "type": "integer"
+         },
+         {
+             "name": "enery_report_id",
+             "type": "integer"
+         }
+    ]
+ }
+ 

@@ -1,33 +1,40 @@
 {
-    "fields": [
+    "fields": [        
         {
-            "name": "year",
+            "name": "policy_score",
+            "type": "integer"
+        },                
+        {
+            "name": "organization_score",
+            "type": "integer"
+        },      
+        {
+            "name": "motivation_score",
+            "type": "integer"
+        },        
+        {
+            "name": "information_score",
+            "type": "integer"
+        },        
+        {
+            "name": "public_relation_score",
+            "type": "integer"
+        },        
+        {
+            "name": "investment_score",
+            "type": "integer"
+        },        
+        {
+            "name": "remark ",
             "type": "text"
-        },
-
+        },        
         {
-            "name": "name_department",
+            "name": "user_id",
             "type": "integer"
-        },
-                
+        },        
         {
-            "name": "number_department",
+            "name": "enery_report_id",
             "type": "integer"
-        },
-         
-        {
-            "name": "number_staff",
-            "type": "integer"
-        },
-         
-        {
-            "name": "all_number_staff",
-            "type": "integer"
-        },
-
-        {
-            "name": "percent",
-            "type": "integer"
-        }
+        }       
     ]
 }

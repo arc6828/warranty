@@ -1,32 +1,29 @@
 {
-    "fields": [
-              
+    "fields": [              
         {
-            "name": "no_1",
-            "type": "integer"
-        },
- 
+            "name": "code",
+            "type": "string"
+        }, 
         {
  
            "name": "product_name",
-           "type": "text"
+           "type": "string"
         },
- 
         {
-            "name": "installed_capacity_1",
-            "type": "text"
-        },
- 
+            "name": "capacity",
+            "type": "float"
+        }, 
         {
- 
-           "name": "actual_yield",
-           "type": "text"
-        },
- 
-        {
- 
-           "name": "percent_yield",
+           "name": "yield",
            "type": "float"
+        },
+        { 
+            "name": "user_id",
+            "type": "integer"
+        },
+        {
+            "name": "enery_report_id",
+            "type": "integer"
         }
     ]
  }

@@ -5,3 +5,16 @@ php artisan crud:generate EnergyUsage --fields_from_file="resources/crud-generat
 php artisan crud:generate Buildings --fields_from_file="resources/crud-generator/json/building.json"
 
 php artisan crud:generate Branch --fields_from_file="resources/crud-generator/json/branch.json"
+
+//Wait For Export - FORM 1
+php artisan crud:generate EneryReport --fields_from_file="resources/crud-generator/json/energy_report.json"
+php artisan crud:generate EneryCommittee --fields_from_file="resources/crud-generator/json/energy_committee.json"
+php artisan crud:generate EneryFactoryInformation --fields_from_file="resources/crud-generator/json/energy_factory_information.json"
+php artisan crud:generate EnergyOrganizationChart --fields_from_file="resources/crud-generator/json/energy_organization_chart.json"
+php artisan crud:generate EnergyEvaluation  --fields_from_file="resources/crud-generator/json/energy_evaluation.json"
+php artisan crud:generate EnergyConservationPolicy  --fields_from_file="resources/crud-generator/json/energy_conservation_policy.json"
+
+//Wait For Export - FORM 2
+php artisan crud:generate EnergyConservationPolicy  --fields_from_file="resources/crud-generator/json/energy_conservation_policy.json"
+
+//Wait For Export - FORM 3

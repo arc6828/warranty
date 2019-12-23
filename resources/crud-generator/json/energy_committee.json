@@ -1,60 +1,37 @@
 {
-    "fields": [
-              
+    "fields": [              
         {
-            "name": "name_president",
-            "type": "text"
+            "name": "president",
+            "type": "string"
         },
+        {
+            "name": "common_responsible_person",
+            "type": "string"
+        },
+        { 
+            "name": "common_responsible_person_code",
+            "type": "string"
+        },    
 
         {
-            "name": "date_president",
-            "type": "date"
-            
+            "name": "senior_responsible_person",
+            "type": "string"
         },
-
+        { 
+            "name": "senior_responsible_person_code",
+            "type": "string"
+        },    
         {
-            "name": "name_responsible_person_1",
-            "type": "text"
+            "name": "factory_owner",
+            "type": "string"
         },
-
-        {
- 
-            "name": "number_responsible_person_1",
+        { 
+            "name": "user_id",
             "type": "integer"
-         },
-
-        {
-            "name": "date_responsible_person_1",
-            "type": "date"
-            
         },
-
         {
-            "name": "name_responsible_person_2",
-            "type": "text"
-        },
-
-        {
- 
-            "name": "number_responsible_person_2",
+            "name": "enery_report_id",
             "type": "integer"
-         },
-
-        {
-            "name": "date_responsible_person_2",
-            "type": "date"
-            
-        },
-
-        {
-            "name": "name_factory_owner",
-            "type": "text"
-        },
-
-        {
-            "name": "date_factory_owner",
-            "type": "date"
-            
         }
        
 

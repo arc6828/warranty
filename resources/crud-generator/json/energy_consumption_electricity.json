@@ -1,61 +1,44 @@
 {
-    "fields": [
-              
-        {
+    "fields": [              
+         {
             "name": "month",
-            "type": "text"
-        },
-
-        {
+            "type": "integer"
+         },
+         {
             "name": "maximum_power_p",
-            "type": "integer"
-        },
- 
-        {
- 
-           "name": "maximum_power_pp",
-           "type": "integer"
-        },
- 
-        {
-            "name": "maximum_power_op",
-            "type": "integer"
-        },
- 
-        {
- 
-           "name": "maximum_power_expenses",
-           "type": "integer"
-        },
- 
-        {
- 
-           "name": "electrical_energy_volume",
-           "type": "integer"
-        },
-
-         {
- 
-            "name": "electrical_energy_expenses",
-            "type": "integer"
-         },
-
-         {
- 
-            "name": "total_electric_bill",
-            "type": "integer"
-         },
-  
-         {
-  
-            "name": "load_factor",
-            "type": "text"
-         },  
-
-         {
-  
-            "name": "average_electricity_bill",
             "type": "float"
+         },   
+         {   
+            "name": "maximum_power_pp",
+            "type": "float"
+         },   
+         {
+            "name": "maximum_power_op",
+            "type": "float"
+         },   
+         {   
+            "name": "maximum_power_expenses",
+            "type": "float"
+         },   
+         {   
+            "name": "electrical_energy_volume",
+            "type": "float"
+         },
+         { 
+            "name": "electrical_energy_expenses",
+            "type": "float"
+         },
+         { 
+            "name": "total_electric_bill",
+            "type": "float"
+         },        
+         { 
+            "name": "user_id",
+            "type": "integer"
+         },
+         {
+            "name": "enery_report_id",
+            "type": "integer"
          }
     ]
  }

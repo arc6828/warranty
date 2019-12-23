@@ -1,44 +1,40 @@
 {
-    "fields": [
-              
+    "fields": [              
         {
-            "name": "no_2",
+            "name": "energy_production_capacity_id",
             "type": "integer"
-        },
- 
+        }, 
         {
- 
-           "name": "main_raw_material",
-           "type": "text"
-        },
- 
+           "name": "raw_material",
+           "type": "string"
+        }, 
         {
-            "name": "production_month",
-            "type": "text"
-        },
- 
-        {
- 
+            "name": "month",
+            "type": "integer"
+        }, 
+        { 
            "name": "working_hours",
-           "type": "integer"
-        },
- 
-        {
- 
+           "type": "float"
+        }, 
+        { 
            "name": "production_unit",
-           "type": "integer"
+           "type": "string"
         },
-
-        {
- 
-            "name": "actual_yield",
-            "type": "integer"
+        { 
+            "name": "yield",
+            "type": "float"
          },
-
+         { 
+            "name": "capacity",
+            "type": "float"
+         },
+         { 
+             "name": "user_id",
+             "type": "integer"
+         },
          {
- 
-            "name": "installed_capacity_2",
-            "type": "integer"
+             "name": "enery_report_id",
+             "type": "integer"
          }
     ]
  }

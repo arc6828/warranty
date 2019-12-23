@@ -1,140 +1,73 @@
 {
-    "fields": [
-              
+    "fields": [                      
         {
-            "name": "photo_policy",
+            "name": "policy",
+            "type": "file"
+        },         
+        {
+            "name": "notice_number",
+            "type": "string"
+        },                               
+        {
+            "name": "notice",
+            "type": "file"
+        },         
+        {
+            "name": "poster_number",
+            "type": "string"
+        },                               
+        {
+            "name": "poster_number",
+            "type": "file"
+        },         
+        { 
+            "name": "publication_number",
+            "type": "string"
+        },                               
+        {
+            "name": "publication",
+            "type": "file"
+        },              
+        {
+            "name": "voice_number",
+            "type": "string"
+        },                               
+        {
+            "name": "voice",
+            "type": "file"
+        },             
+        { 
+            "name": "email_number",
+            "type": "string"
+        },
+        {
+            "name": "email",
             "type": "file"
         },
-        
+        { 
+            "name": "meeting_number",
+            "type": "string"
+        },
         {
-
-            "name": "factory_size1",
-            "type": "select",
-              "options": {
-                  "ติดประกาศ": "ติดประกาศ"
-                }
-         },
-         
-         {
- 
-            "name": "number_post_a_notice",
+            "name": "meeting",
+            "type": "file"
+        },
+        { 
+            "name": "others_number",
+            "type": "string"
+        },
+        {
+            "name": "others",
+            "type": "file"
+        },
+        { 
+            "name": "user_id",
             "type": "integer"
-         },
-                               
-        {
-            "name": "photo_post_a_notice",
-            "type": "file"
         },
-                              
         {
-
-            "name": "factory_size2",
-            "type": "select",
-              "options": {
-                  "โปสเตอร์  ": "โปสเตอร์  "
-                }
-         },
-         
-         {
- 
-            "name": "number_postter",
+            "name": "enery_report_id",
             "type": "integer"
-         },
-                               
-        {
-            "name": "photo_postter",
-            "type": "file"
-        },
-                       
-        {
-
-            "name": "factory_size3",
-            "type": "select",
-              "options": {
-                  "เอกสารเผยแพร่": "เอกสารเผยแพร่"
-                }
-         },
-         
-         {
- 
-            "name": "number_publication",
-            "type": "integer"
-         },
-                               
-        {
-            "name": "photo_publication",
-            "type": "file"
-        },
-                       
-        {
-
-            "name": "factory_size4",
-            "type": "select",
-              "options": {
-                  "publication": "publication"
-                }
-         },
-         
-         {
- 
-            "name": "number_voic",
-            "type": "integer"
-         },
-                               
-        {
-            "name": "photo_voic",
-            "type": "file"
-        },
-                       
-        {
-
-            "name": "factory_size5",
-            "type": "select",
-              "options": {
-                  "จดหมายอิเล็กทรอนิกส์": "จดหมายอิเล็กทรอนิกส์"
-                }
-         },
-         
-         {
- 
-            "name": "number_email",
-            "type": "integer"
-         },
-                               
-        {
-            "name": "photo_email",
-            "type": "file"
-        },
-                       
-        {
-
-            "name": "factory_size6",
-            "type": "select",
-              "options": {
-                  "การประชุมพนักงาน": "การประชุมพนักงาน"
-                }
-         },
-         
-         {
- 
-            "name": "number_staff_meeting",
-            "type": "integer"
-         },
-                               
-        {
-            "name": "photo_staff_meeting",
-            "type": "file"
-        },
-                       
-        {
-
-            "name": "factory_size7",
-            "type": "select",
-              "options": {
-                  "อื่นๆ ": "อื่นๆ "
-                }
-         }
-
+        }
     ]
  }
  

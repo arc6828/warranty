@@ -1,210 +1,82 @@
 {
-    "fields": [
-              
+    "fields": [              
         {
-
             "name": "factory_size",
             "type": "select",
               "options": {
-                  "กลุ่มที่ 1": "กลุ่มที่ 1",
-                  "กลุ่มที่ 2": "กลุ่มที่ 2"
+                  "group-1": "กลุ่มที่ 1 ขนาดเล็ก",
+                  "group-2": "กลุ่มที่ 2 ขนาดใหญ่"
                 }
-         },
-
-        {
-            "name": "address_factory_number",
-            "type": "text"
         },
-
         {
-            "name": "address_factory_swine",
+            "name": "factory_address",
             "type": "text"
-        },
-
+        },          
         {
-            "name": "address_factory_road",
-            "type": "text"
+            "name": "factory_tel",
+            "type": "string"
         },
-
         {
-            "name": "address_factory_district",
-            "type": "text"
+            "name": "factory_fax",
+            "type": "string"
         },
-        
         {
-            "name": "address_factory_city",
-            "type": "text"
+            "name": "factory_email",
+            "type": "string"
         },
-        
         {
-            "name": "address_factory_province",
+            "name": "office_address",
             "type": "text"
-        },
-        
+        },          
         {
-            "name": "address_factory_thai_post",
-            "type": "text"
+            "name": "office_tel",
+            "type": "string"
         },
-        
         {
-            "name": "address_factory_phon",
-            "type": "text"
+            "name": "office_fax",
+            "type": "string"
         },
-        
         {
-            "name": "address_factory_fax",
-            "type": "text"
-        },
-        
-        {
-            "name": "address_factory_email",
-            "type": "text"
-        },
- 
-        
-        {
-            "name": "address_office_number",
-            "type": "text"
-        },
-
-        {
-            "name": "address_office_swine",
-            "type": "text"
-        },
-
-        {
-            "name": "address_office_road",
-            "type": "text"
-        },
-
-        {
-            "name": "address_office_district",
-            "type": "text"
-        },
-        
-        {
-            "name": "address_office_city",
-            "type": "text"
-        },
-        
-        {
-            "name": "address_office_province",
-            "type": "text"
-        },
-        
-        {
-            "name": "address_office_thai_post",
-            "type": "text"
-        },
-        
-        {
-            "name": "address_office_phon",
-            "type": "text"
-        },
-        
-        {
-            "name": "address_office_fax",
-            "type": "text"
-        },
-        
-        {
-            "name": "address_office_email",
-            "type": "text"
-        },
-
+            "name": "office_email",
+            "type": "string"
+        },      
         {
 
-            "name": "factory_size",
+            "name": "factory_type",
             "type": "select",
-              "options": {
-                  "หิน กรวด ดิน ทราย ": "หิน กรวด ดิน ทราย ",
-                  "อาหาร เครื่องดื่มและยาสูบ": "อาหาร เครื่องดื่มและยาสูบ",
-                  "สิ่งทอ": "สิ่งทอ ",
-                  "ไม้": "ไม้",
-                  "กระดาษ ": "กระดาษ ",
-                  "เคมี": "เคมี",
-                  "อโลหะ": "อโลหะ",
-                  "โลหะ": "โลหะ",
-                  "ผลิตภัณฑ์จากโลหะ": "ผลิตภัณฑ์จากโลหะ ",
-                  "การผลิตอื่นๆ": "การผลิตอื่นๆ",
-                  "การไฟฟ้าและก๊าซ  ": "การไฟฟ้าและก๊าซ  ",
-                  "การประปา": "การประปา"
-                }
-         },
-        
+            "options": {
+                "หิน กรวด ดิน ทราย": "หิน กรวด ดิน ทราย",
+                "อาหาร เครื่องดื่มและยาสูบ": "อาหาร เครื่องดื่มและยาสูบ",
+                "สิ่งทอ": "สิ่งทอ",
+                "ไม้": "ไม้",
+                "กระดาษ": "กระดาษ",
+                "เคมี": "เคมี",
+                "อโลหะ": "อโลหะ",
+                "โลหะ": "โลหะ",
+                "ผลิตภัณฑ์จากโลหะ": "ผลิตภัณฑ์จากโลหะ",
+                "การผลิตอื่นๆ": "การผลิตอื่นๆ",
+                "การไฟฟ้าและก๊าซ": "การไฟฟ้าและก๊าซ",
+                "การประปา": "การประปา"
+            }
+         },        
          {
  
-            "name": "manufacturing",
+            "name": "factory_employee",
             "type": "text"
-         },
-                 
+         },   
          {
  
-            "name": "number_staff",
+            "name": "factory_operation_time",
             "type": "text"
          },
-         
-         {
- 
-            "name": "number_departments",
-            "type": "text"
+         { 
+             "name": "user_id",
+             "type": "integer"
          },
-                  
          {
- 
-            "name": "office_time_h/day",
-            "type": "text"
-         },
-                  
-         {
- 
-            "name": "office_time_d/y",
-            "type": "text"
-         },
-                           
-         {
- 
-            "name": "office_time_h/y",
-            "type": "text"
-         },
-                           
-         {
- 
-            "name": "factoryoffice_time_h/day",
-            "type": "text"
-         },
-                  
-         {
- 
-            "name": "factory_time_d/y",
-            "type": "text"
-         },
-                           
-         {
- 
-            "name": "factory_time_h/y",
-            "type": "text"
-         },
-         
-         {
- 
-            "name": "time_month",
-            "type": "text"
-         },
-                  
-         {
- 
-            "name": "time_to_month",
-            "type": "text"
-         },
-         
-                  
-         {
- 
-            "name": "time_sum_month",
-            "type": "text"
+             "name": "enery_report_id",
+             "type": "integer"
          }
-
     ]
  }
  
