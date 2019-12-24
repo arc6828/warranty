@@ -1,15 +1,20 @@
 {
-   "fields": [
-             
+   "fields": [                    
        {
            "name": "photo_diagram",
            "type": "file"
        },
-
        {
-
-          "name": "production_process_description",
+          "name": "description",
           "type": "text"
-       }
+       },        
+       { 
+           "name": "user_id",
+           "type": "integer"
+       },
+       {
+           "name": "enery_report_id",
+           "type": "integer"
+       } 
    ]
 }

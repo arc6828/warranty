@@ -1,93 +1,81 @@
 {
-    "fields": [
-              
+    "fields": [    
+        {
+            "name": "month",
+            "type": "integer"
+        }, 
         {
             "name": "fuel_oil_liter",
-            "type": "integer"
-        },
- 
-        {
- 
+            "type": "float"
+        }, 
+        { 
            "name": "fuel_oil_baht",
-           "type": "integer"
-        },
- 
+           "type": "float"
+        }, 
         {
             "name": "diesel_oil_liter",
-            "type": "integer"
-        },
- 
-        {
- 
+            "type": "float"
+        }, 
+        { 
            "name": "diesel_oil_baht",
-           "type": "integer"
-        },
- 
+           "type": "float"
+        }, 
+        { 
+           "name": "lpg_kg",
+           "type": "float"
+        },         
         {
- 
-           "name": "liquefied_petroleum_gas_kg",
-           "type": "integer"
-        },
-         
-        {
-            "name": "liquefied_petroleum_gas_baht",
-            "type": "integer"
-        },
-         
+            "name": "lpg_baht",
+            "type": "float"
+        },         
         {
             "name": "natural_gas_millionbtu",
-            "type": "integer"
-        },
- 
-        {
- 
+            "type": "float"
+        }, 
+        { 
            "name": "natural_gas_baht",
-           "type": "integer"
-        },
- 
-        {
- 
+           "type": "float"
+        }, 
+        { 
            "name": "coal_ton",
-           "type": "integer"
-        },
-         
+           "type": "float"
+        },         
         {
             "name": "coal_baht",
-            "type": "integer"
-        },
-                 
+            "type": "float"
+        },                 
         {
             "name": "steam_purchased_ton",
-            "type": "integer"
-        },
- 
-        {
- 
+            "type": "float"
+        }, 
+        { 
            "name": "steam_purchased_baht",
-           "type": "integer"
-        },
- 
-        {
- 
+           "type": "float"
+        }, 
+        { 
            "name": "other_unit",
            "type": "integer"
-        },
-         
+        },         
         {
             "name": "other_baht",
             "type": "integer"
         },
-
         {
             "name": "renewable_energy_unit",
             "type": "integer"
-         },
-          
-         {
-             "name": "renewable_energy_baht",
-             "type": "integer"
-         }
-        
+        },          
+        {
+            "name": "renewable_energy_baht",
+            "type": "integer"
+        },        
+        { 
+            "name": "user_id",
+            "type": "integer"
+        },
+        {
+            "name": "enery_report_id",
+            "type": "integer"
+        }        
     ]
  }
  

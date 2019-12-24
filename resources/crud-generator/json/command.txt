@@ -15,6 +15,13 @@ php artisan crud:generate EnergyEvaluation  --fields_from_file="resources/crud-g
 php artisan crud:generate EnergyConservationPolicy  --fields_from_file="resources/crud-generator/json/energy_conservation_policy.json"
 
 //Wait For Export - FORM 2
-php artisan crud:generate EnergyConservationPolicy  --fields_from_file="resources/crud-generator/json/energy_conservation_policy.json"
+php artisan crud:generate EnergyProductionCapacity  --fields_from_file="resources/crud-generator/json/energy_production_capacity.json"
+php artisan crud:generate EnergyProductionCapacityDetail  --fields_from_file="resources/crud-generator/json/energy_production_capacity_detail.json"
+php artisan crud:generate EnergyElectricityTransformer  --fields_from_file="resources/crud-generator/json/energy_electricity_transformer.json"
+php artisan crud:generate EnergyConsumptionElectricity  --fields_from_file="resources/crud-generator/json/energy_consumption_electricity.json"
+php artisan crud:generate EnergyConsumptionHeat  --fields_from_file="resources/crud-generator/json/energy_consumption_heat.json"
+php artisan crud:generate EnergyHeatGenerator  --fields_from_file="resources/crud-generator/json/energy_heat_generator.json"
+php artisan crud:generate EnergyPortionHeat  --fields_from_file="resources/crud-generator/json/energy_portion_heat.json"
+php artisan crud:generate EnergyPortionElectricity  --fields_from_file="resources/crud-generator/json/energy_portion_electricity.json"
 
 //Wait For Export - FORM 3

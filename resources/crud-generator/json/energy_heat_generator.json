@@ -1,0 +1,53 @@
+{
+    "fields": [              
+         {
+            "name": "month",
+            "type": "integer"
+         },
+         {
+            "name": "capacity",
+            "type": "float"
+         }, 
+         { 
+            "name": "primary_fuel_consumption_type",
+            "type": "string"
+         }, 
+         {
+            "name": "primary_fuel_consumption_volume",
+            "type": "float"
+         }, 
+         { 
+            "name": "primary_fuel_consumption_unit",
+            "type": "string"
+         }, 
+         { 
+            "name": "operating_hours",
+            "type": "float"
+         },
+         { 
+            "name": "electricity_use",
+            "type": "float"
+         },
+         { 
+            "name": "electricity_sale",
+            "type": "float"
+         },  
+         {  
+            "name": "steam_use",
+            "type": "float"
+         },  
+         {  
+            "name": "steam_sale",
+            "type": "float"
+         },        
+         { 
+             "name": "user_id",
+             "type": "integer"
+         },
+         {
+             "name": "enery_report_id",
+             "type": "integer"
+         }  
+    ]
+ }
+ 

@@ -1,0 +1,30 @@
+{
+    "fields": [              
+        {
+            "name": "system",
+            "type": "string"
+        },
+        {
+            "name": "electric_power_consumption",
+            "type": "float"
+        }, 
+        {
+            "name": "method_assessment",
+            "type": "string"
+        }, 
+        {
+ 
+           "name": "method_check",
+           "type": "string"
+        },        
+        { 
+            "name": "user_id",
+            "type": "integer"
+        },
+        {
+            "name": "enery_report_id",
+            "type": "integer"
+        }  
+    ]
+ }
+ 
