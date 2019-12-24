@@ -1,7 +1,7 @@
 {
     "fields": [              
         {
-            "name": "energy_production_capacity_id",
+            "name": "energy_production_id",
             "type": "integer"
         }, 
         {

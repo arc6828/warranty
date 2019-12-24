@@ -1,0 +1,80 @@
+{
+   "fields": [             
+      {
+         "name": "system",
+         "type": "string"
+      },
+      {
+         "name": "machine_name",
+         "type": "string"
+      },
+      {
+         "name": "power_type",
+         "type": "string"
+      },
+      {
+         "name": "spec",
+         "type": "float"
+      },
+      {
+         "name": "spec_unit",
+         "type": "string"
+      },
+      {
+         "name": "quantity",
+         "type": "integer"
+      },
+      {
+         "name": "lifetime",
+         "type": "integer"
+      },
+      {
+         "name": "average_active_hours",
+         "type": "float"
+      },
+      {
+         "name": "electric_power",
+         "type": "float"
+      },
+      {
+         "name": "heat_power",
+         "type": "float"
+      },
+      {
+         "name": "fuel_type",
+         "type": "text"
+      },
+      {
+         "name": "fuel_unit",
+         "type": "integer"
+      },
+      {
+         "name": "performance_spec",
+         "type": "float"
+      },
+      {
+         "name": "performance_unit",
+         "type": "string"
+      },
+      {
+         "name": "performance_actual",
+         "type": "float"
+      },
+      {
+         "name": "performance_actual_unit ",
+         "type": "string"
+      },
+      {
+         "name": "remark",
+         "type": "text"
+      },        
+      { 
+         "name": "user_id",
+         "type": "integer"
+      },
+      {
+         "name": "enery_report_id",
+         "type": "integer"
+      }  
+   ]
+}

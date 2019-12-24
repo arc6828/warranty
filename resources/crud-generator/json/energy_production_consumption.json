@@ -15,7 +15,11 @@
          {
             "name": "consumption_heat",
             "type": "float"
-         },        
+         },    
+         {
+            "name": "energy_production_id",
+            "type": "integer"
+         },     
          { 
             "name": "user_id",
             "type": "integer"

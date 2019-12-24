@@ -1,20 +1,24 @@
 {
    "fields": [                    
-       {
-           "name": "photo_diagram",
-           "type": "file"
-       },
-       {
-          "name": "description",
-          "type": "text"
-       },        
-       { 
-           "name": "user_id",
-           "type": "integer"
-       },
-       {
-           "name": "enery_report_id",
-           "type": "integer"
-       } 
+        {
+            "name": "photo_diagram",
+            "type": "file"
+        },
+        {
+            "name": "description",
+            "type": "text"
+        },        
+        {
+            "name": "energy_production_id",
+            "type": "integer"
+        }, 
+        { 
+            "name": "user_id",
+            "type": "integer"
+        },
+        {
+            "name": "enery_report_id",
+            "type": "integer"
+        } 
    ]
 }
