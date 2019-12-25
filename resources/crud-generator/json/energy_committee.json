@@ -11,8 +11,7 @@
         { 
             "name": "common_responsible_person_code",
             "type": "string"
-        },    
-
+        },  
         {
             "name": "senior_responsible_person",
             "type": "string"
@@ -32,9 +31,7 @@
         {
             "name": "enery_report_id",
             "type": "integer"
-        }
-       
-
+        }      
     ]
  }
  

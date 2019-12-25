@@ -8,22 +8,18 @@
             "name": "factory_name ",
             "type": "string"
         }, 
-        {
- 
+        { 
            "name": "tsic_id",
            "type": "string"
         }, 
-        {
- 
+        { 
            "name": "year",
            "type": "integer"
         }, 
-        {
- 
+        { 
            "name": "user_id",
            "type": "integer"
         }
-
     ]
  }
  

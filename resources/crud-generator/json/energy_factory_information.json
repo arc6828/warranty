@@ -4,8 +4,8 @@
             "name": "factory_size",
             "type": "select",
               "options": {
-                  "group-1": "กลุ่มที่ 1 ขนาดเล็ก",
-                  "group-2": "กลุ่มที่ 2 ขนาดใหญ่"
+                  "group-small": "กลุ่มที่ 1 ขนาดเล็ก",
+                  "group-large": "กลุ่มที่ 2 ขนาดใหญ่"
                 }
         },
         {
@@ -41,7 +41,6 @@
             "type": "string"
         },      
         {
-
             "name": "factory_type",
             "type": "select",
             "options": {
@@ -59,13 +58,11 @@
                 "การประปา": "การประปา"
             }
          },        
-         {
- 
+         { 
             "name": "factory_employee",
             "type": "text"
          },   
-         {
- 
+         { 
             "name": "factory_operation_time",
             "type": "text"
          },
