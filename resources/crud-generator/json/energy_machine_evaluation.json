@@ -27,6 +27,14 @@
       {
          "name": "department",
          "type": "string"
+      },
+      {
+         "name": "user_id",
+         "type": "integer"
+      },
+      {
+         "name": "enery_report_id",
+         "type": "integer"
       }
    ]
 }

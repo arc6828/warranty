@@ -61,3 +61,7 @@ Route::get('energy/form2', function(){
 Route::get('energy/form3', function(){
     return view('energy/form3');
 });
+Route::resource('energy-production-diagram', 'EnergyProductionDiagramController');
+Route::resource('energy-production-consumption', 'EnergyProductionConsumptionController');
+Route::resource('energy-machine-evaluation', 'EnergyMachineEvaluationController');
+Route::resource('energy-machine', 'EnergyMachineController');
