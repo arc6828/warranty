@@ -1,10 +1,10 @@
 <div class="form-group {{ $errors->has('legal_name') ? 'has-error' : ''}}">
-    <label for="legal_name" class="control-label">{{ 'Legal Name' }}</label>
+    <label for="legal_name" class="control-label">{{ 'ชื่อนิติบุคคล' }}</label>
     <input class="form-control" name="legal_name" type="text" id="legal_name" value="{{ isset($eneryreport->legal_name) ? $eneryreport->legal_name : ''}}" >
     {!! $errors->first('legal_name', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('factory_name') ? 'has-error' : ''}}">
-    <label for="factory_name" class="control-label">{{ 'Factory Name' }}</label>
+    <label for="factory_name" class="control-label">{{ 'ชื่อโรงงานควบคุม ' }}</label>
     <input class="form-control" name="factory_name" type="text" id="factory_name" value="{{ isset($eneryreport->factory_name) ? $eneryreport->factory_name : ''}}" >
     {!! $errors->first('factory_name', '<p class="help-block">:message</p>') !!}
 </div>
@@ -14,7 +14,7 @@
     {!! $errors->first('tsic_id', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('year') ? 'has-error' : ''}}">
-    <label for="year" class="control-label">{{ 'Year' }}</label>
+    <label for="year" class="control-label">{{ 'ปี' }}</label>
     <input class="form-control" name="year" type="number" id="year" value="{{ isset($eneryreport->year) ? $eneryreport->year : ''}}" >
     {!! $errors->first('year', '<p class="help-block">:message</p>') !!}
 </div>

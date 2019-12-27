@@ -27,7 +27,11 @@
                                     <tr>
                                         <th>ID</th><td>{{ $eneryreport->id }}</td>
                                     </tr>
-                                    <tr><th> Legal Name </th><td> {{ $eneryreport->legal_name }} </td></tr><tr><th> Factory Name </th><td> {{ $eneryreport->factory_name }} </td></tr><tr><th> Tsic Id </th><td> {{ $eneryreport->tsic_id }} </td></tr><tr><th> Year </th><td> {{ $eneryreport->year }} </td></tr><tr><th> User Id </th><td> {{ $eneryreport->user_id }} </td></tr>
+                                    <tr><th> ชื่อนิติบุคคล </th><td> {{ $eneryreport->legal_name }} </td></tr>
+                                    <tr><th> ชื่อโรงงานควบคุม </th><td> {{ $eneryreport->factory_name }} </td></tr>
+                                    <tr><th> Tsic Id </th><td> {{ $eneryreport->tsic_id }} </td></tr>
+                                    <tr><th> ปี </th><td> {{ $eneryreport->year }} </td></tr>
+                                    <tr><th> User Id </th><td> {{ $eneryreport->user_id }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Legal Name</th><th>Factory Name</th><th>Tsic Id</th><th>Year</th><th>User Id</th><th>Actions</th>
+                                        <th>#</th><th>ชื่อนิติบุคคล</th><th>ชื่อโรงงานควบคุม</th><th>Tsic Id</th><th>ปี</th><th>User Id</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
