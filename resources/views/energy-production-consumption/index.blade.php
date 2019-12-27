@@ -33,13 +33,13 @@
                                 <thead>
                                     <tr>
                                         <th class="d-none">#</th>
-                                        <th>Month</th>
-                                        <th>Yield</th>
-                                        <th>Consumption Electricity</th>
-                                        <th>Consumption Heat</th>
-                                        <th>Energy Production Id</th>
-                                        <th>User Id</th>
-                                        <th>Enery Report Id</th>
+                                        <th>เดือน</th>
+                                        <th>ปริมาณผลผลิต (หน่วย)</th>
+                                        <th>พลังงานไฟฟ้าที่ใช้ (กิโลวัตต์-ชั่วโมง)</th>
+                                        <th>พลังงานความร้อนที่ใช้ (เมกะจูล)</th>
+                                        <th class="d-none">Energy Production Id</th>
+                                        <th class="d-none">User Id</th>
+                                        <th class="d-none">Enery Report Id</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -51,9 +51,9 @@
                                         <td>{{ $item->yield }}</td>
                                         <td>{{ $item->consumption_electricity }}</td>
                                         <td>{{ $item->consumption_heat }}</td>
-                                        <td>{{ $item->energy_production_id }}</td>
-                                        <td>{{ $item->user_id }}</td>
-                                        <td>{{ $item->enery_report_id }}</td>
+                                        <td class="d-none">{{ $item->energy_production_id }}</td>
+                                        <td class="d-none">{{ $item->user_id }}</td>
+                                        <td class="d-none">{{ $item->enery_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-production-consumption/' . $item->id) }}" title="View EnergyProductionConsumption"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-production-consumption/' . $item->id . '/edit') }}" title="Edit EnergyProductionConsumption"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

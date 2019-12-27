@@ -32,11 +32,11 @@
                                 <thead>
                                     <tr>
                                         <th class="d-none">#</th>
-                                        <th>Photo Diagram</th>
-                                        <th>Description</th>
-                                        <th>Energy Production Id</th>
-                                        <th>User Id</th>
-                                        <th>Enery Report Id</th>
+                                        <th>แผนผังกระบวนการผลิต</th>
+                                        <th>คำอธิบายกระบวนการผลิต</th>
+                                        <th class="d-none">Energy Production Id</th>
+                                        <th class="d-none">User Id</th>
+                                        <th class="d-none">Enery Report Id</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -46,9 +46,9 @@
                                         <td class="d-none">{{ $loop->iteration }}</td>
                                         <td>{{ $item->photo_diagram }}</td>
                                         <td>{{ $item->description }}</td>
-                                        <td>{{ $item->energy_production_id }}</td>
-                                        <td>{{ $item->user_id }}</td>
-                                        <td>{{ $item->enery_report_id }}</td>
+                                        <td class="d-none">{{ $item->energy_production_id }}</td>
+                                        <td class="d-none">{{ $item->user_id }}</td>
+                                        <td class="d-none">{{ $item->enery_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-production-diagram/' . $item->id) }}" title="View EnergyProductionDiagram"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-production-diagram/' . $item->id . '/edit') }}" title="Edit EnergyProductionDiagram"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

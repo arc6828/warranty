@@ -33,15 +33,15 @@
                                 <thead>
                                     <tr>
                                         <th class="d-none">#</th>
-                                        <th>Energy Machine Id</th>
-                                        <th>Power Consumption Size</th>
-                                        <th>Operating Hours</th>
-                                        <th>Improvement Potential</th>
-                                        <th>Total Score</th>
-                                        <th>Priority</th>
-                                        <th>Department</th>
-                                        <th>User Id</th>
-                                        <th>Enery Report Id</th>
+                                        <th>ขนาดการใช้พลังงาน</th>
+                                        <th>ชั่วโมงการใช้งาน</th>
+                                        <th>ศักยภาพในการปรับปรุง</th>
+                                        <th>คะแนนรวม</th>
+                                        <th>ลำดับความสำคัญ</th>
+                                        <th>ประเภทพลังงาน</th>
+                                        <th class="d-none">Energy Machine Id</th>
+                                        <th class="d-none">User Id</th>
+                                        <th class="d-none">Enery Report Id</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -49,15 +49,15 @@
                                 @foreach($energymachineevaluation as $item)
                                     <tr>
                                         <td class="d-none">{{ $loop->iteration }}</td>
-                                        <td>{{ $item->energy_machine_id }}</td>
                                         <td>{{ $item->power_consumption_size }}</td>
                                         <td>{{ $item->operating_hours }}</td>
                                         <td>{{ $item->improvement_potential }}</td>
                                         <td>{{ $item->total_score }}</td>
                                         <td>{{ $item->priority }}</td>
                                         <td>{{ $item->department }}</td>
-                                        <td>{{ $item->user_id }}</td>
-                                        <td>{{ $item->enery_report_id }}</td>
+                                        <td class="d-none">{{ $item->energy_machine_id }}</td>
+                                        <td class="d-none">{{ $item->user_id }}</td>
+                                        <td class="d-none">{{ $item->enery_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-machine-evaluation/' . $item->id) }}" title="View EnergyMachineEvaluation"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-machine-evaluation/' . $item->id . '/edit') }}" title="Edit EnergyMachineEvaluation"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

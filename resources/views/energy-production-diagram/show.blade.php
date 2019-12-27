@@ -1,9 +1,11 @@
-@extends('layouts.app')
+@extends('layout.main')
+
+@section('title','Energy production diagram')
 
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
+           
 
             <div class="col-md-9">
                 <div class="card">
@@ -25,9 +27,29 @@
                             <table class="table">
                                 <tbody>
                                     <tr>
-                                        <th>ID</th><td>{{ $energyproductiondiagram->id }}</td>
+                                        <th>ID</th>
+                                        <td>{{ $energyproductiondiagram->id }}</td>
                                     </tr>
-                                    <tr><th> Photo Diagram </th><td> {{ $energyproductiondiagram->photo_diagram }} </td></tr><tr><th> Description </th><td> {{ $energyproductiondiagram->description }} </td></tr><tr><th> Energy Production Id </th><td> {{ $energyproductiondiagram->energy_production_id }} </td></tr><tr><th> User Id </th><td> {{ $energyproductiondiagram->user_id }} </td></tr><tr><th> Enery Report Id </th><td> {{ $energyproductiondiagram->enery_report_id }} </td></tr>
+                                    <tr>
+                                        <th> แผนผังกระบวนการผลิต</th>
+                                        <td> {{ $energyproductiondiagram->photo_diagram }} </td>
+                                    </tr>
+                                    <tr>
+                                        <th> คำอธิบายกระบวนการผลิต </th>
+                                        <td> {{ $energyproductiondiagram->description }} </td>
+                                    </tr>
+                                    <tr>
+                                        <th> Energy Production Id </th>
+                                        <td> {{ $energyproductiondiagram->energy_production_id }} </td>
+                                    </tr>
+                                    <tr>
+                                        <th> User Id </th>
+                                        <td> {{ $energyproductiondiagram->user_id }} </td>
+                                    </tr>
+                                    <tr>
+                                        <th> Enery Report Id </th>
+                                        <td> {{ $energyproductiondiagram->enery_report_id }} </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

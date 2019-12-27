@@ -7,7 +7,7 @@
         <div class="row">
            
 
-            <div class="col-md-12">
+            <div class="col-md-16">
                 <div class="card">
                     <div class="card-header">Energy machine</div>
                     <div class="card-body">
@@ -33,25 +33,25 @@
                                 <thead>
                                     <tr>
                                         <th class="d-none">#</th>
-                                        <th>System</th>
-                                        <th>Machine Name</th>
-                                        <th>Power Type</th>
-                                        <th>Spec</th>
-                                        <th>Spec Unit</th>
-                                        <th>Quantity</th>
-                                        <th>Lifetime</th>
-                                        <th>Average Active Hours</th>
-                                        <th>Electric Power</th>
-                                        <th>Heat Power</th>
-                                        <th>Fuel Type</th>
-                                        <th>Fuel Unit</th>
-                                        <th>Performance Spec</th>
-                                        <th>Performance Unit</th>
-                                        <th>Performance Actual</th>
-                                        <th>Performance Actual Unit</th>
-                                        <th>Remark</th>
-                                        <th>User Id</th>
-                                        <th>Enery Report Id</th>
+                                        <th>ระบบที่ใช้พลังงาน</th>
+                                        <th>ชื่ออุปกรณ์</th>
+                                        <th>ประเภทพลังงาน</th>
+                                        <th>พิกัด (ขนาด)</th>
+                                        <th>พิกัด (หน่วย)</th>
+                                        <th>จำนวน</th>
+                                        <th>อายุการใช้งาน</th>
+                                        <th>ชั่วโมงการใช้งานเฉลี่ย/ปี</th>
+                                        <th>พลังงานไฟฟ้า (กิโลวัตต์-ชั่วโมง/ปี)</th>
+                                        <th>พลังงานความร้อน (เมกะจูล/ปี)</th>
+                                        <th>ชนิดการใช้เชื้อเพลิง</th>
+                                        <th>การใช้เชื้อเพลิง (หน่วย)</th>
+                                        <th>ค่าพิกัดประสิทธิภาพ</th>
+                                        <th>ค่าประสิทธิภาพ (หน่วย)</th>
+                                        <th>ค่าประสิทธิภาพ (ใช้งานจริง)</th>
+                                        <th>ค่าประสิทธิภาพที่ใช้งานจริง (หน่วย)</th>
+                                        <th>หมายเหตุ</th>
+                                        <th class="d-none">User Id</th>
+                                        <th class="d-none">Enery Report Id</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -76,8 +76,8 @@
                                         <td>{{ $item->performance_actual }}</td>
                                         <td>{{ $item->performance_actual_unit }}</td>
                                         <td>{{ $item->remark }}</td>
-                                        <td>{{ $item->user_id }}</td>
-                                        <td>{{ $item->enery_report_id }}</td>
+                                        <td class="d-none">{{ $item->user_id }}</td>
+                                        <td class="d-none">{{ $item->enery_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-machine/' . $item->id) }}" title="View EnergyMachine"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-machine/' . $item->id . '/edit') }}" title="Edit EnergyMachine"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
