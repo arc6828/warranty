@@ -18,7 +18,7 @@ class CreateEnergyElectricityTransformersTable extends Migration
             $table->string('user_serial')->nullable();
             $table->string('transformer_serial')->nullable();
             $table->string('user_type')->nullable();
-            $table->string('usage_rate');
+            $table->string('usage_rate')->nullable();
             $table->float('transformer_size')->nullable();
             $table->integer('transformer_quantity')->nullable();
             $table->integer('user_id')->nullable();
