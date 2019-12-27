@@ -25,7 +25,7 @@ class EnergyReport extends Model
      *
      * @var array
      */
-    protected $fillable = ['legal_name', 'factory_name ', 'tsic_id', 'year', 'user_id'];
+    protected $fillable = ['legal_name', 'factory_name', 'tsic_id', 'year', 'user_id'];
 
     
 }
