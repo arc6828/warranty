@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Energyportionheat</div>
+                    <div class="card-header">ข้อมูลการใช้พลังงานความร้อน</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-portion-heat/create') }}" class="btn btn-success btn-sm" title="Add New EnergyPortionHeat">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>System</th><th>Equipment</th><th>Fuel Consumption Type</th><th>Fuel Consumption Megajoule</th><th>Method Assessment</th><th>Method Check</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>ระบบ</th><th>อุปกรณ์</th><th>การใช้พลังงานเชื้อเพลิง (ชนิดเชื้อเพลง)</th><th>การใช้พลังงานเชื้อเพลิง (เมกะจูล/ปี)</th><th>วิธีการประเมิน</th><th>วิธีการตรวจวัด</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

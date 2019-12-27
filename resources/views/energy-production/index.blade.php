@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Energyproduction</div>
+                    <div class="card-header">ข้อมูลการผลิต</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-production/create') }}" class="btn btn-success btn-sm" title="Add New EnergyProduction">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Code</th><th>Product Name</th><th>Capacity</th><th>Yield</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>ลำดับที่</th><th>ชื่อผลิตภัณฑ์</th><th>กำลังผลิตติดตั้ง (กำลังการผลิตสูงสุดของเครื่องจักร)</th><th>ปริมาณผลผลิตจริง</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

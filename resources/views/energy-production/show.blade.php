@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">EnergyProduction {{ $energyproduction->id }}</div>
+                    <div class="card-header">ข้อมูลการผลิต {{ $energyproduction->id }}</div>
                     <div class="card-body">
 
                         <a href="{{ url('/energy-production') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
@@ -27,7 +27,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $energyproduction->id }}</td>
                                     </tr>
-                                    <tr><th> Code </th><td> {{ $energyproduction->code }} </td></tr><tr><th> Product Name </th><td> {{ $energyproduction->product_name }} </td></tr><tr><th> Capacity </th><td> {{ $energyproduction->capacity }} </td></tr><tr><th> Yield </th><td> {{ $energyproduction->yield }} </td></tr><tr><th> User Id </th><td> {{ $energyproduction->user_id }} </td></tr><tr><th> Enery Report Id </th><td> {{ $energyproduction->enery_report_id }} </td></tr>
+                                    <tr><th> ลำดับที่ </th><td> {{ $energyproduction->code }} </td></tr><tr><th> ชื่อผลิตภัณฑ์ </th><td> {{ $energyproduction->product_name }} </td></tr><tr><th> กำลังผลิตติดตั้ง (กำลังการผลิตสูงสุดของเครื่องจักร) </th><td> {{ $energyproduction->capacity }} </td></tr><tr><th> ปริมาณผลผลิตจริง </th><td> {{ $energyproduction->yield }} </td></tr><tr><th> User Id </th><td> {{ $energyproduction->user_id }} </td></tr><tr><th> Enery Report Id </th><td> {{ $energyproduction->enery_report_id }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

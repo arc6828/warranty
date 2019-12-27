@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Energyportionelectricity</div>
+                    <div class="card-header">ข้อมูลสัดส่วนการใช้พลังงานไฟฟ้า</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-portion-electricity/create') }}" class="btn btn-success btn-sm" title="Add New EnergyPortionElectricity">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>System</th><th>Electric Power Consumption</th><th>Method Assessment</th><th>Method Check</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>ระบบ</th><th>การใช้พลังงานไฟฟ้า</th><th>วิธีการประเมิน</th><th>วิธีการตรวจวัด</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

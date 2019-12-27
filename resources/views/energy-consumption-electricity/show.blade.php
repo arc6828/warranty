@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">EnergyConsumptionElectricity {{ $energyconsumptionelectricity->id }}</div>
+                    <div class="card-header">ข้อมูลการใช้ไฟฟ้า {{ $energyconsumptionelectricity->id }}</div>
                     <div class="card-body">
 
                         <a href="{{ url('/energy-consumption-electricity') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>

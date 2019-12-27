@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Energyconsumptionheat</div>
+                    <div class="card-header">ข้อมูลปริมาณการใช้เชื้อเพลิง</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-consumption-heat/create') }}" class="btn btn-success btn-sm" title="Add New EnergyConsumptionHeat">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Month</th><th>Fuel Oil Liter</th><th>Fuel Oil Baht</th><th>Diesel Oil Liter</th><th>Diesel Oil Baht</th><th>Lpg Kg</th><th>Lpg Baht</th><th>Natural Gas Millionbtu</th><th>Natural Gas Baht</th><th>Coal Ton</th><th>Coal Baht</th><th>Steam Purchased Ton</th><th>Steam Purchased Baht</th><th>Other Unit</th><th>Other Baht</th><th>Renewable Energy Unit</th><th>Renewable Energy Baht</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>เดือน</th><th>น้ำมันเตา (ลิตร)</th><th>น้ำมันเตา (บาท)</th><th>น้ำมันดีเซล (ลิตร)</th><th>น้ำมันดีเซล (บาท)</th><th>ก๊าซปิโตรเลียมเหลว (กิโลกรัม)</th><th>ก๊าซปิโตรเลียมเหลว (บาท)</th><th>ก๊าซธรรมชาติ (ล้านบีทียู)</th><th>ก๊าซธรรมชาติ (บาท)</th><th>ถ่านหิน (ตัน)</th><th>ถ่านหิน (บาท)</th><th>ไอน้ำที่ซื้อ (ตัน)</th><th>ไอน้ำที่ซื้อ (บาท)</th><th>อื่นๆ (หน่วย)</th><th>อื่นๆ (บาท)</th><th>พลังงานหมุนเวียน (หน่วย)</th><th>พลังงานหมุนเวียน (บาท)</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

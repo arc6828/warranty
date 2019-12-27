@@ -1,20 +1,20 @@
 <div class="form-group {{ $errors->has('code') ? 'has-error' : ''}}">
-    <label for="code" class="control-label">{{ 'Code' }}</label>
+    <label for="code" class="control-label">{{ 'ลำดับที่' }}</label>
     <input class="form-control" name="code" type="text" id="code" value="{{ isset($energyproduction->code) ? $energyproduction->code : ''}}" >
     {!! $errors->first('code', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('product_name') ? 'has-error' : ''}}">
-    <label for="product_name" class="control-label">{{ 'Product Name' }}</label>
+    <label for="product_name" class="control-label">{{ 'ชื่อผลิตภัณฑ์' }}</label>
     <input class="form-control" name="product_name" type="text" id="product_name" value="{{ isset($energyproduction->product_name) ? $energyproduction->product_name : ''}}" >
     {!! $errors->first('product_name', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('capacity') ? 'has-error' : ''}}">
-    <label for="capacity" class="control-label">{{ 'Capacity' }}</label>
+    <label for="capacity" class="control-label">{{ 'กำลังผลิตติดตั้ง (กำลังการผลิตสูงสุดของเครื่องจักร)' }}</label>
     <input class="form-control" name="capacity" type="number" id="capacity" value="{{ isset($energyproduction->capacity) ? $energyproduction->capacity : ''}}" >
     {!! $errors->first('capacity', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('yield') ? 'has-error' : ''}}">
-    <label for="yield" class="control-label">{{ 'Yield' }}</label>
+    <label for="yield" class="control-label">{{ 'ปริมาณผลผลิตจริง' }}</label>
     <input class="form-control" name="yield" type="number" id="yield" value="{{ isset($energyproduction->yield) ? $energyproduction->yield : ''}}" >
     {!! $errors->first('yield', '<p class="help-block">:message</p>') !!}
 </div>

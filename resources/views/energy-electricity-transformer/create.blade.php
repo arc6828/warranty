@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Create New EnergyElectricityTransformer</div>
+                    <div class="card-header">สร้าง ข้อมูลหม้อแปลงไฟฟ้า</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-electricity-transformer') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />

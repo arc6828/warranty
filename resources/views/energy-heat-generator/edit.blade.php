@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Edit EnergyHeatGenerator #{{ $energyheatgenerator->id }}</div>
+                    <div class="card-header">แก้ไข ข้อมูลการใช้เชื้อเพลิงในการผลิตไฟฟ้า #{{ $energyheatgenerator->id }}</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-heat-generator') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />

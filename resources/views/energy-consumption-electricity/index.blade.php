@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Energyconsumptionelectricity</div>
+                    <div class="card-header">ข้อมูลการใช้ไฟฟ้า</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-consumption-electricity/create') }}" class="btn btn-success btn-sm" title="Add New EnergyConsumptionElectricity">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New

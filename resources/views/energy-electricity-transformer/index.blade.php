@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Energyelectricitytransformer</div>
+                    <div class="card-header">ข้อมูลหม้อแปลงไฟฟ้า</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-electricity-transformer/create') }}" class="btn btn-success btn-sm" title="Add New EnergyElectricityTransformer">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>User Serial</th><th>Transformer Serial</th><th>User Type</th><th>Usage Rate</th><th>Transformer Size</th><th>Transformer Quantity</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>หมายเลขผู้ใช้ไฟฟ้า</th><th>หมายเลขเครื่องวัดไฟฟ้า</th><th>ประเภทผู้ใช้ไฟฟ้า</th><th>อัตราการใช้ไฟฟ้า</th><th>ขนาดหม้อแปลงไฟฟ้า</th><th>จำนวนหม้อแปลงไฟฟ้า</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

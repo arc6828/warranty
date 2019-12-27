@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Energyheatgenerator</div>
+                    <div class="card-header">ข้อมูลการใช้เชื้อเพลิงในการผลิตไฟฟ้า</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-heat-generator/create') }}" class="btn btn-success btn-sm" title="Add New EnergyHeatGenerator">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Month</th><th>Capacity</th><th>Primary Fuel Consumption Type</th><th>Primary Fuel Consumption Volume</th><th>Primary Fuel Consumption Unit</th><th>Operating Hours</th><th>Electricity Use</th><th>Electricity Sale</th><th>Steam Use</th><th>Steam Sale</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>เดือน</th><th>กำลังผลิตติดตั้ง (กิโลวัตต์)</th><th>ปริมาณการใช้เชื้อเพลง(ชนิด)</th><th>ปริมาณการใช้เชื้อเพลง(ปริมาณ)</th><th>ปริมาณการใช้เชื้อเพลง(หน่วย)</th><th>ชั่วโมงการเดินเครื่อง</th><th>ปริมาณพลังงานไฟฟ้าที่ผลิตได้ (กิโลวัตต์-ชั่วโมง) สำหรับใช้เอง</th><th>ปริมาณพลังงานไฟฟ้าที่ผลิตได้ (กิโลวัตต์-ชั่วโมง) สำหรับจำหน่าย</th><th>ปริมาณไอน้ำที่ผลิต</th><th>ปริมาณไอน้ำที่จำหน่าย</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

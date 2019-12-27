@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Edit EnergyProductionOperation #{{ $energyproductionoperation->id }}</div>
+                    <div class="card-header"> แก้ไข ข้อมูลการผลิต(รายละเอียด) #{{ $energyproductionoperation->id }}</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-production-operation') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />

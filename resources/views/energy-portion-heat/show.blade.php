@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">EnergyPortionHeat {{ $energyportionheat->id }}</div>
+                    <div class="card-header">ข้อมูลการใช้พลังงานความร้อน {{ $energyportionheat->id }}</div>
                     <div class="card-body">
 
                         <a href="{{ url('/energy-portion-heat') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
@@ -27,7 +27,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $energyportionheat->id }}</td>
                                     </tr>
-                                    <tr><th> System </th><td> {{ $energyportionheat->system }} </td></tr><tr><th> Equipment </th><td> {{ $energyportionheat->equipment }} </td></tr><tr><th> Fuel Consumption Type </th><td> {{ $energyportionheat->fuel_consumption_type }} </td></tr><tr><th> Fuel Consumption Megajoule </th><td> {{ $energyportionheat->fuel_consumption_megajoule }} </td></tr><tr><th> Method Assessment </th><td> {{ $energyportionheat->method_assessment }} </td></tr><tr><th> Method Check </th><td> {{ $energyportionheat->method_check }} </td></tr><tr><th> User Id </th><td> {{ $energyportionheat->user_id }} </td></tr><tr><th> Enery Report Id </th><td> {{ $energyportionheat->enery_report_id }} </td></tr>
+                                    <tr><th> ระบบ </th><td> {{ $energyportionheat->system }} </td></tr><tr><th> อุปกรณ์ </th><td> {{ $energyportionheat->equipment }} </td></tr><tr><th> การใช้พลังงานเชื้อเพลิง (ชนิดเชื้อเพลง) </th><td> {{ $energyportionheat->fuel_consumption_type }} </td></tr><tr><th> การใช้พลังงานเชื้อเพลิง (เมกะจูล/ปี) </th><td> {{ $energyportionheat->fuel_consumption_megajoule }} </td></tr><tr><th> วิธีการประเมิน </th><td> {{ $energyportionheat->method_assessment }} </td></tr><tr><th> วิธีการตรวจวัด </th><td> {{ $energyportionheat->method_check }} </td></tr><tr><th> User Id </th><td> {{ $energyportionheat->user_id }} </td></tr><tr><th> Enery Report Id </th><td> {{ $energyportionheat->enery_report_id }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
