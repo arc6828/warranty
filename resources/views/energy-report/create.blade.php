@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Create New EnergyReport</div>
+                    <div class="card-header">สร้าง รายงานการจัดการพลังงาน</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-report') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />

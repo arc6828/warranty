@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Edit EnergyConservationPolicy #{{ $energyconservationpolicy->id }}</div>
+                    <div class="card-header">แก้ไขนโยบายอนุรักษ์พลังงาน #{{ $energyconservationpolicy->id }}</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-conservation-policy') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />

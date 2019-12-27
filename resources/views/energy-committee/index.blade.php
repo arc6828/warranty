@@ -30,14 +30,29 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>President</th><th>Common Responsible Person</th><th>Common Responsible Person Code</th><th>Senior Responsible Person</th><th>Senior Responsible Person Code</th><th>Factory Owner</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>ประธาน</th>
+                                        <th>ผู้รับผิดชอบสามัญ</th>
+                                        <th>ผู้รับผิดชอบสามัญ ทะเบียนเลขที่</th>
+                                        <th>ผู้รับผิดชอบอาวุโส</th>
+                                        <th>ผู้รับผิดชอบอาวุโส ทะเบียนเลขที่</th>
+                                        <th>เจ้าของโรงงาน</th>
+                                        <th>User Id</th>
+                                        <th>Enery Report Id</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($energycommittee as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->president }}</td><td>{{ $item->common_responsible_person }}</td><td>{{ $item->common_responsible_person_code }}</td><td>{{ $item->senior_responsible_person }}</td><td>{{ $item->senior_responsible_person_code }}</td><td>{{ $item->factory_owner }}</td><td>{{ $item->user_id }}</td><td>{{ $item->enery_report_id }}</td>
+                                        <td>{{ $item->president }}</td>
+                                        <td>{{ $item->common_responsible_person }}</td>
+                                        <td>{{ $item->common_responsible_person_code }}</td>
+                                        <td>{{ $item->senior_responsible_person }}</td>
+                                        <td>{{ $item->senior_responsible_person_code }}</td>
+                                        <td>{{ $item->factory_owner }}</td>
+                                        <td>{{ $item->user_id }}</td>
+                                        <td>{{ $item->enery_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-committee/' . $item->id) }}" title="View EnergyCommittee"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-committee/' . $item->id . '/edit') }}" title="Edit EnergyCommittee"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

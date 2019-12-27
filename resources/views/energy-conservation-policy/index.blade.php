@@ -30,7 +30,24 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Policy</th><th>Notice Number</th><th>Notice</th><th>Poster Number</th><th>Poster Number</th><th>Publication Number</th><th>Publication</th><th>Voice Number</th><th>Voice</th><th>Email Number</th><th>Email</th><th>Meeting Number</th><th>Meeting</th><th>Others Number</th><th>Others</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>นโยบาย</th>
+                                        <th>จำนวน ติดประกาศ</th>
+                                        <th>ติดประกาศ</th>
+                                        <th>จำนวน โปสเตอร์</th>
+                                        <th>โปสเตอร์</th>
+                                        <th>จำนวน เอกสารเผยแพร่</th>
+                                        <th>เอกสารเผยแพร่</th>
+                                        <th>จำนวน เสียงตามสาย</th>
+                                        <th>เสียงตามสาย</th>
+                                        <th>จำนวน อีเมล</th>
+                                        <th>อีเมล</th>
+                                        <th>จำนวน การประชุม</th>
+                                        <th>การประชุม</th>
+                                        <th>อื่นๆ จำนวน</th>
+                                        <th>อื่นๆ</th>
+                                        <th>User Id</th>
+                                        <th>Enery Report Id</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

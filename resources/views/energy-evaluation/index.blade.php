@@ -30,7 +30,16 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Policy Score</th><th>Organization Score</th><th>Motivation Score</th><th>Information Score</th><th>Public Relation Score</th><th>Investment Score</th><th>Remark</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>คะแนนนโยบาย</th>
+                                        <th>คะแนนนการจัดองค์กร</th>
+                                        <th>คะแนนนการสร้างแรงจูงใจ</th>
+                                        <th>คะแนนนข้อมูลข่าวสาร</th>
+                                        <th>คะแนนนประชาสัมพันธ์</th>
+                                        <th>คะแนนนการลงทุน</th>
+                                        <th>Remark</th>
+                                        <th>User Id</th>
+                                        <th>Enery Report Id</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

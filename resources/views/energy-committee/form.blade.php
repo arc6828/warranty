@@ -1,30 +1,30 @@
 <div class="form-group {{ $errors->has('president') ? 'has-error' : ''}}">
-    <label for="president" class="control-label">{{ 'President' }}</label>
+    <label for="president" class="control-label">{{ 'ประธาน' }}</label>
     <input class="form-control" name="president" type="text" id="president" value="{{ isset($energycommittee->president) ? $energycommittee->president : ''}}" >
     {!! $errors->first('president', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('common_responsible_person') ? 'has-error' : ''}}">
-    <label for="common_responsible_person" class="control-label">{{ 'Common Responsible Person' }}</label>
+    <label for="common_responsible_person" class="control-label">{{ 'ผู้รับผิดชอบสามัญ' }}</label>
     <input class="form-control" name="common_responsible_person" type="text" id="common_responsible_person" value="{{ isset($energycommittee->common_responsible_person) ? $energycommittee->common_responsible_person : ''}}" >
     {!! $errors->first('common_responsible_person', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('common_responsible_person_code') ? 'has-error' : ''}}">
-    <label for="common_responsible_person_code" class="control-label">{{ 'Common Responsible Person Code' }}</label>
+    <label for="common_responsible_person_code" class="control-label">{{ 'ผู้รับผิดชอบสามัญ ทะเบียนเลขที่' }}</label>
     <input class="form-control" name="common_responsible_person_code" type="text" id="common_responsible_person_code" value="{{ isset($energycommittee->common_responsible_person_code) ? $energycommittee->common_responsible_person_code : ''}}" >
     {!! $errors->first('common_responsible_person_code', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('senior_responsible_person') ? 'has-error' : ''}}">
-    <label for="senior_responsible_person" class="control-label">{{ 'Senior Responsible Person' }}</label>
+    <label for="senior_responsible_person" class="control-label">{{ 'ผู้รับผิดชอบอาวุโส' }}</label>
     <input class="form-control" name="senior_responsible_person" type="text" id="senior_responsible_person" value="{{ isset($energycommittee->senior_responsible_person) ? $energycommittee->senior_responsible_person : ''}}" >
     {!! $errors->first('senior_responsible_person', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('senior_responsible_person_code') ? 'has-error' : ''}}">
-    <label for="senior_responsible_person_code" class="control-label">{{ 'Senior Responsible Person Code' }}</label>
+    <label for="senior_responsible_person_code" class="control-label">{{ 'ผู้รับผิดชอบอาวุโส ทะเบียนเลขที่' }}</label>
     <input class="form-control" name="senior_responsible_person_code" type="text" id="senior_responsible_person_code" value="{{ isset($energycommittee->senior_responsible_person_code) ? $energycommittee->senior_responsible_person_code : ''}}" >
     {!! $errors->first('senior_responsible_person_code', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('factory_owner') ? 'has-error' : ''}}">
-    <label for="factory_owner" class="control-label">{{ 'Factory Owner' }}</label>
+    <label for="factory_owner" class="control-label">{{ 'เจ้าของโรงงาน' }}</label>
     <input class="form-control" name="factory_owner" type="text" id="factory_owner" value="{{ isset($energycommittee->factory_owner) ? $energycommittee->factory_owner : ''}}" >
     {!! $errors->first('factory_owner', '<p class="help-block">:message</p>') !!}
 </div>

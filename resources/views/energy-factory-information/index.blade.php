@@ -30,7 +30,22 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Factory Size</th><th>Factory Address</th><th>Factory Tel</th><th>Factory Fax</th><th>Factory Email</th><th>Office Address</th><th>Office Tel</th><th>Office Fax</th><th>Office Email</th><th>Factory Type</th><th>Factory Employee</th><th>Factory Operation Time</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th>
+                                        <th>กลุ่มโรงงาน</th>
+                                        <th>ที่อยู่โรงงาน</th>
+                                        <th>โทรศัพท์</th>
+                                        <th>โทรสาร</th>
+                                        <th>อีเมล</th>
+                                        <th>ที่อยู่สำนักงาน</th>
+                                        <th>โทรศัพท์</th>
+                                        <th>โทรสาร</th>
+                                        <th>อีเมล</th>
+                                        <th>ประเภทอุตสาหกรรม</th>
+                                        <th>พนักงงานโรงงาน</th>
+                                        <th>เวลาดำเนินการ</th>
+                                        <th>User Id</th>
+                                        <th>Enery Report Id</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
