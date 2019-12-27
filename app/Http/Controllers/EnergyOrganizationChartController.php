@@ -26,7 +26,6 @@ class EnergyOrganizationChartController extends Controller
                 ->orWhere('notice_number', 'LIKE', "%$keyword%")
                 ->orWhere('notice', 'LIKE', "%$keyword%")
                 ->orWhere('poster_number', 'LIKE', "%$keyword%")
-                ->orWhere('poster_number', 'LIKE', "%$keyword%")
                 ->orWhere('publication_number', 'LIKE', "%$keyword%")
                 ->orWhere('publication', 'LIKE', "%$keyword%")
                 ->orWhere('voice_number', 'LIKE', "%$keyword%")

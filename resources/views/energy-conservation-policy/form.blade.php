@@ -15,11 +15,6 @@
 </div>
 <div class="form-group {{ $errors->has('poster_number') ? 'has-error' : ''}}">
     <label for="poster_number" class="control-label">{{ 'Poster Number' }}</label>
-    <input class="form-control" name="poster_number" type="text" id="poster_number" value="{{ isset($energyconservationpolicy->poster_number) ? $energyconservationpolicy->poster_number : ''}}" >
-    {!! $errors->first('poster_number', '<p class="help-block">:message</p>') !!}
-</div>
-<div class="form-group {{ $errors->has('poster_number') ? 'has-error' : ''}}">
-    <label for="poster_number" class="control-label">{{ 'Poster Number' }}</label>
     <input class="form-control" name="poster_number" type="file" id="poster_number" value="{{ isset($energyconservationpolicy->poster_number) ? $energyconservationpolicy->poster_number : ''}}" >
     {!! $errors->first('poster_number', '<p class="help-block">:message</p>') !!}
 </div>
