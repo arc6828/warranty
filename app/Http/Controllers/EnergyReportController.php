@@ -15,7 +15,7 @@ use App\EnergyCommittee;
 use App\EnergyFactoryInformation;
 use App\EnergyOrganizationChart;
 use App\EnergyEvaluation;
-use App\EnergyConservationPolicie;
+use App\EnergyConservationPolicy;
 //CREATE FORM-2
 use App\EnergyProduction;
 use App\EnergyElectricityTransformer;
@@ -84,7 +84,7 @@ class EnergyReportController extends Controller
         EnergyFactoryInformation::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyOrganizationChart::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyEvaluation::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
-        EnergyConservationPolicie::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyConservationPolicy::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         //CREATE FORM-2
         EnergyProduction::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyElectricityTransformer::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
