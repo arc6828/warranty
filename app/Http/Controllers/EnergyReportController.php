@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 
 use App\EnergyReport;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Auth;
+
 //CREATE FORM-1
 use App\EnergyCommittee;
 use App\EnergyFactoryInformation;
