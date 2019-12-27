@@ -1,16 +1,15 @@
-@extends('layout.main')
-
-@section('title','Edit EnergyUsage')
+@extends('layouts.app')
 
 @section('content')
     <div class="container">
         <div class="row">
+            @include('admin.sidebar')
 
-            <div class="col-md-12">
+            <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Edit EnergyUsage #{{ $energyusage->id }}</div>
+                    <div class="card-header">Edit EnergyReport #{{ $energyreport->id }}</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-usage') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-report') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -22,11 +21,11 @@
                             </ul>
                         @endif
 
-                        <form method="POST" action="{{ url('/energy-usage/' . $energyusage->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/energy-report/' . $energyreport->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             {{ csrf_field() }}
 
-                            @include ('energy-usage.form', ['formMode' => 'edit'])
+                            @include ('energy-report.form', ['formMode' => 'edit'])
 
                         </form>
 

@@ -25,7 +25,7 @@ class EnergyOrganizationChart extends Model
      *
      * @var array
      */
-    protected $fillable = ['organization_chart', 'organization_chart_promotion', 'notice_number', 'notice', 'poster_number', 'poster_number', 'publication_number', 'publication', 'voice_number', 'voice', 'email_number', 'email', 'meeting_number', 'meeting', 'others_number', 'others', 'user_id', 'enery_report_id'];
+    protected $fillable = ['organization_chart', 'organization_chart_promotion', 'notice_number', 'notice', 'poster_number', 'publication_number', 'publication', 'voice_number', 'voice', 'email_number', 'email', 'meeting_number', 'meeting', 'others_number', 'others', 'user_id', 'enery_report_id'];
 
     
 }

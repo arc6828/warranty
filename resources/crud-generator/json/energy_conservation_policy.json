@@ -11,11 +11,7 @@
         {
             "name": "notice",
             "type": "file"
-        },         
-        {
-            "name": "poster_number",
-            "type": "string"
-        },                               
+        },                     
         {
             "name": "poster_number",
             "type": "file"

@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\EneryReport;
+use App\EnergyCommittee;
 use Illuminate\Http\Request;
 
-class EneryReportController extends Controller
+class EnergyCommitteeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,17 +21,20 @@ class EneryReportController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $eneryreport = EneryReport::where('legal_name', 'LIKE', "%$keyword%")
-                ->orWhere('factory_name', 'LIKE', "%$keyword%")
-                ->orWhere('tsic_id', 'LIKE', "%$keyword%")
-                ->orWhere('year', 'LIKE', "%$keyword%")
+            $energycommittee = EnergyCommittee::where('president', 'LIKE', "%$keyword%")
+                ->orWhere('common_responsible_person', 'LIKE', "%$keyword%")
+                ->orWhere('common_responsible_person_code', 'LIKE', "%$keyword%")
+                ->orWhere('senior_responsible_person', 'LIKE', "%$keyword%")
+                ->orWhere('senior_responsible_person_code', 'LIKE', "%$keyword%")
+                ->orWhere('factory_owner', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
+                ->orWhere('enery_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
-            $eneryreport = EneryReport::latest()->paginate($perPage);
+            $energycommittee = EnergyCommittee::latest()->paginate($perPage);
         }
 
-        return view('enery-report.index', compact('eneryreport'));
+        return view('energy-committee.index', compact('energycommittee'));
     }
 
     /**
@@ -41,7 +44,7 @@ class EneryReportController extends Controller
      */
     public function create()
     {
-        return view('enery-report.create');
+        return view('energy-committee.create');
     }
 
     /**
@@ -56,9 +59,9 @@ class EneryReportController extends Controller
         
         $requestData = $request->all();
         
-        EneryReport::create($requestData);
+        EnergyCommittee::create($requestData);
 
-        return redirect('enery-report')->with('flash_message', 'EneryReport added!');
+        return redirect('energy-committee')->with('flash_message', 'EnergyCommittee added!');
     }
 
     /**
@@ -70,9 +73,9 @@ class EneryReportController extends Controller
      */
     public function show($id)
     {
-        $eneryreport = EneryReport::findOrFail($id);
+        $energycommittee = EnergyCommittee::findOrFail($id);
 
-        return view('enery-report.show', compact('eneryreport'));
+        return view('energy-committee.show', compact('energycommittee'));
     }
 
     /**
@@ -84,9 +87,9 @@ class EneryReportController extends Controller
      */
     public function edit($id)
     {
-        $eneryreport = EneryReport::findOrFail($id);
+        $energycommittee = EnergyCommittee::findOrFail($id);
 
-        return view('enery-report.edit', compact('eneryreport'));
+        return view('energy-committee.edit', compact('energycommittee'));
     }
 
     /**
@@ -102,10 +105,10 @@ class EneryReportController extends Controller
         
         $requestData = $request->all();
         
-        $eneryreport = EneryReport::findOrFail($id);
-        $eneryreport->update($requestData);
+        $energycommittee = EnergyCommittee::findOrFail($id);
+        $energycommittee->update($requestData);
 
-        return redirect('enery-report')->with('flash_message', 'EneryReport updated!');
+        return redirect('energy-committee')->with('flash_message', 'EnergyCommittee updated!');
     }
 
     /**
@@ -117,8 +120,8 @@ class EneryReportController extends Controller
      */
     public function destroy($id)
     {
-        EneryReport::destroy($id);
+        EnergyCommittee::destroy($id);
 
-        return redirect('enery-report')->with('flash_message', 'EneryReport deleted!');
+        return redirect('energy-committee')->with('flash_message', 'EnergyCommittee deleted!');
     }
 }

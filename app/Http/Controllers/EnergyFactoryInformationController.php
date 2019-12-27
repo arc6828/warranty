@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\EneryFactoryInformation;
+use App\EnergyFactoryInformation;
 use Illuminate\Http\Request;
 
-class EneryFactoryInformationController extends Controller
+class EnergyFactoryInformationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +21,7 @@ class EneryFactoryInformationController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $eneryfactoryinformation = EneryFactoryInformation::where('factory_size', 'LIKE', "%$keyword%")
+            $energyfactoryinformation = EnergyFactoryInformation::where('factory_size', 'LIKE', "%$keyword%")
                 ->orWhere('factory_address', 'LIKE', "%$keyword%")
                 ->orWhere('factory_tel', 'LIKE', "%$keyword%")
                 ->orWhere('factory_fax', 'LIKE', "%$keyword%")
@@ -37,10 +37,10 @@ class EneryFactoryInformationController extends Controller
                 ->orWhere('enery_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
-            $eneryfactoryinformation = EneryFactoryInformation::latest()->paginate($perPage);
+            $energyfactoryinformation = EnergyFactoryInformation::latest()->paginate($perPage);
         }
 
-        return view('enery-factory-information.index', compact('eneryfactoryinformation'));
+        return view('energy-factory-information.index', compact('energyfactoryinformation'));
     }
 
     /**
@@ -50,7 +50,7 @@ class EneryFactoryInformationController extends Controller
      */
     public function create()
     {
-        return view('enery-factory-information.create');
+        return view('energy-factory-information.create');
     }
 
     /**
@@ -65,9 +65,9 @@ class EneryFactoryInformationController extends Controller
         
         $requestData = $request->all();
         
-        EneryFactoryInformation::create($requestData);
+        EnergyFactoryInformation::create($requestData);
 
-        return redirect('enery-factory-information')->with('flash_message', 'EneryFactoryInformation added!');
+        return redirect('energy-factory-information')->with('flash_message', 'EnergyFactoryInformation added!');
     }
 
     /**
@@ -79,9 +79,9 @@ class EneryFactoryInformationController extends Controller
      */
     public function show($id)
     {
-        $eneryfactoryinformation = EneryFactoryInformation::findOrFail($id);
+        $energyfactoryinformation = EnergyFactoryInformation::findOrFail($id);
 
-        return view('enery-factory-information.show', compact('eneryfactoryinformation'));
+        return view('energy-factory-information.show', compact('energyfactoryinformation'));
     }
 
     /**
@@ -93,9 +93,9 @@ class EneryFactoryInformationController extends Controller
      */
     public function edit($id)
     {
-        $eneryfactoryinformation = EneryFactoryInformation::findOrFail($id);
+        $energyfactoryinformation = EnergyFactoryInformation::findOrFail($id);
 
-        return view('enery-factory-information.edit', compact('eneryfactoryinformation'));
+        return view('energy-factory-information.edit', compact('energyfactoryinformation'));
     }
 
     /**
@@ -111,10 +111,10 @@ class EneryFactoryInformationController extends Controller
         
         $requestData = $request->all();
         
-        $eneryfactoryinformation = EneryFactoryInformation::findOrFail($id);
-        $eneryfactoryinformation->update($requestData);
+        $energyfactoryinformation = EnergyFactoryInformation::findOrFail($id);
+        $energyfactoryinformation->update($requestData);
 
-        return redirect('enery-factory-information')->with('flash_message', 'EneryFactoryInformation updated!');
+        return redirect('energy-factory-information')->with('flash_message', 'EnergyFactoryInformation updated!');
     }
 
     /**
@@ -126,8 +126,8 @@ class EneryFactoryInformationController extends Controller
      */
     public function destroy($id)
     {
-        EneryFactoryInformation::destroy($id);
+        EnergyFactoryInformation::destroy($id);
 
-        return redirect('enery-factory-information')->with('flash_message', 'EneryFactoryInformation deleted!');
+        return redirect('energy-factory-information')->with('flash_message', 'EnergyFactoryInformation deleted!');
     }
 }

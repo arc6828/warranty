@@ -79,3 +79,6 @@ Route::resource('enery-factory-information', 'EneryFactoryInformationController'
 Route::resource('energy-organization-chart', 'EnergyOrganizationChartController');
 Route::resource('energy-evaluation', 'EnergyEvaluationController');
 Route::resource('energy-conservation-policy', 'EnergyConservationPolicyController');
+Route::resource('energy-report', 'EnergyReportController');
+Route::resource('energy-committee', 'EnergyCommitteeController');
+Route::resource('energy-factory-information', 'EnergyFactoryInformationController');

@@ -20,7 +20,6 @@ class CreateEnergyOrganizationChartsTable extends Migration
             $table->string('notice_number')->nullable();
             $table->string('notice')->nullable();
             $table->string('poster_number')->nullable();
-            $table->string('poster_number')->nullable();
             $table->string('publication_number')->nullable();
             $table->string('publication')->nullable();
             $table->string('voice_number')->nullable();

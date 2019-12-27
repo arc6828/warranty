@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EneryCommittee extends Model
+class EnergyCommittee extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'enery_committees';
+    protected $table = 'energy_committees';
 
     /**
     * The database primary key value.

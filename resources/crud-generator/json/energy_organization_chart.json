@@ -19,11 +19,7 @@
         {
             "name": "poster_number",
             "type": "string"
-        },                               
-        {
-            "name": "poster_number",
-            "type": "file"
-        },         
+        },          
         { 
             "name": "publication_number",
             "type": "string"

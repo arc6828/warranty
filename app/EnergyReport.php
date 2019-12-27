@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EneryFactoryInformation extends Model
+class EnergyReport extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'enery_factory_informations';
+    protected $table = 'energy_reports';
 
     /**
     * The database primary key value.
@@ -25,7 +25,7 @@ class EneryFactoryInformation extends Model
      *
      * @var array
      */
-    protected $fillable = ['factory_size', 'factory_address', 'factory_tel', 'factory_fax', 'factory_email', 'office_address', 'office_tel', 'office_fax', 'office_email', 'factory_type', 'factory_employee', 'factory_operation_time', 'user_id', 'enery_report_id'];
+    protected $fillable = ['legal_name', 'factory_name', 'tsic_id', 'year', 'user_id'];
 
     
 }

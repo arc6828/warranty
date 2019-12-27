@@ -7,9 +7,9 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Create New EneryCommittee</div>
+                    <div class="card-header">Edit EnergyFactoryInformation #{{ $energyfactoryinformation->id }}</div>
                     <div class="card-body">
-                        <a href="{{ url('/enery-committee') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-factory-information') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -21,10 +21,11 @@
                             </ul>
                         @endif
 
-                        <form method="POST" action="{{ url('/enery-committee') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/energy-factory-information/' . $energyfactoryinformation->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                            {{ method_field('PATCH') }}
                             {{ csrf_field() }}
 
-                            @include ('enery-committee.form', ['formMode' => 'create'])
+                            @include ('energy-factory-information.form', ['formMode' => 'edit'])
 
                         </form>
 

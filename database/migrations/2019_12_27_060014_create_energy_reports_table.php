@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateEneryReportsTable extends Migration
+class CreateEnergyReportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateEneryReportsTable extends Migration
      */
     public function up()
     {
-        Schema::create('enery_reports', function (Blueprint $table) {
+        Schema::create('energy_reports', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('legal_name')->nullable();
@@ -30,6 +30,6 @@ class CreateEneryReportsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('enery_reports');
+        Schema::drop('energy_reports');
     }
 }

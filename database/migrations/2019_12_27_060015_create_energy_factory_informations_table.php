@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateEneryFactoryInformationsTable extends Migration
+class CreateEnergyFactoryInformationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class CreateEneryFactoryInformationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('enery_factory_informations', function (Blueprint $table) {
+        Schema::create('energy_factory_informations', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('factory_size');
+            $table->string('factory_size')->nullable();
             $table->text('factory_address')->nullable();
             $table->string('factory_tel')->nullable();
             $table->string('factory_fax')->nullable();
@@ -24,7 +24,7 @@ class CreateEneryFactoryInformationsTable extends Migration
             $table->string('office_tel')->nullable();
             $table->string('office_fax')->nullable();
             $table->string('office_email')->nullable();
-            $table->string('factory_type');
+            $table->string('factory_type')->nullable();
             $table->text('factory_employee')->nullable();
             $table->text('factory_operation_time')->nullable();
             $table->integer('user_id')->nullable();
@@ -39,6 +39,6 @@ class CreateEneryFactoryInformationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('enery_factory_informations');
+        Schema::drop('energy_factory_informations');
     }
 }
