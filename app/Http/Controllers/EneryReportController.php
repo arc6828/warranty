@@ -56,8 +56,26 @@ class EneryReportController extends Controller
         
         $requestData = $request->all();
         
-        EneryReport::create($requestData);
+        $energy_report = EneryReport::create($requestData);
 
+        //CREATE FORM-1
+        EnergyCommittee::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyFactoryInformation::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyOrganizationChart::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyEvaluation::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyConservationPolicie::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        //CREATE FORM-2
+        EnergyProduction::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyElectricityTransformer::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyConsumptionElectricity::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyConsumptionHeat::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyHeatGenerator::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyPortionHeat::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyPortionElectricity::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        
+        //CREATE FORM-3
+        EnergyMachine::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id]);
+        
         return redirect('enery-report')->with('flash_message', 'EneryReport added!');
     }
 
