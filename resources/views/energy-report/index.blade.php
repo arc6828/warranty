@@ -30,11 +30,11 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                    <tr><th> ชื่อนิติบุคคล </th><td> {{ $energyreport->legal_name }} </td></tr>
-                                    <tr><th> ชื่อโรงงานควบคุม </th><td> {{ $energyreport->factory_name }} </td></tr>
-                                    <tr><th> Tsic Id </th><td> {{ $energyreport->tsic_id }} </td></tr>
-                                    <tr><th> ปี </th><td> {{ $energyreport->year }} </td></tr>
-                                    <tr><th> User Id </th><td> {{ $energyreport->user_id }} </td></tr>
+                                     <th> ชื่อนิติบุคคล </th> 
+                                     <th> ชื่อโรงงานควบคุม </th> 
+                                     <th> Tsic Id </th> 
+                                     <th> ปี </th> 
+                                     <th> User Id </th> 
                                     </tr>
                                 </thead>
                                 <tbody>
