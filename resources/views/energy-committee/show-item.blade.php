@@ -1,5 +1,4 @@
-<table class="table">
-    <tbody>
+  <tr>
             <tr>
                 <th>ID</th><td>{{ $energycommittee->id }}</td>
             </tr>
@@ -12,5 +11,4 @@
             <tr><th> User Id </th><td> {{ $energycommittee->user_id }} </td></tr>
             <tr><th> Enery Report Id </th>
             <td> {{ $energycommittee->enery_report_id }} </td></tr>
-    </tbody>
-</table>
+  </tr>
