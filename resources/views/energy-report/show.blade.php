@@ -35,45 +35,7 @@
                                 </tbody>
                             </table> 
                         </div>
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                  @include('energy-committee/show-item')
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                  @include('energy_factory_information/show-item')
-                                </tbody>
-                            </table>
-                        </div>
-
-                         <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                  @include('energy_organization_chart/show-item')
-                                </tbody>
-                            </table>
-                        </div>
-
-                         <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                  @include('energy_evaluation/show-item')
-                                </tbody>
-                            </table>
-                        </div>
-
-                         <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                  @include('energy_conservation_policy/show-item')
-                                </tbody>
-                            </table>
-                        </div>
+                        
 
                     </div>
                 </div>

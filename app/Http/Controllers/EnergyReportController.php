@@ -161,4 +161,20 @@ class EnergyReportController extends Controller
 
         return redirect('energy-report')->with('flash_message', 'EnergyReport deleted!');
     }
+
+    public function redirect(Request $request, $page)
+    {
+        switch($page){
+            case():
+            return redirect('energy-report')->with('flash_message', 'EnergyReport updated!');
+
+        }
+
+        $requestData = $request->all();
+        
+        $energyreport = EnergyReport::findOrFail($id);
+        $energyreport->update($requestData);
+
+        return redirect('energy-report')->with('flash_message', 'EnergyReport updated!');
+    }
 }

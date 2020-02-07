@@ -29,7 +29,7 @@
     {!! $errors->first('investment_score', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('remark') ? 'has-error' : ''}}">
-    <label for="remark" class="control-label">{{ 'Remark }}</label>
+    <label for="remark" class="control-label">{{ 'Remark' }}</label>
     <textarea class="form-control" rows="5" name="remark" type="textarea" id="remark" >{{ isset($energyevaluation->remark) ? $energyevaluation->remark : ''}}</textarea>
     {!! $errors->first('remark', '<p class="help-block">:message</p>') !!}
 </div>

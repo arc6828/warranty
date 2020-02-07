@@ -22,6 +22,15 @@
     
     <script src="https://kit.fontawesome.com/d59a8a2721.js"></script>
 
+    
+    <style>
+        a.active {
+        font-weight: 900;
+    }
+    </style>
+    
+    
+
     @yield('head')
 </head>
 <body>
@@ -38,10 +47,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mx-auto">
-                      <li class="mx-4"><a href="{{ url('/') }}/branch">Branch</a></li>
-                      <li class="mx-4"><a href="{{ url('/') }}/building">Building</a></li>
-                      <li class="mx-4"><a href="{{ url('/') }}/hardware">Hardware</a></li>
-                      <li class="mx-4"><a href="{{ url('/') }}/energy-usage">Energy usage</a></li>
+                      <li class="mx-4"><a href="{{ url('/') }}/energy-report">Energy</a></li>
+                      <li class="mx-4"><a href="#">Environment</a></li>
+                      <li class="mx-4"><a href="#">Factory</a></li>
+                      <li class="mx-4"><a href="#">BOI</a></li>
+
+                      <li class="mx-4 d-none"><a href="{{ url('/') }}/branch">Branch</a></li>
+                      <li class="mx-4 d-none"><a href="{{ url('/') }}/building">Building</a></li>
+                      <li class="mx-4 d-none"><a href="{{ url('/') }}/hardware">Hardware</a></li>
+                      <li class="mx-4 d-none"><a href="{{ url('/') }}/energy-usage">Energy usage</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -79,10 +93,51 @@
                 </div>
             </div>
         </nav>
+        
+        <div class="container pt-4 text-right">
+            <button class="btn btn-sm btn-outline-primary" onclick="previous_page()">ก่อนหน้า</button>
+            <button class="btn btn-sm btn-primary"  onclick="next_page()">ถัดไป</button>
+        </div>
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+    <script>
+        var url = window.location.href;
+        console.log("URL : ", url);
+        var object = document.querySelector('a[href="'+url+'"]');
+        console.log(object);
+        if(object){
+            object.classList.add('active');
+        }
+        //$('.menu a[href="'+url+'"]').addClass('current_page_item');
+        function previous_page(){
+            //get and up
+            var object = document.querySelector('a[href="'+url+'"]').parentNode;
+            var prev_object = object.previousElementSibling;
+            //console.log(object);
+            if (prev_object.tagName == "LI") {
+                prev_object.firstChild.click();
+            }else{
+                prev_object.previousElementSibling.firstChild.click();
+            }
+            
+        }
+        function next_page(){
+            var object = document.querySelector('a[href="'+url+'"]').parentNode;
+            console.log(object);
+            var next_object = object.nextElementSibling;
+            console.log(next_object,next_object.tagName);
+            if (next_object.tagName == "LI") {
+                next_object.firstChild.click();
+            }else{
+                next_object.nextElementSibling.firstChild.click();
+            }
+            
+            //console.log(object);
+            
+        }
+    </script>
 </body>
 </html>

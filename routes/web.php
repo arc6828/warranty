@@ -61,24 +61,30 @@ Route::get('energy/form2', function(){
 Route::get('energy/form3', function(){
     return view('energy/form3');
 });
-Route::resource('energy-production-diagram', 'EnergyProductionDiagramController');
-Route::resource('energy-production-consumption', 'EnergyProductionConsumptionController');
-Route::resource('energy-machine-evaluation', 'EnergyMachineEvaluationController');
-Route::resource('energy-machine', 'EnergyMachineController');
-Route::resource('energy-production', 'EnergyProductionController');
-Route::resource('energy-production-operation', 'EnergyProductionOperationController');
-Route::resource('energy-electricity-transformer', 'EnergyElectricityTransformerController');
-Route::resource('energy-consumption-electricity', 'EnergyConsumptionElectricityController');
-Route::resource('energy-consumption-heat', 'EnergyConsumptionHeatController');
-Route::resource('energy-heat-generator', 'EnergyHeatGeneratorController');
-Route::resource('energy-portion-heat', 'EnergyPortionHeatController');
-Route::resource('energy-portion-electricity', 'EnergyPortionElectricityController');
-Route::resource('enery-report', 'EneryReportController');
-Route::resource('enery-committee', 'EneryCommitteeController');
-Route::resource('enery-factory-information', 'EneryFactoryInformationController');
-Route::resource('energy-organization-chart', 'EnergyOrganizationChartController');
-Route::resource('energy-evaluation', 'EnergyEvaluationController');
-Route::resource('energy-conservation-policy', 'EnergyConservationPolicyController');
-Route::resource('energy-report', 'EnergyReportController');
-Route::resource('energy-committee', 'EnergyCommitteeController');
-Route::resource('energy-factory-information', 'EnergyFactoryInformationController');
+Route::middleware(['auth'])->group(function () {        
+    //Part1
+    Route::get('energy-report/redirect/{page}','EnergyReportController@redirect');
+    Route::resource('energy-report', 'EnergyReportController');
+    Route::resource('energy-committee', 'EnergyCommitteeController');
+    Route::resource('energy-factory-information', 'EnergyFactoryInformationController');
+    Route::resource('energy-organization-chart', 'EnergyOrganizationChartController');
+    Route::resource('energy-evaluation', 'EnergyEvaluationController');
+    Route::resource('energy-conservation-policy', 'EnergyConservationPolicyController');
+
+    //Part2
+    Route::resource('energy-production', 'EnergyProductionController');
+    Route::resource('energy-production-operation', 'EnergyProductionOperationController');
+    Route::resource('energy-electricity-transformer', 'EnergyElectricityTransformerController');
+    Route::resource('energy-consumption-electricity', 'EnergyConsumptionElectricityController');
+    Route::resource('energy-consumption-heat', 'EnergyConsumptionHeatController');
+    Route::resource('energy-heat-generator', 'EnergyHeatGeneratorController');
+    Route::resource('energy-portion-heat', 'EnergyPortionHeatController');
+    Route::resource('energy-portion-electricity', 'EnergyPortionElectricityController');
+
+
+    //PART3
+    Route::resource('energy-production-diagram', 'EnergyProductionDiagramController');
+    Route::resource('energy-production-consumption', 'EnergyProductionConsumptionController');
+    Route::resource('energy-machine-evaluation', 'EnergyMachineEvaluationController');
+    Route::resource('energy-machine', 'EnergyMachineController');
+});
