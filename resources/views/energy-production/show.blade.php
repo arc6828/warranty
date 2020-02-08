@@ -27,7 +27,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $energyproduction->id }}</td>
                                     </tr>
-                                    <tr><th> ลำดับที่ </th><td> {{ $energyproduction->code }} </td></tr><tr><th> ชื่อผลิตภัณฑ์ </th><td> {{ $energyproduction->product_name }} </td></tr><tr><th> กำลังผลิตติดตั้ง (กำลังการผลิตสูงสุดของเครื่องจักร) </th><td> {{ $energyproduction->capacity }} </td></tr><tr><th> ปริมาณผลผลิตจริง </th><td> {{ $energyproduction->yield }} </td></tr><tr><th> User Id </th><td> {{ $energyproduction->user_id }} </td></tr><tr><th> Enery Report Id </th><td> {{ $energyproduction->enery_report_id }} </td></tr>
+                                    <tr><th> ลำดับที่ </th><td> {{ $energyproduction->code }} </td></tr><tr><th> ชื่อผลิตภัณฑ์ </th><td> {{ $energyproduction->product_name }} </td></tr><tr><th> กำลังผลิตติดตั้ง (กำลังการผลิตสูงสุดของเครื่องจักร) </th><td> {{ $energyproduction->capacity }} </td></tr><tr><th> ปริมาณผลผลิตจริง </th><td> {{ $energyproduction->yield }} </td></tr><tr><th> User Id </th><td> {{ $energyproduction->user_id }} </td></tr><tr><th> Enery Report Id </th><td> {{ $energyproduction->energy_report_id }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

@@ -25,7 +25,7 @@ class EnergyCommittee extends Model
      *
      * @var array
      */
-    protected $fillable = ['president', 'common_responsible_person', 'common_responsible_person_code', 'senior_responsible_person', 'senior_responsible_person_code', 'factory_owner', 'user_id', 'enery_report_id'];
+    protected $fillable = ['president', 'common_responsible_person', 'common_responsible_person_code', 'senior_responsible_person', 'senior_responsible_person_code', 'factory_owner', 'user_id', 'energy_report_id'];
 
     
 }

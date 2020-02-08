@@ -37,7 +37,7 @@
                                 @foreach($energyheatgenerator as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->month }}</td><td>{{ $item->capacity }}</td><td>{{ $item->primary_fuel_consumption_type }}</td><td>{{ $item->primary_fuel_consumption_volume }}</td><td>{{ $item->primary_fuel_consumption_unit }}</td><td>{{ $item->operating_hours }}</td><td>{{ $item->electricity_use }}</td><td>{{ $item->electricity_sale }}</td><td>{{ $item->steam_use }}</td><td>{{ $item->steam_sale }}</td><td>{{ $item->user_id }}</td><td>{{ $item->enery_report_id }}</td>
+                                        <td>{{ $item->month }}</td><td>{{ $item->capacity }}</td><td>{{ $item->primary_fuel_consumption_type }}</td><td>{{ $item->primary_fuel_consumption_volume }}</td><td>{{ $item->primary_fuel_consumption_unit }}</td><td>{{ $item->operating_hours }}</td><td>{{ $item->electricity_use }}</td><td>{{ $item->electricity_sale }}</td><td>{{ $item->steam_use }}</td><td>{{ $item->steam_sale }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-heat-generator/' . $item->id) }}" title="View EnergyHeatGenerator"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-heat-generator/' . $item->id . '/edit') }}" title="Edit EnergyHeatGenerator"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

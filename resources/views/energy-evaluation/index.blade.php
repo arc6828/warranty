@@ -46,7 +46,7 @@
                                 @foreach($energyevaluation as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->policy_score }}</td><td>{{ $item->organization_score }}</td><td>{{ $item->motivation_score }}</td><td>{{ $item->information_score }}</td><td>{{ $item->public_relation_score }}</td><td>{{ $item->investment_score }}</td><td>{{ $item->remark }}</td><td>{{ $item->user_id }}</td><td>{{ $item->enery_report_id }}</td>
+                                        <td>{{ $item->policy_score }}</td><td>{{ $item->organization_score }}</td><td>{{ $item->motivation_score }}</td><td>{{ $item->information_score }}</td><td>{{ $item->public_relation_score }}</td><td>{{ $item->investment_score }}</td><td>{{ $item->remark }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-evaluation/' . $item->id) }}" title="View EnergyEvaluation"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-evaluation/' . $item->id . '/edit') }}" title="Edit EnergyEvaluation"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

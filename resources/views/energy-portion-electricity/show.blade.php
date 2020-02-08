@@ -27,7 +27,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $energyportionelectricity->id }}</td>
                                     </tr>
-                                    <tr><th> ระบบ </th><td> {{ $energyportionelectricity->system }} </td></tr><tr><th> การใช้พลังงานไฟฟ้า </th><td> {{ $energyportionelectricity->electric_power_consumption }} </td></tr><tr><th> วิธีการประเมิน </th><td> {{ $energyportionelectricity->method_assessment }} </td></tr><tr><th> วิธีการตรวจวัด </th><td> {{ $energyportionelectricity->method_check }} </td></tr><tr><th> User Id </th><td> {{ $energyportionelectricity->user_id }} </td></tr><tr><th> Enery Report Id </th><td> {{ $energyportionelectricity->enery_report_id }} </td></tr>
+                                    <tr><th> ระบบ </th><td> {{ $energyportionelectricity->system }} </td></tr><tr><th> การใช้พลังงานไฟฟ้า </th><td> {{ $energyportionelectricity->electric_power_consumption }} </td></tr><tr><th> วิธีการประเมิน </th><td> {{ $energyportionelectricity->method_assessment }} </td></tr><tr><th> วิธีการตรวจวัด </th><td> {{ $energyportionelectricity->method_check }} </td></tr><tr><th> User Id </th><td> {{ $energyportionelectricity->user_id }} </td></tr><tr><th> Enery Report Id </th><td> {{ $energyportionelectricity->energy_report_id }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

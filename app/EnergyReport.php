@@ -27,5 +27,8 @@ class EnergyReport extends Model
      */
     protected $fillable = ['legal_name', 'factory_name', 'tsic_id', 'year', 'user_id'];
 
-    
+    public function  energy_committee ()
+    {
+        return $this->hasOne('App\EnergyCommittee','energy_report_id');
+    }
 }

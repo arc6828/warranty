@@ -53,10 +53,10 @@
     <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyheatgenerator->user_id) ? $energyheatgenerator->user_id : ''}}" >
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('enery_report_id') ? 'has-error' : ''}}">
-    <label for="enery_report_id" class="control-label">{{ 'Enery Report Id' }}</label>
-    <input class="form-control" name="enery_report_id" type="number" id="enery_report_id" value="{{ isset($energyheatgenerator->enery_report_id) ? $energyheatgenerator->enery_report_id : ''}}" >
-    {!! $errors->first('enery_report_id', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
+    <label for="energy_report_id" class="control-label">{{ 'Enery Report Id' }}</label>
+    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energyheatgenerator->energy_report_id) ? $energyheatgenerator->energy_report_id : ''}}" >
+    {!! $errors->first('energy_report_id', '<p class="help-block">:message</p>') !!}
 </div>
 
 

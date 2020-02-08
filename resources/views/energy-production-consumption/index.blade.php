@@ -53,7 +53,7 @@
                                         <td>{{ $item->consumption_heat }}</td>
                                         <td class="d-none">{{ $item->energy_production_id }}</td>
                                         <td class="d-none">{{ $item->user_id }}</td>
-                                        <td class="d-none">{{ $item->enery_report_id }}</td>
+                                        <td class="d-none">{{ $item->energy_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-production-consumption/' . $item->id) }}" title="View EnergyProductionConsumption"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-production-consumption/' . $item->id . '/edit') }}" title="Edit EnergyProductionConsumption"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

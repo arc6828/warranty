@@ -25,7 +25,7 @@ class EnergyFactoryInformation extends Model
      *
      * @var array
      */
-    protected $fillable = ['factory_size', 'factory_address', 'factory_tel', 'factory_fax', 'factory_email', 'office_address', 'office_tel', 'office_fax', 'office_email', 'factory_type', 'factory_employee', 'factory_operation_time', 'user_id', 'enery_report_id'];
+    protected $fillable = ['factory_size', 'factory_address', 'factory_tel', 'factory_fax', 'factory_email', 'office_address', 'office_tel', 'office_fax', 'office_email', 'factory_type', 'factory_employee', 'factory_operation_time', 'user_id', 'energy_report_id'];
 
     
 }

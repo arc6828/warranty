@@ -37,7 +37,7 @@
                                 @foreach($energyelectricitytransformer as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->user_serial }}</td><td>{{ $item->transformer_serial }}</td><td>{{ $item->user_type }}</td><td>{{ $item->usage_rate }}</td><td>{{ $item->transformer_size }}</td><td>{{ $item->transformer_quantity }}</td><td>{{ $item->user_id }}</td><td>{{ $item->enery_report_id }}</td>
+                                        <td>{{ $item->user_serial }}</td><td>{{ $item->transformer_serial }}</td><td>{{ $item->user_type }}</td><td>{{ $item->usage_rate }}</td><td>{{ $item->transformer_size }}</td><td>{{ $item->transformer_quantity }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-electricity-transformer/' . $item->id) }}" title="View EnergyElectricityTransformer"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-electricity-transformer/' . $item->id . '/edit') }}" title="Edit EnergyElectricityTransformer"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

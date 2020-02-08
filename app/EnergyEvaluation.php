@@ -25,7 +25,7 @@ class EnergyEvaluation extends Model
      *
      * @var array
      */
-    protected $fillable = ['policy_score', 'organization_score', 'motivation_score', 'information_score', 'public_relation_score', 'investment_score', 'remark ', 'user_id', 'enery_report_id'];
+    protected $fillable = ['policy_score', 'organization_score', 'motivation_score', 'information_score', 'public_relation_score', 'investment_score', 'remark ', 'user_id', 'energy_report_id'];
 
     
 }

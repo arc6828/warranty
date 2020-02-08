@@ -104,7 +104,7 @@
                                     </tr>
                                     <tr>
                                         <th> Enery Report Id </th>
-                                        <td> {{ $energymachine->enery_report_id }} </td>
+                                        <td> {{ $energymachine->energy_report_id }} </td>
                                     </tr>
                                 </tbody>
                             </table>

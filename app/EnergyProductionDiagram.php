@@ -25,7 +25,7 @@ class EnergyProductionDiagram extends Model
      *
      * @var array
      */
-    protected $fillable = ['photo_diagram', 'description', 'energy_production_id', 'user_id', 'enery_report_id'];
+    protected $fillable = ['photo_diagram', 'description', 'energy_production_id', 'user_id', 'energy_report_id'];
 
     
 }

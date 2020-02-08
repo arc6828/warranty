@@ -164,6 +164,7 @@ class EnergyReportController extends Controller
 
     public function redirect(Request $request, $page)
     {
+        /*
         switch($page){
             case():
             return redirect('energy-report')->with('flash_message', 'EnergyReport updated!');
@@ -176,5 +177,6 @@ class EnergyReportController extends Controller
         $energyreport->update($requestData);
 
         return redirect('energy-report')->with('flash_message', 'EnergyReport updated!');
+        */
     }
 }

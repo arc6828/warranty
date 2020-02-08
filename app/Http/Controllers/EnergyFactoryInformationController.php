@@ -34,7 +34,7 @@ class EnergyFactoryInformationController extends Controller
                 ->orWhere('factory_employee', 'LIKE', "%$keyword%")
                 ->orWhere('factory_operation_time', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('enery_report_id', 'LIKE', "%$keyword%")
+                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $energyfactoryinformation = EnergyFactoryInformation::latest()->paginate($perPage);

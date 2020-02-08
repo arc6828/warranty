@@ -29,7 +29,7 @@ class EnergyEvaluationController extends Controller
                 ->orWhere('investment_score', 'LIKE', "%$keyword%")
                 ->orWhere('remark', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('enery_report_id', 'LIKE', "%$keyword%")
+                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $energyevaluation = EnergyEvaluation::latest()->paginate($perPage);

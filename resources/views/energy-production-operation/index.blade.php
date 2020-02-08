@@ -37,7 +37,7 @@
                                 @foreach($energyproductionoperation as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->energy_production_id }}</td><td>{{ $item->raw_material }}</td><td>{{ $item->month }}</td><td>{{ $item->working_hours }}</td><td>{{ $item->production_unit }}</td><td>{{ $item->yield }}</td><td>{{ $item->capacity }}</td><td>{{ $item->user_id }}</td><td>{{ $item->enery_report_id }}</td>
+                                        <td>{{ $item->energy_production_id }}</td><td>{{ $item->raw_material }}</td><td>{{ $item->month }}</td><td>{{ $item->working_hours }}</td><td>{{ $item->production_unit }}</td><td>{{ $item->yield }}</td><td>{{ $item->capacity }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-production-operation/' . $item->id) }}" title="View EnergyProductionOperation"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-production-operation/' . $item->id . '/edit') }}" title="Edit EnergyProductionOperation"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

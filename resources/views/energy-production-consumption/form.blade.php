@@ -28,10 +28,10 @@
     <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyproductionconsumption->user_id) ? $energyproductionconsumption->user_id : ''}}" readonly >
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('enery_report_id') ? 'has-error' : ''}}">
-    <label for="enery_report_id" class="control-label">{{ 'Enery Report Id' }}</label>
-    <input class="form-control" name="enery_report_id" type="number" id="enery_report_id" value="{{ isset($energyproductionconsumption->enery_report_id) ? $energyproductionconsumption->enery_report_id : ''}}" readonly >
-    {!! $errors->first('enery_report_id', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
+    <label for="energy_report_id" class="control-label">{{ 'Enery Report Id' }}</label>
+    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energyproductionconsumption->energy_report_id) ? $energyproductionconsumption->energy_report_id : ''}}" readonly >
+    {!! $errors->first('energy_report_id', '<p class="help-block">:message</p>') !!}
 </div>
 
 

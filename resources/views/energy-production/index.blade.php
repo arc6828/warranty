@@ -37,7 +37,7 @@
                                 @foreach($energyproduction as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->code }}</td><td>{{ $item->product_name }}</td><td>{{ $item->capacity }}</td><td>{{ $item->yield }}</td><td>{{ $item->user_id }}</td><td>{{ $item->enery_report_id }}</td>
+                                        <td>{{ $item->code }}</td><td>{{ $item->product_name }}</td><td>{{ $item->capacity }}</td><td>{{ $item->yield }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-production/' . $item->id) }}" title="View EnergyProduction"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-production/' . $item->id . '/edit') }}" title="Edit EnergyProduction"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

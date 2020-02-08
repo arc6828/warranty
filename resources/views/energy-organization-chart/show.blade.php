@@ -44,7 +44,7 @@
                                     <tr><th> อื่นๆ จำนวน </th><td> {{ $energyorganizationchart->others_number }} </td></tr>
                                     <tr><th> อื่นๆ </th><td> {{ $energyorganizationchart->others }} </td></tr>
                                     <tr><th> User Id </th><td> {{ $energyorganizationchart->user_id }} </td></tr>
-                                    <tr><th> Enery Report Id </th><td> {{ $energyorganizationchart->enery_report_id }} </td></tr>
+                                    <tr><th> Enery Report Id </th><td> {{ $energyorganizationchart->energy_report_id }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

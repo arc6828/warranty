@@ -10,5 +10,5 @@
             <tr><th> เจ้าของโรงงาน </th><td> {{ $energycommittee->factory_owner }} </td></tr>
             <tr><th> User Id </th><td> {{ $energycommittee->user_id }} </td></tr>
             <tr><th> Enery Report Id </th>
-            <td> {{ $energycommittee->enery_report_id }} </td></tr>
+            <td> {{ $energycommittee->energy_report_id }} </td></tr>
   </tr>

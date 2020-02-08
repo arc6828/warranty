@@ -43,7 +43,7 @@
                                     <tr><th> อื่นๆ จำนวน </th><td> {{ $energyconservationpolicy->others_number }} </td></tr>
                                     <tr><th> อื่นๆ </th><td> {{ $energyconservationpolicy->others }} </td></tr>
                                     <tr><th> User Id </th><td> {{ $energyconservationpolicy->user_id }} </td></tr>
-                                    <tr><th> Enery Report Id </th><td> {{ $energyconservationpolicy->enery_report_id }} </td></tr>
+                                    <tr><th> Enery Report Id </th><td> {{ $energyconservationpolicy->energy_report_id }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

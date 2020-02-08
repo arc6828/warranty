@@ -28,7 +28,7 @@ class EnergyElectricityTransformerController extends Controller
                 ->orWhere('transformer_size', 'LIKE', "%$keyword%")
                 ->orWhere('transformer_quantity', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('enery_report_id', 'LIKE', "%$keyword%")
+                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $energyelectricitytransformer = EnergyElectricityTransformer::latest()->paginate($perPage);

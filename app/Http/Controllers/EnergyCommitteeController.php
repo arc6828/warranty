@@ -28,7 +28,7 @@ class EnergyCommitteeController extends Controller
                 ->orWhere('senior_responsible_person_code', 'LIKE', "%$keyword%")
                 ->orWhere('factory_owner', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('enery_report_id', 'LIKE', "%$keyword%")
+                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $energycommittee = EnergyCommittee::latest()->paginate($perPage);

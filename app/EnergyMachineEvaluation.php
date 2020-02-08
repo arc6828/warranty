@@ -25,7 +25,7 @@ class EnergyMachineEvaluation extends Model
      *
      * @var array
      */
-    protected $fillable = ['energy_machine_id', 'power_consumption_size', 'operating_hours', 'improvement_potential', 'total_score', 'priority', 'department', 'user_id', 'enery_report_id'];
+    protected $fillable = ['energy_machine_id', 'power_consumption_size', 'operating_hours', 'improvement_potential', 'total_score', 'priority', 'department', 'user_id', 'energy_report_id'];
 
     
 }

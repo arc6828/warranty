@@ -48,7 +48,7 @@
                                     </tr>
                                     <tr>
                                         <th> Enery Report Id </th>
-                                        <td> {{ $energyproductiondiagram->enery_report_id }} </td>
+                                        <td> {{ $energyproductiondiagram->energy_report_id }} </td>
                                     </tr>
                                 </tbody>
                             </table>

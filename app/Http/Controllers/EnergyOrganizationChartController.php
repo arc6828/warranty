@@ -37,7 +37,7 @@ class EnergyOrganizationChartController extends Controller
                 ->orWhere('others_number', 'LIKE', "%$keyword%")
                 ->orWhere('others', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('enery_report_id', 'LIKE', "%$keyword%")
+                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $energyorganizationchart = EnergyOrganizationChart::latest()->paginate($perPage);

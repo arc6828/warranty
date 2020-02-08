@@ -25,7 +25,7 @@ class EnergyPortionElectricity extends Model
      *
      * @var array
      */
-    protected $fillable = ['system', 'electric_power_consumption', 'method_assessment', 'method_check', 'user_id', 'enery_report_id'];
+    protected $fillable = ['system', 'electric_power_consumption', 'method_assessment', 'method_check', 'user_id', 'energy_report_id'];
 
     
 }

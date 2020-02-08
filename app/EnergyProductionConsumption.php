@@ -25,7 +25,7 @@ class EnergyProductionConsumption extends Model
      *
      * @var array
      */
-    protected $fillable = ['month', 'yield', 'consumption_electricity', 'consumption_heat', 'energy_production_id', 'user_id', 'enery_report_id'];
+    protected $fillable = ['month', 'yield', 'consumption_electricity', 'consumption_heat', 'energy_production_id', 'user_id', 'energy_report_id'];
 
     
 }

@@ -29,7 +29,7 @@ class EnergyProductionOperationController extends Controller
                 ->orWhere('yield', 'LIKE', "%$keyword%")
                 ->orWhere('capacity', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('enery_report_id', 'LIKE', "%$keyword%")
+                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $energyproductionoperation = EnergyProductionOperation::latest()->paginate($perPage);

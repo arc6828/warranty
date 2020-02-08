@@ -39,7 +39,7 @@ class EnergyConsumptionHeatController extends Controller
                 ->orWhere('renewable_energy_unit', 'LIKE', "%$keyword%")
                 ->orWhere('renewable_energy_baht', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('enery_report_id', 'LIKE', "%$keyword%")
+                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $energyconsumptionheat = EnergyConsumptionHeat::latest()->paginate($perPage);

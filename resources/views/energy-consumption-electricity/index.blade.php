@@ -37,7 +37,7 @@
                                 @foreach($energyconsumptionelectricity as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->month }}</td><td>{{ $item->maximum_power_p }}</td><td>{{ $item->maximum_power_pp }}</td><td>{{ $item->maximum_power_op }}</td><td>{{ $item->maximum_power_expenses }}</td><td>{{ $item->electrical_energy_volume }}</td><td>{{ $item->electrical_energy_expenses }}</td><td>{{ $item->total_electric_bill }}</td><td>{{ $item->user_id }}</td><td>{{ $item->enery_report_id }}</td>
+                                        <td>{{ $item->month }}</td><td>{{ $item->maximum_power_p }}</td><td>{{ $item->maximum_power_pp }}</td><td>{{ $item->maximum_power_op }}</td><td>{{ $item->maximum_power_expenses }}</td><td>{{ $item->electrical_energy_volume }}</td><td>{{ $item->electrical_energy_expenses }}</td><td>{{ $item->total_electric_bill }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-consumption-electricity/' . $item->id) }}" title="View EnergyConsumptionElectricity"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-consumption-electricity/' . $item->id . '/edit') }}" title="Edit EnergyConsumptionElectricity"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

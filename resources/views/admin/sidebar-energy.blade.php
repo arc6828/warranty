@@ -1,12 +1,7 @@
-<ul class="" role="tablist">
-    <li role="presentation">
-        <a href="{{ url('/dashboard') }}">
-            Dashboard
-        </a>                    
-    </li>
+@if($energyreport)
     <h5>Part 1</h5>
     <li role="presentation">
-        <a href="{{ url('/energy-committee') }}">
+        <a href="{{ url('/energy-committee') }}/{{ $energyreport->energy_committee->id }}/edit">
             Energy Committee
         </a>                    
     </li>
@@ -92,4 +87,4 @@
             Energy Production Diagram
         </a>                    
     </li>       
-</ul>
+@endif

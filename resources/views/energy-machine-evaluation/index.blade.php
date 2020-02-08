@@ -57,7 +57,7 @@
                                         <td>{{ $item->department }}</td>
                                         <td class="d-none">{{ $item->energy_machine_id }}</td>
                                         <td class="d-none">{{ $item->user_id }}</td>
-                                        <td class="d-none">{{ $item->enery_report_id }}</td>
+                                        <td class="d-none">{{ $item->energy_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-machine-evaluation/' . $item->id) }}" title="View EnergyMachineEvaluation"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-machine-evaluation/' . $item->id . '/edit') }}" title="Edit EnergyMachineEvaluation"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

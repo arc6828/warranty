@@ -99,9 +99,9 @@
             <button class="btn btn-sm btn-primary"  onclick="next_page()">ถัดไป</button>
         </div>
 
-        <main class="py-4">
+        <div class="py-4">
             @yield('content')
-        </main>
+        </div>
     </div>
     <script>
         var url = window.location.href;

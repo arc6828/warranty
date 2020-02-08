@@ -61,7 +61,7 @@
                                         <td>{{ $item->notice }}</td>
                                         <td>{{ $item->poster_number }}</td>
                                         <td>{{ $item->poster_number }}</td>
-                                        <td>{{ $item->publication_number }}</td><td>{{ $item->publication }}</td><td>{{ $item->voice_number }}</td><td>{{ $item->voice }}</td><td>{{ $item->email_number }}</td><td>{{ $item->email }}</td><td>{{ $item->meeting_number }}</td><td>{{ $item->meeting }}</td><td>{{ $item->others_number }}</td><td>{{ $item->others }}</td><td>{{ $item->user_id }}</td><td>{{ $item->enery_report_id }}</td>
+                                        <td>{{ $item->publication_number }}</td><td>{{ $item->publication }}</td><td>{{ $item->voice_number }}</td><td>{{ $item->voice }}</td><td>{{ $item->email_number }}</td><td>{{ $item->email }}</td><td>{{ $item->meeting_number }}</td><td>{{ $item->meeting }}</td><td>{{ $item->others_number }}</td><td>{{ $item->others }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
                                         <td>
                                             <a href="{{ url('/energy-organization-chart/' . $item->id) }}" title="View EnergyOrganizationChart"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-organization-chart/' . $item->id . '/edit') }}" title="Edit EnergyOrganizationChart"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

@@ -25,7 +25,7 @@ class EnergyElectricityTransformer extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_serial', 'transformer_serial', 'user_type', 'usage_rate', 'transformer_size', 'transformer_quantity', 'user_id', 'enery_report_id'];
+    protected $fillable = ['user_serial', 'transformer_serial', 'user_type', 'usage_rate', 'transformer_size', 'transformer_quantity', 'user_id', 'energy_report_id'];
 
     
 }

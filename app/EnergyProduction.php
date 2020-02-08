@@ -25,7 +25,7 @@ class EnergyProduction extends Model
      *
      * @var array
      */
-    protected $fillable = ['code', 'product_name', 'capacity', 'yield', 'user_id', 'enery_report_id'];
+    protected $fillable = ['code', 'product_name', 'capacity', 'yield', 'user_id', 'energy_report_id'];
 
     
 }
