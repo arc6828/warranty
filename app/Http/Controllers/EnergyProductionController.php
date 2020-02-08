@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\EnergyProduction;
+use App\EnergyReport;
 use Illuminate\Http\Request;
 
 class EnergyProductionController extends Controller
@@ -16,23 +17,29 @@ class EnergyProductionController extends Controller
      * @return \Illuminate\View\View
      */
     public function index(Request $request)
-    {
+    {   
+        $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
+
         $keyword = $request->get('search');
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $energyproduction = EnergyProduction::where('code', 'LIKE', "%$keyword%")
-                ->orWhere('product_name', 'LIKE', "%$keyword%")
-                ->orWhere('capacity', 'LIKE', "%$keyword%")
-                ->orWhere('yield', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
+            $energyproduction = EnergyProduction::where('energy_report_id', $energyreport->id)
+                ->where(function ($query){
+                    $query->where('code', 'LIKE', "%$keyword%")
+                        ->orWhere('product_name', 'LIKE', "%$keyword%")
+                        ->orWhere('capacity', 'LIKE', "%$keyword%")
+                        ->orWhere('yield', 'LIKE', "%$keyword%")
+                        ->orWhere('user_id', 'LIKE', "%$keyword%")
+                        ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
+                        ->latest()->paginate($perPage);                    
+                });                
         } else {
-            $energyproduction = EnergyProduction::latest()->paginate($perPage);
+            $energyproduction = EnergyProduction::where('energy_report_id', $energyreport->id)
+                ->latest()->paginate($perPage);
         }
 
-        return view('energy-production.index', compact('energyproduction'));
+        return view('energy-production.index', compact('energyproduction','energyreport'));
     }
 
     /**
@@ -42,7 +49,8 @@ class EnergyProductionController extends Controller
      */
     public function create()
     {
-        return view('energy-production.create');
+        $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
+        return view('energy-production.create', compact('energyreport'));
     }
 
     /**
@@ -71,6 +79,7 @@ class EnergyProductionController extends Controller
      */
     public function show($id)
     {
+        
         $energyproduction = EnergyProduction::findOrFail($id);
 
         return view('energy-production.show', compact('energyproduction'));

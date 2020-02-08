@@ -24,7 +24,7 @@
 
     
     <style>
-        a.active {
+        li.active {
         font-weight: 900;
     }
     </style>
@@ -96,6 +96,7 @@
         
         <div class="container pt-4 text-right">
             <button class="btn btn-sm btn-outline-primary" onclick="previous_page()">ก่อนหน้า</button>
+            <span id="nubmer_of_progress"></span>
             <button class="btn btn-sm btn-primary"  onclick="next_page()">ถัดไป</button>
         </div>
 
@@ -104,14 +105,28 @@
         </div>
     </div>
     <script>
+        //DEFINED ACTIVE LINK
         var url = window.location.href;
         console.log("URL : ", url);
         var object = document.querySelector('a[href="'+url+'"]');
         console.log(object);
         if(object){
-            object.classList.add('active');
+            object.parentNode.classList.add('active');
         }
         //$('.menu a[href="'+url+'"]').addClass('current_page_item');
+        //POSITIONING ACTIVE LINK
+        var objects = document.querySelectorAll('li[role="presentation"]');
+        console.log(objects.length);
+        let i = 0;
+        for(let i=0; i<objects.length; i++)
+        {
+            if (objects[i].classList.contains("active")) {
+                var target = document.querySelector('#nubmer_of_progress');
+                target.innerHTML = ""+(i+1)+"/"+objects.length;
+            } 
+
+        }
+
         function previous_page(){
             //get and up
             var object = document.querySelector('a[href="'+url+'"]').parentNode;

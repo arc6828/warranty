@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\EnergyReport;
 
 use App\EnergyConsumptionElectricity;
 use Illuminate\Http\Request;
@@ -17,6 +18,8 @@ class EnergyConsumptionElectricityController extends Controller
      */
     public function index(Request $request)
     {
+        $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
+
         $keyword = $request->get('search');
         $perPage = 25;
 
@@ -36,7 +39,7 @@ class EnergyConsumptionElectricityController extends Controller
             $energyconsumptionelectricity = EnergyConsumptionElectricity::latest()->paginate($perPage);
         }
 
-        return view('energy-consumption-electricity.index', compact('energyconsumptionelectricity'));
+        return view('energy-consumption-electricity.index', compact('energyconsumptionelectricity','energyreport'));
     }
 
     /**

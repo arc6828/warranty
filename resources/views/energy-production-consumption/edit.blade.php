@@ -1,5 +1,12 @@
 @extends('layout.main')
 
+@section('adaptivesidebar')
+    @php
+    $energyreport = $energyproductionconsumption->energy_report ;
+    @endphp
+    @include('admin/sidebar-energy')
+@endsection
+
 @section('title','Energy production consumption')
 
 @section('content')

@@ -49,53 +49,53 @@ class EnergyReport extends Model
         return $this->hasOne('App\EnergyConservationPolicy','energy_report_id');
     }
     //PART 2
-    public function  energy_production ()
+    public function  energy_productions ()
     {
         return $this->hasMany('App\EnergyProduction','energy_report_id');
     }
-    public function  energy_production_operation  ()
+    public function  energy_production_operations  ()
     {
         return $this->hasMany('App\EnergyProductionOperation','energy_report_id');
     }
-    public function  energy_electricity_transformer  ()
+    public function  energy_electricity_transformers  ()
     {
         return $this->hasMany('App\EnergyElectricityTransformer','energy_report_id');
     }
-    public function  energy_consumption_electricity  ()
+    public function  energy_consumption_electricities  ()
     {
         return $this->hasMany('App\EnergyConsumptionElectricity','energy_report_id');
     }
-    public function  energy_consumption_heat  ()
+    public function  energy_consumption_heats  ()
     {
         return $this->hasMany('App\EnergyConsumptionHeat','energy_report_id');
     }
-    public function  energy_heat_generator  ()
+    public function  energy_heat_generators  ()
     {
         return $this->hasMany('App\EnergyHeatGenerator','energy_report_id');
     }
-    public function  energy_portion_heat ()
+    public function  energy_portion_heats ()
     {
         return $this->hasMany('App\EnergyPortionHeat','energy_report_id');
     }
-    public function  energy_portion_electricity ()
+    public function  energy_portion_electricities ()
     {
         return $this->hasMany('App\EnergyPortionElectricity','energy_report_id');
     }
 
     //PART 3
-    public function  energy_machine ()
+    public function  energy_machines ()
     {
         return $this->hasMany('App\EnergyMachine','energy_report_id');
     }
-    public function  energy_machine_evaluation ()
+    public function  energy_machine_evaluations ()
     {
         return $this->hasMany('App\EnergyMachineEvaluation','energy_report_id');
     }
-    public function  energy_production_diagram ()
+    public function  energy_production_diagrams ()
     {
         return $this->hasMany('App\EnerenergyProductionDiagram','energy_report_id');
     }
-    public function  energy_production_consumption ()
+    public function  energy_production_consumptions ()
     {
         return $this->hasMany('App\EnergyProductionConsumption','energy_report_id');
     }

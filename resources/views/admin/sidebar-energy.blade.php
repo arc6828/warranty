@@ -1,4 +1,4 @@
-@if($energyreport)
+@if(isset($energyreport))
     <h5>Part 1</h5>
     <li role="presentation">
         <a href="{{ url('/energy-committee') }}/{{ $energyreport->energy_committee->id }}/edit">
@@ -11,79 +11,79 @@
         </a>                    
     </li>                
     <li role="presentation">
-        <a href="{{ url('/energy-organization-chart') }}">
+        <a href="{{ url('/energy-organization-chart') }}/{{ $energyreport->energy_organization_chart->id }}/edit">
             Energy Organization Chart
         </a>                    
     </li>                                             
     <li role="presentation">
-        <a href="{{ url('/energy-evaluation') }}">
+        <a href="{{ url('/energy-evaluation') }}/{{ $energyreport->energy_evaluation->id }}/edit">
             Energy Evaluation
         </a>                    
     </li>                                     
     <li role="presentation">
-        <a href="{{ url('/energy-conservation-policy') }}">
+        <a href="{{ url('/energy-conservation-policy') }}/{{ $energyreport->energy_conservation_policy->id }}/edit">
             Energy Conservation Policy
         </a>                    
     </li>
     <h5>Part 2</h5>
     <li role="presentation">
-        <a href="{{ url('/energy-production') }}">
+        <a href="{{ url('/energy-production') }}?energy_report_id={{ $energyreport->id }}">
             Energy Production
         </a>                    
     </li>  
     <li role="presentation">
-        <a href="{{ url('/energy-production-operation') }}">
+        <a href="{{ url('/energy-production-operation') }}?energy_report_id={{ $energyreport->id }}">
             Energy Production Operation
         </a>                    
     </li>  
     <li role="presentation">
-        <a href="{{ url('/energy-electricity-transformer') }}">
+        <a href="{{ url('/energy-electricity-transformer') }}?energy_report_id={{ $energyreport->id }}">
             Energy electricity-transformer
         </a>                    
     </li>  
     <li role="presentation">
-        <a href="{{ url('/energy-consumption-electricity') }}">
+        <a href="{{ url('/energy-consumption-electricity') }}?energy_report_id={{ $energyreport->id }}">
             Energy consumption-electricity
         </a>                    
     </li>  
     <li role="presentation">
-        <a href="{{ url('/energy-consumption-heat') }}">
+        <a href="{{ url('/energy-consumption-heat') }}?energy_report_id={{ $energyreport->id }}">
             Energy consumption-heat
         </a>                    
     </li>  
     <li role="presentation">
-        <a href="{{ url('/energy-heat-generator') }}">
+        <a href="{{ url('/energy-heat-generator') }}?energy_report_id={{ $energyreport->id }}">
             Energy heat-generator
         </a>                    
     </li>  
     <li role="presentation">
-        <a href="{{ url('/energy-portion-heat') }}">
+        <a href="{{ url('/energy-portion-heat') }}?energy_report_id={{ $energyreport->id }}">
             Energy portion-heat
         </a>                    
     </li>  
     <li role="presentation">
-        <a href="{{ url('/energy-portion-electricity') }}">
+        <a href="{{ url('/energy-portion-electricity') }}?energy_report_id={{ $energyreport->id }}">
             Energy portion-electricity
         </a>                    
     </li>  
     <h5>Part 3</h5>                                               
     <li role="presentation">
-        <a href="{{ url('/energy-production-diagram') }}">
+        <a href="{{ url('/energy-production-diagram') }}?energy_report_id={{ $energyreport->id }}">
             Energy Production Diagram
         </a>                    
     </li>                                       
     <li role="presentation">
-        <a href="{{ url('/energy-production-consumption') }}">
+        <a href="{{ url('/energy-production-consumption') }}?energy_report_id={{ $energyreport->id }}">
             Energy Production consumption
         </a>                    
     </li>                                       
     <li role="presentation">
-        <a href="{{ url('/energy-machine-evaluation') }}">
+        <a href="{{ url('/energy-machine-evaluation') }}?energy_report_id={{ $energyreport->id }}">
             Energy machine-evaluation
         </a>                    
     </li>                                       
     <li role="presentation">
-        <a href="{{ url('/energy-machine') }}">
+        <a href="{{ url('/energy-machine') }}?energy_report_id={{ $energyreport->id }}">
             Energy Production Diagram
         </a>                    
     </li>       

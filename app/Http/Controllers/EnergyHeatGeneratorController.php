@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\EnergyReport;
 
 use App\EnergyHeatGenerator;
 use Illuminate\Http\Request;
@@ -17,6 +18,8 @@ class EnergyHeatGeneratorController extends Controller
      */
     public function index(Request $request)
     {
+        $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
+
         $keyword = $request->get('search');
         $perPage = 25;
 
@@ -38,7 +41,7 @@ class EnergyHeatGeneratorController extends Controller
             $energyheatgenerator = EnergyHeatGenerator::latest()->paginate($perPage);
         }
 
-        return view('energy-heat-generator.index', compact('energyheatgenerator'));
+        return view('energy-heat-generator.index', compact('energyheatgenerator','energyreport'));
     }
 
     /**
