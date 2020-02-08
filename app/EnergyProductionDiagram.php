@@ -27,5 +27,8 @@ class EnergyProductionDiagram extends Model
      */
     protected $fillable = ['photo_diagram', 'description', 'energy_production_id', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

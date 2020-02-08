@@ -27,5 +27,8 @@ class EnergyProductionOperation extends Model
      */
     protected $fillable = ['energy_production_id', 'raw_material', 'month', 'working_hours', 'production_unit', 'yield', 'capacity', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

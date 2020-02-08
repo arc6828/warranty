@@ -27,5 +27,8 @@ class EnergyPortionHeat extends Model
      */
     protected $fillable = ['system', 'equipment', 'fuel_consumption_type', 'fuel_consumption_megajoule', 'method_assessment', 'method_check', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

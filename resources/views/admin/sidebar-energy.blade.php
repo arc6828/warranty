@@ -6,7 +6,7 @@
         </a>                    
     </li>
     <li role="presentation">
-        <a href="{{ url('/energy-factory-information') }}">
+        <a href="{{ url('/energy-factory-information') }}/{{ $energyreport->energy_factory_information->id }}/edit">
             Enery Factory Information
         </a>                    
     </li>                

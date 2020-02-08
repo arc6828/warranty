@@ -27,5 +27,8 @@ class EnergyConsumptionHeat extends Model
      */
     protected $fillable = ['month', 'fuel_oil_liter', 'fuel_oil_baht', 'diesel_oil_liter', 'diesel_oil_baht', 'lpg_kg', 'lpg_baht', 'natural_gas_millionbtu', 'natural_gas_baht', 'coal_ton', 'coal_baht', 'steam_purchased_ton', 'steam_purchased_baht', 'other_unit', 'other_baht', 'renewable_energy_unit', 'renewable_energy_baht', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

@@ -27,5 +27,8 @@ class EnergyMachineEvaluation extends Model
      */
     protected $fillable = ['energy_machine_id', 'power_consumption_size', 'operating_hours', 'improvement_potential', 'total_score', 'priority', 'department', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

@@ -27,5 +27,8 @@ class EnergyFactoryInformation extends Model
      */
     protected $fillable = ['factory_size', 'factory_address', 'factory_tel', 'factory_fax', 'factory_email', 'office_address', 'office_tel', 'office_fax', 'office_email', 'factory_type', 'factory_employee', 'factory_operation_time', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

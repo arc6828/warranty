@@ -1,5 +1,10 @@
 @extends('layouts.app')
-
+@section('adaptivesidebar')
+    @php
+    $energyreport = $energyfactoryinformation->energy_report ;
+    @endphp
+    @include('admin/sidebar-energy')
+@endsection
 @section('content')
     <div class="container">
         <div class="row">

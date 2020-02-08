@@ -27,5 +27,8 @@ class EnergyConsumptionElectricity extends Model
      */
     protected $fillable = ['month', 'maximum_power_p', 'maximum_power_pp', 'maximum_power_op', 'maximum_power_expenses', 'electrical_energy_volume', 'electrical_energy_expenses', 'total_electric_bill', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

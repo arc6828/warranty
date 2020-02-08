@@ -27,5 +27,8 @@ class EnergyProduction extends Model
      */
     protected $fillable = ['code', 'product_name', 'capacity', 'yield', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

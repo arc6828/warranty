@@ -27,5 +27,8 @@ class EnergyPortionElectricity extends Model
      */
     protected $fillable = ['system', 'electric_power_consumption', 'method_assessment', 'method_check', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

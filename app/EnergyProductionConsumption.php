@@ -27,5 +27,8 @@ class EnergyProductionConsumption extends Model
      */
     protected $fillable = ['month', 'yield', 'consumption_electricity', 'consumption_heat', 'energy_production_id', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

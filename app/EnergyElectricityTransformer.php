@@ -27,5 +27,8 @@ class EnergyElectricityTransformer extends Model
      */
     protected $fillable = ['user_serial', 'transformer_serial', 'user_type', 'usage_rate', 'transformer_size', 'transformer_quantity', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

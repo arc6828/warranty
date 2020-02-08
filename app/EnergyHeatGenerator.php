@@ -27,5 +27,8 @@ class EnergyHeatGenerator extends Model
      */
     protected $fillable = ['month', 'capacity', 'primary_fuel_consumption_type', 'primary_fuel_consumption_volume', 'primary_fuel_consumption_unit', 'operating_hours', 'electricity_use', 'electricity_sale', 'steam_use', 'steam_sale', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

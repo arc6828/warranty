@@ -27,5 +27,8 @@ class EnergyConservationPolicy extends Model
      */
     protected $fillable = ['policy', 'notice_number', 'notice', 'poster_number', 'publication_number', 'publication', 'voice_number', 'voice', 'email_number', 'email', 'meeting_number', 'meeting', 'others_number', 'others', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

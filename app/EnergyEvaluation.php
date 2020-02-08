@@ -27,5 +27,8 @@ class EnergyEvaluation extends Model
      */
     protected $fillable = ['policy_score', 'organization_score', 'motivation_score', 'information_score', 'public_relation_score', 'investment_score', 'remark ', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }

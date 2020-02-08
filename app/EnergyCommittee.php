@@ -27,5 +27,9 @@ class EnergyCommittee extends Model
      */
     protected $fillable = ['president', 'common_responsible_person', 'common_responsible_person_code', 'senior_responsible_person', 'senior_responsible_person_code', 'factory_owner', 'user_id', 'energy_report_id'];
 
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
     
 }

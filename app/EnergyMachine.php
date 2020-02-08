@@ -27,5 +27,8 @@ class EnergyMachine extends Model
      */
     protected $fillable = ['system', 'machine_name', 'power_type', 'spec', 'spec_unit', 'quantity', 'lifetime', 'average_active_hours', 'electric_power', 'heat_power', 'fuel_type', 'fuel_unit', 'performance_spec', 'performance_unit', 'performance_actual', 'performance_actual_unit ', 'remark', 'user_id', 'energy_report_id'];
 
-    
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','energy_report_id');
+    }
 }
