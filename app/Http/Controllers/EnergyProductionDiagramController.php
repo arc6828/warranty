@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\EnergyProductionDiagram;
+use App\EnergyReport;
 use Illuminate\Http\Request;
 
 class EnergyProductionDiagramController extends Controller
@@ -17,21 +18,27 @@ class EnergyProductionDiagramController extends Controller
      */
     public function index(Request $request)
     {
+
+        $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
+
         $keyword = $request->get('search');
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $energyproductiondiagram = EnergyProductionDiagram::where('photo_diagram', 'LIKE', "%$keyword%")
-                ->orWhere('description', 'LIKE', "%$keyword%")
-                ->orWhere('energy_production_id', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
+            $energyproductiondiagram = EnergyProductionDiagram::where('energy_report_id', $energyreport->id)
+                ->where(function ($query){
+                    $query->where('photo_diagram', 'LIKE', "%$keyword%")
+                    ->orWhere('description', 'LIKE', "%$keyword%")
+                    ->orWhere('energy_production_id', 'LIKE', "%$keyword%")
+                    ->orWhere('user_id', 'LIKE', "%$keyword%")
+                    ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
+                    ->latest()->paginate($perPage);
+                });
         } else {
-            $energyproductiondiagram = EnergyProductionDiagram::latest()->paginate($perPage);
+            $energyproductiondiagram = EnergyProductionDiagram::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
         }
 
-        return view('energy-production-diagram.index', compact('energyproductiondiagram'));
+        return view('energy-production-diagram.index', compact('energyproductiondiagram','energyreport'));
     }
 
     /**

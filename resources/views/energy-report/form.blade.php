@@ -18,9 +18,9 @@
     <input class="form-control" name="year" type="number" id="year" value="{{ isset($energyreport->year) ? $energyreport->year : ''}}" >
     {!! $errors->first('year', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
+<div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}} d-none">
     <label for="user_id" class="control-label">{{ 'User Id' }}</label>
-    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyreport->user_id) ? $energyreport->user_id : ''}}" >
+    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyreport->user_id) ? $energyreport->user_id : Auth::id() }}"  readonly>
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
 

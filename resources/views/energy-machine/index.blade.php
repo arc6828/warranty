@@ -2,13 +2,20 @@
 
 @section('title','Energy machine')
 
+@section('adaptivesidebar')
+    @php
+    //$energyreport = $energyproductiondiagram->energy_report ;
+    @endphp
+    @include('admin/sidebar-energy')
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">
            
             @include('admin.sidebar')
 
-            <div class="col-md-16">
+            <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">Energy machine</div>
                     <div class="card-body">

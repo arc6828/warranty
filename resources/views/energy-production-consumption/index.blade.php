@@ -2,6 +2,13 @@
 
 @section('title','Energy production consumption')
 
+@section('adaptivesidebar')
+    @php
+    //$energyreport = $energyproductiondiagram->energy_report ;
+    @endphp
+    @include('admin/sidebar-energy')
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">

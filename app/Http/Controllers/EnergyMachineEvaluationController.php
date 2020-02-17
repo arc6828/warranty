@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\EnergyMachineEvaluation;
+use App\EnergyReport;
 use Illuminate\Http\Request;
 
 class EnergyMachineEvaluationController extends Controller
@@ -17,11 +18,15 @@ class EnergyMachineEvaluationController extends Controller
      */
     public function index(Request $request)
     {
+        $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
+        
         $keyword = $request->get('search');
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $energymachineevaluation = EnergyMachineEvaluation::where('energy_machine_id', 'LIKE', "%$keyword%")
+            $energymachineevaluation = EnergyMachineEvaluation::where('energy_report_id', $energyreport->id)
+            ->where(function ($query){
+                $query->where('energy_machine_id', 'LIKE', "%$keyword%")
                 ->orWhere('power_consumption_size', 'LIKE', "%$keyword%")
                 ->orWhere('operating_hours', 'LIKE', "%$keyword%")
                 ->orWhere('improvement_potential', 'LIKE', "%$keyword%")
@@ -31,11 +36,12 @@ class EnergyMachineEvaluationController extends Controller
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
                 ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
+            });
         } else {
-            $energymachineevaluation = EnergyMachineEvaluation::latest()->paginate($perPage);
+            $energymachineevaluation = EnergyMachineEvaluation::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
         }
 
-        return view('energy-machine-evaluation.index', compact('energymachineevaluation'));
+        return view('energy-machine-evaluation.index', compact('energymachineevaluation','energyreport'));
     }
 
     /**

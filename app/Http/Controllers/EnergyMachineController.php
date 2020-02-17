@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\EnergyMachine;
+use App\EnergyReport;
 use Illuminate\Http\Request;
 
 class EnergyMachineController extends Controller
@@ -17,11 +18,15 @@ class EnergyMachineController extends Controller
      */
     public function index(Request $request)
     {
+        $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
+        
         $keyword = $request->get('search');
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $energymachine = EnergyMachine::where('system', 'LIKE', "%$keyword%")
+            $energymachine = EnergyMachine::where('energy_report_id', $energyreport->id)
+            ->where(function ($query){
+                $query->where('system', 'LIKE', "%$keyword%")
                 ->orWhere('machine_name', 'LIKE', "%$keyword%")
                 ->orWhere('power_type', 'LIKE', "%$keyword%")
                 ->orWhere('spec', 'LIKE', "%$keyword%")
@@ -41,11 +46,12 @@ class EnergyMachineController extends Controller
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
                 ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
+            });
         } else {
-            $energymachine = EnergyMachine::latest()->paginate($perPage);
+            $energymachine = EnergyMachine::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
         }
 
-        return view('energy-machine.index', compact('energymachine'));
+        return view('energy-machine.index', compact('energymachine','energyreport'));
     }
 
     /**

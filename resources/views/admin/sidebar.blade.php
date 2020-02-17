@@ -7,11 +7,11 @@
         <div class="card-body">
 
             <ul class="" role="tablist">
-                <li role="presentation">
+                <!--li role="presentation">
                     <a href="{{ url('/dashboard') }}">
                         Dashboard
                     </a>                    
-                </li>
+                </li-->
             
                 
                 @yield('adaptivesidebar')

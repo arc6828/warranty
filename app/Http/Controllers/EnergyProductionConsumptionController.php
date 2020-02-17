@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\EnergyProductionConsumption;
+use App\EnergyReport;
 use Illuminate\Http\Request;
 
 class EnergyProductionConsumptionController extends Controller
@@ -17,11 +18,15 @@ class EnergyProductionConsumptionController extends Controller
      */
     public function index(Request $request)
     {
+        $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
+
         $keyword = $request->get('search');
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $energyproductionconsumption = EnergyProductionConsumption::where('month', 'LIKE', "%$keyword%")
+            $energyproductionconsumption = EnergyProductionConsumption::where('energy_report_id', $energyreport->id)
+            ->where(function ($query){
+                $query->where('month', 'LIKE', "%$keyword%")
                 ->orWhere('yield', 'LIKE', "%$keyword%")
                 ->orWhere('consumption_electricity', 'LIKE', "%$keyword%")
                 ->orWhere('consumption_heat', 'LIKE', "%$keyword%")
@@ -29,11 +34,12 @@ class EnergyProductionConsumptionController extends Controller
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
                 ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
+            });
         } else {
-            $energyproductionconsumption = EnergyProductionConsumption::latest()->paginate($perPage);
+            $energyproductionconsumption = EnergyProductionConsumption::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
         }
 
-        return view('energy-production-consumption.index', compact('energyproductionconsumption'));
+        return view('energy-production-consumption.index', compact('energyproductionconsumption','energyreport'));
     }
 
     /**
