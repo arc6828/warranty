@@ -84,7 +84,7 @@
     </li>                                       
     <li role="presentation">
         <a href="{{ url('/energy-machine') }}?energy_report_id={{ $energyreport->id }}">
-            Energy Production Diagram
+            Energy Machine
         </a>                    
     </li>       
 @endif

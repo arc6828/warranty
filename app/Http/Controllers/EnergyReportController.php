@@ -81,7 +81,7 @@ class EnergyReportController extends Controller
         $energy_report = EnergyReport::create($requestData);
         //CREATE FORM-1
         EnergyCommittee::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
-        EnergyFactoryInformation::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
+        EnergyFactoryInformation::create(["user_id" => Auth::id() , "factory_size"=>0 , "energy_report_id" => $energy_report->id ]);
         EnergyOrganizationChart::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyEvaluation::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyConservationPolicy::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
