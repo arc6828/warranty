@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.app')
 
 @section('title','Energy production consumption')
 
@@ -6,7 +6,8 @@
     <div class="container">
         <div class="row">
             
-
+            
+            @include('admin.sidebar')
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">EnergyProductionConsumption {{ $energyproductionconsumption->id }}</div>

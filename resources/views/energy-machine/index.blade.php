@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.app')
 
 @section('title','Energy machine')
 
@@ -6,6 +6,7 @@
     <div class="container">
         <div class="row">
            
+            @include('admin.sidebar')
 
             <div class="col-md-16">
                 <div class="card">
