@@ -66,12 +66,12 @@
     <textarea class="form-control" rows="5" name="factory_operation_time" type="textarea" id="factory_operation_time" >{{ isset($energyfactoryinformation->factory_operation_time) ? $energyfactoryinformation->factory_operation_time : ''}}</textarea>
     {!! $errors->first('factory_operation_time', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
+<div class="form-group  d-none {{ $errors->has('user_id') ? 'has-error' : ''}}">
     <label for="user_id" class="control-label">{{ 'User Id' }}</label>
     <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyfactoryinformation->user_id) ? $energyfactoryinformation->user_id : ''}}" >
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
+<div class="form-group  d-none {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
     <label for="energy_report_id" class="control-label">{{ 'Enery Report Id' }}</label>
     <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energyfactoryinformation->energy_report_id) ? $energyfactoryinformation->energy_report_id : ''}}" >
     {!! $errors->first('energy_report_id', '<p class="help-block">:message</p>') !!}

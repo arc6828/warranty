@@ -23,19 +23,7 @@ class EnergyElectricityTransformerController extends Controller
         $keyword = $request->get('search');
         $perPage = 25;
 
-        if (!empty($keyword)) {
-            $energyelectricitytransformer = EnergyElectricityTransformer::where('user_serial', 'LIKE', "%$keyword%")
-                ->orWhere('transformer_serial', 'LIKE', "%$keyword%")
-                ->orWhere('user_type', 'LIKE', "%$keyword%")
-                ->orWhere('usage_rate', 'LIKE', "%$keyword%")
-                ->orWhere('transformer_size', 'LIKE', "%$keyword%")
-                ->orWhere('transformer_quantity', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
-        } else {
-            $energyelectricitytransformer = EnergyElectricityTransformer::latest()->paginate($perPage);
-        }
+        $energyelectricitytransformer = EnergyElectricityTransformer::where('energy_report_id',$energyreport->id)->latest()->paginate($perPage);
 
         return view('energy-electricity-transformer.index', compact('energyelectricitytransformer','energyreport'));
     }
@@ -62,9 +50,9 @@ class EnergyElectricityTransformerController extends Controller
         
         $requestData = $request->all();
         
-        EnergyElectricityTransformer::create($requestData);
+        $energyelectricitytransformer = EnergyElectricityTransformer::create($requestData);
 
-        return redirect('energy-electricity-transformer')->with('flash_message', 'EnergyElectricityTransformer added!');
+        return redirect('energy-electricity-transformer?energy_report_id='.$energyelectricitytransformer->energy_report_id)->with('flash_message', 'EnergyElectricityTransformer added!');
     }
 
     /**
@@ -111,7 +99,7 @@ class EnergyElectricityTransformerController extends Controller
         $energyelectricitytransformer = EnergyElectricityTransformer::findOrFail($id);
         $energyelectricitytransformer->update($requestData);
 
-        return redirect('energy-electricity-transformer')->with('flash_message', 'EnergyElectricityTransformer updated!');
+        return redirect('energy-electricity-transformer?energy_report_id='.$energyelectricitytransformer->energy_report_id)->with('flash_message', 'EnergyElectricityTransformer updated!');
     }
 
     /**
@@ -123,8 +111,9 @@ class EnergyElectricityTransformerController extends Controller
      */
     public function destroy($id)
     {
+        $energyelectricitytransformer = EnergyElectricityTransformer::findOrFail($id);
         EnergyElectricityTransformer::destroy($id);
 
-        return redirect('energy-electricity-transformer')->with('flash_message', 'EnergyElectricityTransformer deleted!');
+        return redirect('energy-electricity-transformer?energy_report_id='.$energyelectricitytransformer->energy_report_id)->with('flash_message', 'EnergyElectricityTransformer deleted!');
     }
 }

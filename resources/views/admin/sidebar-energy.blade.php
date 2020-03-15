@@ -1,4 +1,10 @@
 @if(isset($energyreport))
+    @section('header','Energy Report # '.$energyreport->factory_name . ' '. $energyreport->year )
+    <li role="presentation">
+        <a href="{{ url('/energy-report') }}/{{ $energyreport->id }}">
+            Energy Report # {{ $energyreport->id }}
+        </a>                    
+    </li>
     <h5>Part 1</h5>
     <li role="presentation">
         <a href="{{ url('/energy-committee') }}/{{ $energyreport->energy_committee->id }}/edit">
@@ -29,11 +35,6 @@
     <li role="presentation">
         <a href="{{ url('/energy-production') }}?energy_report_id={{ $energyreport->id }}">
             Energy Production
-        </a>                    
-    </li>  
-    <li role="presentation">
-        <a href="{{ url('/energy-production-operation') }}?energy_report_id={{ $energyreport->id }}">
-            Energy Production Operation
         </a>                    
     </li>  
     <li role="presentation">

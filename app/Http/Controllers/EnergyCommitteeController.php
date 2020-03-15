@@ -108,7 +108,7 @@ class EnergyCommitteeController extends Controller
         $energycommittee = EnergyCommittee::findOrFail($id);
         $energycommittee->update($requestData);
 
-        return redirect('energy-committee')->with('flash_message', 'EnergyCommittee updated!');
+        return redirect('energy-committee/'.$id.'/edit')->with('flash_message', 'EnergyCommittee updated!');
     }
 
     /**

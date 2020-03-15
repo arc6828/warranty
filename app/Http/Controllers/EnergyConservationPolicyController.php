@@ -180,7 +180,7 @@ class EnergyConservationPolicyController extends Controller
         $energyconservationpolicy = EnergyConservationPolicy::findOrFail($id);
         $energyconservationpolicy->update($requestData);
 
-        return redirect('energy-conservation-policy')->with('flash_message', 'EnergyConservationPolicy updated!');
+        return redirect('energy-conservation-policy/'.$id.'/edit')->with('flash_message', 'EnergyConservationPolicy updated!');
     }
 
     /**

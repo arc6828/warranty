@@ -109,7 +109,7 @@ class EnergyEvaluationController extends Controller
         $energyevaluation = EnergyEvaluation::findOrFail($id);
         $energyevaluation->update($requestData);
 
-        return redirect('energy-evaluation')->with('flash_message', 'EnergyEvaluation updated!');
+        return redirect('energy-evaluation/'.$id.'/edit')->with('flash_message', 'EnergyEvaluation updated!');
     }
 
     /**

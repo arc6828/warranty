@@ -189,7 +189,7 @@ class EnergyOrganizationChartController extends Controller
         $energyorganizationchart = EnergyOrganizationChart::findOrFail($id);
         $energyorganizationchart->update($requestData);
 
-        return redirect('energy-organization-chart')->with('flash_message', 'EnergyOrganizationChart updated!');
+        return redirect('energy-organization-chart/'.$id.'/edit')->with('flash_message', 'EnergyOrganizationChart updated!');
     }
 
     /**

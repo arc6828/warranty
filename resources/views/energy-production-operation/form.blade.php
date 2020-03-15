@@ -1,6 +1,6 @@
-<div class="form-group {{ $errors->has('energy_production_id') ? 'has-error' : ''}}">
-    <label for="energy_production_id" class="control-label">{{ 'ลำดับที่' }}</label>
-    <input class="form-control" name="energy_production_id" type="number" id="energy_production_id" value="{{ isset($energyproductionoperation->energy_production_id) ? $energyproductionoperation->energy_production_id : ''}}" >
+<div class="form-group d-none {{ $errors->has('energy_production_id') ? 'has-error' : ''}}">
+    <label for="energy_production_id" class="control-label">{{ 'Energy Production Id' }}</label>
+    <input class="form-control" name="energy_production_id" type="number" id="energy_production_id" value="{{ isset($energyproductionoperation->energy_production_id) ? $energyproductionoperation->energy_production_id : $energyproduction->id}}" >
     {!! $errors->first('energy_production_id', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('raw_material') ? 'has-error' : ''}}">
@@ -33,14 +33,14 @@
     <input class="form-control" name="capacity" type="number" id="capacity" value="{{ isset($energyproductionoperation->capacity) ? $energyproductionoperation->capacity : ''}}" >
     {!! $errors->first('capacity', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
+<div class="form-group d-none {{ $errors->has('user_id') ? 'has-error' : ''}}">
     <label for="user_id" class="control-label">{{ 'User Id' }}</label>
-    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyproductionoperation->user_id) ? $energyproductionoperation->user_id : ''}}" >
+    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyproductionoperation->user_id) ? $energyproductionoperation->user_id : Auth::id()}}" >
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
+<div class="form-group d-none {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
     <label for="energy_report_id" class="control-label">{{ 'Enery Report Id' }}</label>
-    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energyproductionoperation->energy_report_id) ? $energyproductionoperation->energy_report_id : ''}}" >
+    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energyproductionoperation->energy_report_id) ? $energyproductionoperation->energy_report_id : $energyproduction->energy_report_id }}" >
     {!! $errors->first('energy_report_id', '<p class="help-block">:message</p>') !!}
 </div>
 

@@ -10,9 +10,10 @@
                 <div class="card">
                     <div class="card-header">Energyreport</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-report/create') }}" class="btn btn-success btn-sm" title="Add New EnergyReport">
+                        <a href="{{ url('/energy-report/create') }}" class="btn btn-success btn-sm d-none" title="Add New EnergyReport">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+                        @include('energy-report/create-modal')
 
                         <form method="GET" action="{{ url('/energy-report') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
@@ -30,21 +31,27 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                     <th> ชื่อนิติบุคคล </th> 
-                                     <th> ชื่อโรงงานควบคุม </th> 
-                                     <th> Tsic Id </th> 
-                                     <th> ปี </th> 
-                                     <th> User Id </th> 
+                                    <tr>                                    
+                                        <th> # </th> 
+                                        <th> ชื่อนิติบุคคล </th> 
+                                        <th> ชื่อโรงงานควบคุม </th> 
+                                        <th> Tsic Id </th> 
+                                        <th> ปี </th> 
+                                        <th> User Id </th> 
+                                        <th> Created at </th> 
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($energyreport as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->legal_name }}</td><td>{{ $item->factory_name }}</td><td>{{ $item->tsic_id }}</td><td>{{ $item->year }}</td><td>{{ $item->user_id }}</td>
+                                        <td><a href="{{ url('/energy-report/' . $item->id) }}" >{{ $item->legal_name }}</a></td>
+                                        <td>{{ $item->factory_name }}</td>
+                                        <td>{{ $item->tsic_id }}</td><td>{{ $item->year }}</td>
+                                        <td>{{ $item->user->name }}</td>
+                                        <td>{{ $item->created_at }}</td>
                                         <td>
-                                            <a href="{{ url('/energy-report/' . $item->id) }}" title="View EnergyReport"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                            <a class="d-none" href="{{ url('/energy-report/' . $item->id) }}" title="View EnergyReport"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-report/' . $item->id . '/edit') }}" title="Edit EnergyReport"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
                                             <form method="POST" action="{{ url('/energy-report' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">

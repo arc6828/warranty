@@ -34,7 +34,7 @@
     @yield('head')
 </head>
 <body>
-    <div id="app">
+    <div id="">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -93,12 +93,22 @@
                 </div>
             </div>
         </nav>
-        
-        <div class="container pt-4 text-right">
-            <button class="btn btn-sm btn-outline-primary" onclick="previous_page()">ก่อนหน้า</button>
-            <span id="nubmer_of_progress"></span>
-            <button class="btn btn-sm btn-primary"  onclick="next_page()">ถัดไป</button>
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-lg-9 t">
+                    <h2>@yield("header")</h2>
+                </div>
+                <div class="col-lg-3 text-right">
+                    <button class="btn btn-sm btn-outline-primary" onclick="previous_page()">ก่อนหน้า</button>
+                    <span id="nubmer_of_progress"></span>
+                    <button class="btn btn-sm btn-primary"  onclick="next_page()">ถัดไป</button>
+                
+                </div>
+            </div>
+            
         </div>
+        
+        
 
         <div class="py-4">
             @yield('content')
@@ -133,9 +143,9 @@
             var prev_object = object.previousElementSibling;
             //console.log(object);
             if (prev_object.tagName == "LI") {
-                prev_object.firstChild.click();
+                prev_object.querySelectorAll("a")[0].click();
             }else{
-                prev_object.previousElementSibling.firstChild.click();
+                prev_object.previousElementSibling.querySelectorAll("a")[0].click();
             }
             
         }
@@ -145,9 +155,12 @@
             var next_object = object.nextElementSibling;
             console.log(next_object,next_object.tagName);
             if (next_object.tagName == "LI") {
-                next_object.firstChild.click();
+                next_object.querySelectorAll("a")[0].click();
             }else{
-                next_object.nextElementSibling.firstChild.click();
+                
+                console.log(next_object.nextElementSibling,next_object.nextElementSibling.tagName);
+                console.log(next_object.nextElementSibling.firstChild);
+                next_object.nextElementSibling.querySelectorAll("a")[0].click();
             }
             
             //console.log(object);

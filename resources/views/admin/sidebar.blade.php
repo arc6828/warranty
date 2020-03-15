@@ -5,8 +5,14 @@
         </div>
 
         <div class="card-body">
+            <style>
+                ul.side-bar{
+                    list-style-type: none;
+                    padding-left: 15px;
+                }        
+            </style>
 
-            <ul class="" role="tablist">
+            <ul class="side-bar" role="tablist">
                 <!--li role="presentation">
                     <a href="{{ url('/dashboard') }}">
                         Dashboard

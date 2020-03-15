@@ -16,7 +16,7 @@
                 <div class="card">
                     <div class="card-header">แก้ไข ข้อมูลหม้อแปลงไฟฟ้า #{{ $energyelectricitytransformer->id }}</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-electricity-transformer') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-electricity-transformer?energy_report_id='.$energyelectricitytransformer->energy_report_id) }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 

@@ -1,4 +1,4 @@
-<div class="form-group {{ $errors->has('code') ? 'has-error' : ''}}">
+<div class="form-group d-none {{ $errors->has('code') ? 'has-error' : ''}}">
     <label for="code" class="control-label">{{ 'ลำดับที่' }}</label>
     <input class="form-control" name="code" type="text" id="code" value="{{ isset($energyproduction->code) ? $energyproduction->code : ''}}" >
     {!! $errors->first('code', '<p class="help-block">:message</p>') !!}
@@ -18,14 +18,14 @@
     <input class="form-control" name="yield" type="number" id="yield" value="{{ isset($energyproduction->yield) ? $energyproduction->yield : ''}}" >
     {!! $errors->first('yield', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
+<div class="form-group d-none {{ $errors->has('user_id') ? 'has-error' : ''}}">
     <label for="user_id" class="control-label">{{ 'User Id' }}</label>
-    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyproduction->user_id) ? $energyproduction->user_id : ''}}" >
+    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyproduction->user_id) ? $energyproduction->user_id : Auth::id() }}" >
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
+<div class="form-group d-none {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
     <label for="energy_report_id" class="control-label">{{ 'Enery Report Id' }}</label>
-    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energyproduction->energy_report_id) ? $energyproduction->energy_report_id : ''}}" >
+    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energyproduction->energy_report_id) ? $energyproduction->energy_report_id : request('energy_report_id') }}" >
     {!! $errors->first('energy_report_id', '<p class="help-block">:message</p>') !!}
 </div>
 

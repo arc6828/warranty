@@ -16,9 +16,10 @@
                 <div class="card">
                     <div class="card-header">ข้อมูลการผลิต</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-production/create') }}" class="btn btn-success btn-sm" title="Add New EnergyProduction">
+                        <a href="{{ url('/energy-production/create') }}" class="btn btn-success btn-sm d-none" title="Add New EnergyProduction">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+                        @include('energy-production/create-modal')
 
                         <form method="GET" action="{{ url('/energy-production') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
@@ -37,14 +38,20 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>ลำดับที่</th><th>ชื่อผลิตภัณฑ์</th><th>กำลังผลิตติดตั้ง (กำลังการผลิตสูงสุดของเครื่องจักร)</th><th>ปริมาณผลผลิตจริง</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th>
+                                        <!--th>ลำดับที่</th-->
+                                        <th>ชื่อผลิตภัณฑ์</th><th>กำลังผลิตติดตั้ง (กำลังการผลิตสูงสุดของเครื่องจักร)</th><th>ปริมาณผลผลิตจริง</th>
+                                        <!--th>User Id</th><th>Enery Report Id</th-->
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($energyproduction as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->code }}</td><td>{{ $item->product_name }}</td><td>{{ $item->capacity }}</td><td>{{ $item->yield }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
+                                        <!--td>{{ $item->code }}</td-->
+                                        <td>{{ $item->product_name }}</td><td>{{ $item->capacity }}</td><td>{{ $item->yield }}</td>
+                                        <!--td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td-->
                                         <td>
                                             <a href="{{ url('/energy-production/' . $item->id) }}" title="View EnergyProduction"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-production/' . $item->id . '/edit') }}" title="Edit EnergyProduction"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
@@ -67,4 +74,8 @@
             </div>
         </div>
     </div>
+
+
+
+
 @endsection

@@ -86,6 +86,7 @@ class EnergyReportController extends Controller
         EnergyEvaluation::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyConservationPolicy::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         //CREATE FORM-2
+        /*
         EnergyProduction::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyElectricityTransformer::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyConsumptionElectricity::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
@@ -93,10 +94,11 @@ class EnergyReportController extends Controller
         EnergyHeatGenerator::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyPortionHeat::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
         EnergyPortionElectricity::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id ]);
-        
+        */
         //CREATE FORM-3
+        /*
         EnergyMachine::create(["user_id" => Auth::id() ,  "energy_report_id" => $energy_report->id]);
-        
+        */
 
         return redirect('energy-report')->with('flash_message', 'EnergyReport added!');
     }
@@ -145,7 +147,7 @@ class EnergyReportController extends Controller
         $energyreport = EnergyReport::findOrFail($id);
         $energyreport->update($requestData);
 
-        return redirect('energy-report')->with('flash_message', 'EnergyReport updated!');
+        return redirect("energy-report/".$id)->with('flash_message', 'EnergyReport updated!');
     }
 
     /**

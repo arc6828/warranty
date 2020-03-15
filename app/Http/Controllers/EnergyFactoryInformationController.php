@@ -114,7 +114,7 @@ class EnergyFactoryInformationController extends Controller
         $energyfactoryinformation = EnergyFactoryInformation::findOrFail($id);
         $energyfactoryinformation->update($requestData);
 
-        return redirect('energy-factory-information')->with('flash_message', 'EnergyFactoryInformation updated!');
+        return redirect('energy-factory-information/'.$id.'/edit')->with('flash_message', 'EnergyFactoryInformation updated!');
     }
 
     /**

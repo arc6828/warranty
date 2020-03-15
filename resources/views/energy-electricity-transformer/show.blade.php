@@ -10,7 +10,7 @@
                     <div class="card-header">ข้อมูลหม้อแปลงไฟฟ้า {{ $energyelectricitytransformer->id }}</div>
                     <div class="card-body">
 
-                        <a href="{{ url('/energy-electricity-transformer') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-electricity-transformer?energy_report_id='.$energyelectricitytransformer->energy_report_id) }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <a href="{{ url('/energy-electricity-transformer/' . $energyelectricitytransformer->id . '/edit') }}" title="Edit EnergyElectricityTransformer"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
                         <form method="POST" action="{{ url('energyelectricitytransformer' . '/' . $energyelectricitytransformer->id) }}" accept-charset="UTF-8" style="display:inline">

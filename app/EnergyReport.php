@@ -100,6 +100,10 @@ class EnergyReport extends Model
         return $this->hasMany('App\EnergyProductionConsumption','energy_report_id');
     }
 
+    public function user(){
+        return $this->belongsTo('App\User','user_id');
+    }
+
 
     
 

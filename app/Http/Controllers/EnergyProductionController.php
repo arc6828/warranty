@@ -47,7 +47,7 @@ class EnergyProductionController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create()
+    public function create(Request $request)
     {
         $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
         return view('energy-production.create', compact('energyreport'));
@@ -65,9 +65,9 @@ class EnergyProductionController extends Controller
         
         $requestData = $request->all();
         
-        EnergyProduction::create($requestData);
+        $energyproduction = EnergyProduction::create($requestData);
 
-        return redirect('energy-production')->with('flash_message', 'EnergyProduction added!');
+        return redirect('energy-production?energy_report_id='.$energyproduction->energy_report_id)->with('flash_message', 'EnergyProduction added!');
     }
 
     /**
@@ -115,7 +115,7 @@ class EnergyProductionController extends Controller
         $energyproduction = EnergyProduction::findOrFail($id);
         $energyproduction->update($requestData);
 
-        return redirect('energy-production')->with('flash_message', 'EnergyProduction updated!');
+        return redirect('energy-production?energy_report_id='.$energyproduction->energy_report_id)->with('flash_message', 'EnergyProduction updated!');
     }
 
     /**
@@ -127,8 +127,9 @@ class EnergyProductionController extends Controller
      */
     public function destroy($id)
     {
+        $energyproduction = EnergyProduction::findOrFail($id);
         EnergyProduction::destroy($id);
 
-        return redirect('energy-production')->with('flash_message', 'EnergyProduction deleted!');
+        return redirect('energy-production?energy_report_id='.$energyproduction->energy_report_id)->with('flash_message', 'EnergyProduction deleted!');
     }
 }

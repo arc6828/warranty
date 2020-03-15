@@ -16,9 +16,10 @@
                 <div class="card">
                     <div class="card-header">ข้อมูลหม้อแปลงไฟฟ้า</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-electricity-transformer/create') }}" class="btn btn-success btn-sm" title="Add New EnergyElectricityTransformer">
+                        <a href="{{ url('/energy-electricity-transformer/create') }}" class="btn btn-success btn-sm d-none" title="Add New EnergyElectricityTransformer">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+                        @include('energy-electricity-transformer/create-modal')
 
                         <form method="GET" action="{{ url('/energy-electricity-transformer') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">

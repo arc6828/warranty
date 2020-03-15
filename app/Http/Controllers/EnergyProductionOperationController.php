@@ -63,9 +63,9 @@ class EnergyProductionOperationController extends Controller
         
         $requestData = $request->all();
         
-        EnergyProductionOperation::create($requestData);
+        $energyproductionoperation = EnergyProductionOperation::create($requestData);
 
-        return redirect('energy-production-operation')->with('flash_message', 'EnergyProductionOperation added!');
+        return redirect('energy-production/'.$energyproductionoperation->energy_production_id)->with('flash_message', 'EnergyProductionOperation added!');
     }
 
     /**
@@ -112,7 +112,7 @@ class EnergyProductionOperationController extends Controller
         $energyproductionoperation = EnergyProductionOperation::findOrFail($id);
         $energyproductionoperation->update($requestData);
 
-        return redirect('energy-production-operation')->with('flash_message', 'EnergyProductionOperation updated!');
+        return redirect('energy-production/'.$energyproductionoperation->energy_production_id)->with('flash_message', 'EnergyProductionOperation updated!');
     }
 
     /**
@@ -124,8 +124,9 @@ class EnergyProductionOperationController extends Controller
      */
     public function destroy($id)
     {
+        $energyproductionoperation = EnergyProductionOperation::findOrFail($id);
         EnergyProductionOperation::destroy($id);
 
-        return redirect('energy-production-operation')->with('flash_message', 'EnergyProductionOperation deleted!');
+        return redirect('energy-production/'.$energyproductionoperation->energy_production_id)->with('flash_message', 'EnergyProductionOperation deleted!');
     }
 }
