@@ -115,6 +115,6 @@ class EnergyConsumptionHeatController extends Controller
         $energyconsumptionheat = EnergyConsumptionHeat::findOrFail($id);
         EnergyConsumptionHeat::destroy($id);
 
-        return redirect('energy-consumption-?energy_report_id='.$energyconsumptionheat->energy_report_id)->with('flash_message', 'EnergyConsumptionHeat deleted!');
+        return redirect('energy-consumption-heat?energy_report_id='.$energyconsumptionheat->energy_report_id)->with('flash_message', 'EnergyConsumptionHeat deleted!');
     }
 }
