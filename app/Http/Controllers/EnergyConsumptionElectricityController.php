@@ -23,21 +23,7 @@ class EnergyConsumptionElectricityController extends Controller
         $keyword = $request->get('search');
         $perPage = 25;
 
-        if (!empty($keyword)) {
-            $energyconsumptionelectricity = EnergyConsumptionElectricity::where('month', 'LIKE', "%$keyword%")
-                ->orWhere('maximum_power_p', 'LIKE', "%$keyword%")
-                ->orWhere('maximum_power_pp', 'LIKE', "%$keyword%")
-                ->orWhere('maximum_power_op', 'LIKE', "%$keyword%")
-                ->orWhere('maximum_power_expenses', 'LIKE', "%$keyword%")
-                ->orWhere('electrical_energy_volume', 'LIKE', "%$keyword%")
-                ->orWhere('electrical_energy_expenses', 'LIKE', "%$keyword%")
-                ->orWhere('total_electric_bill', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
-        } else {
-            $energyconsumptionelectricity = EnergyConsumptionElectricity::latest()->paginate($perPage);
-        }
+        $energyconsumptionelectricity = EnergyConsumptionElectricity::where('energy_report_id',$energyreport->id)->latest()->paginate($perPage);
 
         return view('energy-consumption-electricity.index', compact('energyconsumptionelectricity','energyreport'));
     }
@@ -64,9 +50,9 @@ class EnergyConsumptionElectricityController extends Controller
         
         $requestData = $request->all();
         
-        EnergyConsumptionElectricity::create($requestData);
+        $energyconsumptionelectricity = EnergyConsumptionElectricity::create($requestData);
 
-        return redirect('energy-consumption-electricity')->with('flash_message', 'EnergyConsumptionElectricity added!');
+        return redirect('energy-consumption-electricity?energy_report_id='.$energyconsumptionelectricity->energy_report_id)->with('flash_message', 'EnergyConsumptionElectricity added!');
     }
 
     /**
@@ -113,7 +99,7 @@ class EnergyConsumptionElectricityController extends Controller
         $energyconsumptionelectricity = EnergyConsumptionElectricity::findOrFail($id);
         $energyconsumptionelectricity->update($requestData);
 
-        return redirect('energy-consumption-electricity')->with('flash_message', 'EnergyConsumptionElectricity updated!');
+        return redirect('energy-consumption-electricity?energy_report_id='.$energyconsumptionelectricity->energy_report_id)->with('flash_message', 'EnergyConsumptionElectricity updated!');
     }
 
     /**
@@ -125,8 +111,10 @@ class EnergyConsumptionElectricityController extends Controller
      */
     public function destroy($id)
     {
+        
+        $energyconsumptionelectricity = EnergyConsumptionElectricity::findOrFail($id);
         EnergyConsumptionElectricity::destroy($id);
 
-        return redirect('energy-consumption-electricity')->with('flash_message', 'EnergyConsumptionElectricity deleted!');
+        return redirect('energy-consumption-electricity?energy_report_id='.$energyconsumptionelectricity->energy_report_id)->with('flash_message', 'EnergyConsumptionElectricity deleted!');
     }
 }

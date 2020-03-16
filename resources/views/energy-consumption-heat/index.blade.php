@@ -16,9 +16,10 @@
                 <div class="card">
                     <div class="card-header">ข้อมูลปริมาณการใช้เชื้อเพลิง</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-consumption-heat/create') }}" class="btn btn-success btn-sm" title="Add New EnergyConsumptionHeat">
+                        <a href="{{ url('/energy-consumption-heat/create') }}" class="btn btn-success btn-sm d-none" title="Add New EnergyConsumptionHeat">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+                        @include('energy-consumption-heat/create-modal')
 
                         <form method="GET" action="{{ url('/energy-consumption-heat') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">

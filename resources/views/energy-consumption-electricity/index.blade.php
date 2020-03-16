@@ -16,9 +16,10 @@
                 <div class="card">
                     <div class="card-header">ข้อมูลการใช้ไฟฟ้า</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-consumption-electricity/create') }}" class="btn btn-success btn-sm" title="Add New EnergyConsumptionElectricity">
+                        <a href="{{ url('/energy-consumption-electricity/create') }}" class="btn btn-success btn-sm d-none" title="Add New EnergyConsumptionElectricity">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+                        @include('energy-consumption-electricity/create-modal')
 
                         <form method="GET" action="{{ url('/energy-consumption-electricity') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
@@ -37,14 +38,17 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Month</th><th>Maximum Power P</th><th>Maximum Power Pp</th><th>Maximum Power Op</th><th>Maximum Power Expenses</th><th>Electrical Energy Volume</th><th>Electrical Energy Expenses</th><th>Total Electric Bill</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>Month</th><th>Maximum Power P</th><th>Maximum Power Pp</th><th>Maximum Power Op</th><th>Maximum Power Expenses</th><th>Electrical Energy Volume</th><th>Electrical Energy Expenses</th><th>Total Electric Bill</th>
+                                        <!--th>User Id</th><th>Enery Report Id</th-->
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($energyconsumptionelectricity as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->month }}</td><td>{{ $item->maximum_power_p }}</td><td>{{ $item->maximum_power_pp }}</td><td>{{ $item->maximum_power_op }}</td><td>{{ $item->maximum_power_expenses }}</td><td>{{ $item->electrical_energy_volume }}</td><td>{{ $item->electrical_energy_expenses }}</td><td>{{ $item->total_electric_bill }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
+                                        <td>{{ $item->month }}</td><td>{{ $item->maximum_power_p }}</td><td>{{ $item->maximum_power_pp }}</td><td>{{ $item->maximum_power_op }}</td><td>{{ $item->maximum_power_expenses }}</td><td>{{ $item->electrical_energy_volume }}</td><td>{{ $item->electrical_energy_expenses }}</td><td>{{ $item->total_electric_bill }}</td>
+                                        <!--td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td-->
                                         <td>
                                             <a href="{{ url('/energy-consumption-electricity/' . $item->id) }}" title="View EnergyConsumptionElectricity"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-consumption-electricity/' . $item->id . '/edit') }}" title="Edit EnergyConsumptionElectricity"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

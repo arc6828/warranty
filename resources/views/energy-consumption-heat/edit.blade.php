@@ -16,7 +16,7 @@
                 <div class="card">
                     <div class="card-header">แก้ไข ข้อมูลปริมาณการใช้เชื้อเพลิง #{{ $energyconsumptionheat->id }}</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-consumption-heat') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-consumption-heat?energy_report_id='.$energyconsumptionheat->energy_report_id) }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 

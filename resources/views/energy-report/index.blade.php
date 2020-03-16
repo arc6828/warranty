@@ -37,7 +37,7 @@
                                         <th> ชื่อโรงงานควบคุม </th> 
                                         <th> Tsic Id </th> 
                                         <th> ปี </th> 
-                                        <th> User Id </th> 
+                                        <th class="d-none"> User </th> 
                                         <th> Created at </th> 
                                     </tr>
                                 </thead>
@@ -48,13 +48,13 @@
                                         <td><a href="{{ url('/energy-report/' . $item->id) }}" >{{ $item->legal_name }}</a></td>
                                         <td>{{ $item->factory_name }}</td>
                                         <td>{{ $item->tsic_id }}</td><td>{{ $item->year }}</td>
-                                        <td>{{ $item->user->name }}</td>
+                                        <td class="d-none">{{ $item->user->name }}</td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>
                                             <a class="d-none" href="{{ url('/energy-report/' . $item->id) }}" title="View EnergyReport"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/energy-report/' . $item->id . '/edit') }}" title="Edit EnergyReport"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a class="d-none" href="{{ url('/energy-report/' . $item->id . '/edit') }}" title="Edit EnergyReport"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
-                                            <form method="POST" action="{{ url('/energy-report' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form class="d-none" method="POST" action="{{ url('/energy-report' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete EnergyReport" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>

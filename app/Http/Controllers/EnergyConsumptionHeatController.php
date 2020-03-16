@@ -23,30 +23,7 @@ class EnergyConsumptionHeatController extends Controller
         $keyword = $request->get('search');
         $perPage = 25;
 
-        if (!empty($keyword)) {
-            $energyconsumptionheat = EnergyConsumptionHeat::where('month', 'LIKE', "%$keyword%")
-                ->orWhere('fuel_oil_liter', 'LIKE', "%$keyword%")
-                ->orWhere('fuel_oil_baht', 'LIKE', "%$keyword%")
-                ->orWhere('diesel_oil_liter', 'LIKE', "%$keyword%")
-                ->orWhere('diesel_oil_baht', 'LIKE', "%$keyword%")
-                ->orWhere('lpg_kg', 'LIKE', "%$keyword%")
-                ->orWhere('lpg_baht', 'LIKE', "%$keyword%")
-                ->orWhere('natural_gas_millionbtu', 'LIKE', "%$keyword%")
-                ->orWhere('natural_gas_baht', 'LIKE', "%$keyword%")
-                ->orWhere('coal_ton', 'LIKE', "%$keyword%")
-                ->orWhere('coal_baht', 'LIKE', "%$keyword%")
-                ->orWhere('steam_purchased_ton', 'LIKE', "%$keyword%")
-                ->orWhere('steam_purchased_baht', 'LIKE', "%$keyword%")
-                ->orWhere('other_unit', 'LIKE', "%$keyword%")
-                ->orWhere('other_baht', 'LIKE', "%$keyword%")
-                ->orWhere('renewable_energy_unit', 'LIKE', "%$keyword%")
-                ->orWhere('renewable_energy_baht', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
-        } else {
-            $energyconsumptionheat = EnergyConsumptionHeat::latest()->paginate($perPage);
-        }
+        $energyconsumptionheat = EnergyConsumptionHeat::where('energy_report_id',$energyreport->id)->latest()->paginate($perPage);
 
         return view('energy-consumption-heat.index', compact('energyconsumptionheat','energyreport'));
     }
@@ -73,9 +50,9 @@ class EnergyConsumptionHeatController extends Controller
         
         $requestData = $request->all();
         
-        EnergyConsumptionHeat::create($requestData);
+        $energyconsumptionheat = EnergyConsumptionHeat::create($requestData);
 
-        return redirect('energy-consumption-heat')->with('flash_message', 'EnergyConsumptionHeat added!');
+        return redirect('energy-consumption-heat?energy_report_id='.$energyconsumptionheat->energy_report_id)->with('flash_message', 'EnergyConsumptionHeat added!');
     }
 
     /**
@@ -122,7 +99,7 @@ class EnergyConsumptionHeatController extends Controller
         $energyconsumptionheat = EnergyConsumptionHeat::findOrFail($id);
         $energyconsumptionheat->update($requestData);
 
-        return redirect('energy-consumption-heat')->with('flash_message', 'EnergyConsumptionHeat updated!');
+        return redirect('energy-consumption-heat?energy_report_id='.$energyconsumptionheat->energy_report_id)->with('flash_message', 'EnergyConsumptionHeat updated!');
     }
 
     /**
@@ -134,8 +111,10 @@ class EnergyConsumptionHeatController extends Controller
      */
     public function destroy($id)
     {
+        
+        $energyconsumptionheat = EnergyConsumptionHeat::findOrFail($id);
         EnergyConsumptionHeat::destroy($id);
 
-        return redirect('energy-consumption-heat')->with('flash_message', 'EnergyConsumptionHeat deleted!');
+        return redirect('energy-consumption-?energy_report_id='.$energyconsumptionheat->energy_report_id)->with('flash_message', 'EnergyConsumptionHeat deleted!');
     }
 }
