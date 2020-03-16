@@ -23,23 +23,7 @@ class EnergyHeatGeneratorController extends Controller
         $keyword = $request->get('search');
         $perPage = 25;
 
-        if (!empty($keyword)) {
-            $energyheatgenerator = EnergyHeatGenerator::where('month', 'LIKE', "%$keyword%")
-                ->orWhere('capacity', 'LIKE', "%$keyword%")
-                ->orWhere('primary_fuel_consumption_type', 'LIKE', "%$keyword%")
-                ->orWhere('primary_fuel_consumption_volume', 'LIKE', "%$keyword%")
-                ->orWhere('primary_fuel_consumption_unit', 'LIKE', "%$keyword%")
-                ->orWhere('operating_hours', 'LIKE', "%$keyword%")
-                ->orWhere('electricity_use', 'LIKE', "%$keyword%")
-                ->orWhere('electricity_sale', 'LIKE', "%$keyword%")
-                ->orWhere('steam_use', 'LIKE', "%$keyword%")
-                ->orWhere('steam_sale', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
-        } else {
-            $energyheatgenerator = EnergyHeatGenerator::latest()->paginate($perPage);
-        }
+        $energyheatgenerator = EnergyHeatGenerator::where('energy_report_id',$energyreport->id)->latest()->paginate($perPage);
 
         return view('energy-heat-generator.index', compact('energyheatgenerator','energyreport'));
     }
@@ -66,9 +50,9 @@ class EnergyHeatGeneratorController extends Controller
         
         $requestData = $request->all();
         
-        EnergyHeatGenerator::create($requestData);
+        $energyheatgenerator = EnergyHeatGenerator::create($requestData);
 
-        return redirect('energy-heat-generator')->with('flash_message', 'EnergyHeatGenerator added!');
+        return redirect('energy-heat-generator?energy_report_id='.$energyheatgenerator->energy_report_id)->with('flash_message', 'EnergyHeatGenerator added!');
     }
 
     /**
@@ -115,7 +99,7 @@ class EnergyHeatGeneratorController extends Controller
         $energyheatgenerator = EnergyHeatGenerator::findOrFail($id);
         $energyheatgenerator->update($requestData);
 
-        return redirect('energy-heat-generator')->with('flash_message', 'EnergyHeatGenerator updated!');
+        return redirect('energy-heat-generator?energy_report_id='.$energyheatgenerator->energy_report_id)->with('flash_message', 'EnergyHeatGenerator updated!');
     }
 
     /**
@@ -127,8 +111,10 @@ class EnergyHeatGeneratorController extends Controller
      */
     public function destroy($id)
     {
+        
+        $energyheatgenerator = EnergyHeatGenerator::findOrFail($id);
         EnergyHeatGenerator::destroy($id);
 
-        return redirect('energy-heat-generator')->with('flash_message', 'EnergyHeatGenerator deleted!');
+        return redirect('energy-heat-generator?energy_report_id='.$energyheatgenerator->energy_report_id)->with('flash_message', 'EnergyHeatGenerator deleted!');
     }
 }

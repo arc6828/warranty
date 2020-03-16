@@ -48,14 +48,14 @@
     <input class="form-control" name="steam_sale" type="number" id="steam_sale" value="{{ isset($energyheatgenerator->steam_sale) ? $energyheatgenerator->steam_sale : ''}}" >
     {!! $errors->first('steam_sale', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
+<div class="form-group d-none {{ $errors->has('user_id') ? 'has-error' : ''}}">
     <label for="user_id" class="control-label">{{ 'User Id' }}</label>
-    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyheatgenerator->user_id) ? $energyheatgenerator->user_id : ''}}" >
+    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energyheatgenerator->user_id) ? $energyheatgenerator->user_id : Auth::id() }}" >
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
+<div class="form-group d-none {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
     <label for="energy_report_id" class="control-label">{{ 'Enery Report Id' }}</label>
-    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energyheatgenerator->energy_report_id) ? $energyheatgenerator->energy_report_id : ''}}" >
+    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energyheatgenerator->energy_report_id) ? $energyheatgenerator->energy_report_id : request('energy_report_id') }}" >
     {!! $errors->first('energy_report_id', '<p class="help-block">:message</p>') !!}
 </div>
 
