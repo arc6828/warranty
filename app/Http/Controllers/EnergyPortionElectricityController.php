@@ -23,17 +23,7 @@ class EnergyPortionElectricityController extends Controller
         $keyword = $request->get('search');
         $perPage = 25;
 
-        if (!empty($keyword)) {
-            $energyportionelectricity = EnergyPortionElectricity::where('system', 'LIKE', "%$keyword%")
-                ->orWhere('electric_power_consumption', 'LIKE', "%$keyword%")
-                ->orWhere('method_assessment', 'LIKE', "%$keyword%")
-                ->orWhere('method_check', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
-        } else {
-            $energyportionelectricity = EnergyPortionElectricity::latest()->paginate($perPage);
-        }
+        $energyportionelectricity = EnergyPortionElectricity::where('energy_report_id',$energyreport->id)->latest()->paginate($perPage);
 
         return view('energy-portion-electricity.index', compact('energyportionelectricity','energyreport'));
     }
@@ -60,9 +50,9 @@ class EnergyPortionElectricityController extends Controller
         
         $requestData = $request->all();
         
-        EnergyPortionElectricity::create($requestData);
+        $energyportionelectricity = EnergyPortionElectricity::create($requestData);
 
-        return redirect('energy-portion-electricity')->with('flash_message', 'EnergyPortionElectricity added!');
+        return redirect('energy-portion-electricity?energy_report_id='.$energyportionelectricity->energy_report_id)->with('flash_message', 'EnergyPortionElectricity added!');
     }
 
     /**
@@ -109,7 +99,7 @@ class EnergyPortionElectricityController extends Controller
         $energyportionelectricity = EnergyPortionElectricity::findOrFail($id);
         $energyportionelectricity->update($requestData);
 
-        return redirect('energy-portion-electricity')->with('flash_message', 'EnergyPortionElectricity updated!');
+        return redirect('energy-portion-electricity?energy_report_id='.$energyportionelectricity->energy_report_id)->with('flash_message', 'EnergyPortionElectricity updated!');
     }
 
     /**
@@ -121,8 +111,9 @@ class EnergyPortionElectricityController extends Controller
      */
     public function destroy($id)
     {
+        $energyportionelectricity = EnergyPortionElectricity::findOrFail($id);
         EnergyPortionElectricity::destroy($id);
 
-        return redirect('energy-portion-electricity')->with('flash_message', 'EnergyPortionElectricity deleted!');
+        return redirect('energy-portion-electricity?energy_report_id='.$energyportionelectricity->energy_report_id)->with('flash_message', 'EnergyPortionElectricity deleted!');
     }
 }

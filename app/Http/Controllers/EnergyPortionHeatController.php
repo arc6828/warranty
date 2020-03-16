@@ -23,19 +23,7 @@ class EnergyPortionHeatController extends Controller
         $keyword = $request->get('search');
         $perPage = 25;
 
-        if (!empty($keyword)) {
-            $energyportionheat = EnergyPortionHeat::where('system', 'LIKE', "%$keyword%")
-                ->orWhere('equipment', 'LIKE', "%$keyword%")
-                ->orWhere('fuel_consumption_type', 'LIKE', "%$keyword%")
-                ->orWhere('fuel_consumption_megajoule', 'LIKE', "%$keyword%")
-                ->orWhere('method_assessment', 'LIKE', "%$keyword%")
-                ->orWhere('method_check', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
-        } else {
-            $energyportionheat = EnergyPortionHeat::latest()->paginate($perPage);
-        }
+        $energyportionheat = EnergyPortionHeat::where('energy_report_id',$energyreport->id)->latest()->paginate($perPage);
 
         return view('energy-portion-heat.index', compact('energyportionheat','energyreport'));
     }
@@ -62,9 +50,9 @@ class EnergyPortionHeatController extends Controller
         
         $requestData = $request->all();
         
-        EnergyPortionHeat::create($requestData);
+        $energyportionheat = EnergyPortionHeat::create($requestData);
 
-        return redirect('energy-portion-heat')->with('flash_message', 'EnergyPortionHeat added!');
+        return redirect('energy-portion-heat?energy_report_id='.$energyportionheat->energy_report_id)->with('flash_message', 'EnergyPortionHeat added!');
     }
 
     /**
@@ -111,7 +99,7 @@ class EnergyPortionHeatController extends Controller
         $energyportionheat = EnergyPortionHeat::findOrFail($id);
         $energyportionheat->update($requestData);
 
-        return redirect('energy-portion-heat')->with('flash_message', 'EnergyPortionHeat updated!');
+        return redirect('energy-portion-heat?energy_report_id='.$energyportionheat->energy_report_id)->with('flash_message', 'EnergyPortionHeat updated!');
     }
 
     /**
@@ -123,8 +111,10 @@ class EnergyPortionHeatController extends Controller
      */
     public function destroy($id)
     {
+        
+        $energyportionheat = EnergyPortionHeat::findOrFail($id);
         EnergyPortionHeat::destroy($id);
 
-        return redirect('energy-portion-heat')->with('flash_message', 'EnergyPortionHeat deleted!');
+        return redirect('energy-portion-heat?energy_report_id='.$energyportionheat->energy_report_id)->with('flash_message', 'EnergyPortionHeat deleted!');
     }
 }

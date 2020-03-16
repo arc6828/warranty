@@ -16,9 +16,10 @@
                 <div class="card">
                     <div class="card-header">ข้อมูลสัดส่วนการใช้พลังงานไฟฟ้า</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-portion-electricity/create') }}" class="btn btn-success btn-sm" title="Add New EnergyPortionElectricity">
+                        <a href="{{ url('/energy-portion-electricity/create') }}" class="btn btn-success btn-sm d-none" title="Add New EnergyPortionElectricity">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+                        @include('energy-portion-electricity/create-modal')
 
                         <form method="GET" action="{{ url('/energy-portion-electricity') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
@@ -37,14 +38,14 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>ระบบ</th><th>การใช้พลังงานไฟฟ้า</th><th>วิธีการประเมิน</th><th>วิธีการตรวจวัด</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>ระบบ</th><th>การใช้พลังงานไฟฟ้า</th><th>วิธีการประเมิน</th><th>วิธีการตรวจวัด</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($energyportionelectricity as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->system }}</td><td>{{ $item->electric_power_consumption }}</td><td>{{ $item->method_assessment }}</td><td>{{ $item->method_check }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
+                                        <td>{{ $item->system }}</td><td>{{ $item->electric_power_consumption }}</td><td>{{ $item->method_assessment }}</td><td>{{ $item->method_check }}</td>
                                         <td>
                                             <a href="{{ url('/energy-portion-electricity/' . $item->id) }}" title="View EnergyPortionElectricity"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-portion-electricity/' . $item->id . '/edit') }}" title="Edit EnergyPortionElectricity"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

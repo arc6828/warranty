@@ -16,7 +16,7 @@
                 <div class="card">
                     <div class="card-header">แก้ไข ข้อมูลการใช้พลังงานความร้อน #{{ $energyportionheat->id }}</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-portion-heat') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-portion-heat?energy_report_id='.$energyportionheat->energy_report_id) }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 

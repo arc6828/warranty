@@ -16,9 +16,11 @@
                 <div class="card">
                     <div class="card-header">ข้อมูลการใช้พลังงานความร้อน</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-portion-heat/create') }}" class="btn btn-success btn-sm" title="Add New EnergyPortionHeat">
+                        <a href="{{ url('/energy-portion-heat/create') }}" class="btn btn-success btn-sm d-none" title="Add New EnergyPortionHeat">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+
+                        @include('energy-portion-heat/create-modal')
 
                         <form method="GET" action="{{ url('/energy-portion-heat') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
@@ -37,14 +39,15 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>ระบบ</th><th>อุปกรณ์</th><th>การใช้พลังงานเชื้อเพลิง (ชนิดเชื้อเพลง)</th><th>การใช้พลังงานเชื้อเพลิง (เมกะจูล/ปี)</th><th>วิธีการประเมิน</th><th>วิธีการตรวจวัด</th><th>User Id</th><th>Enery Report Id</th><th>Actions</th>
+                                        <th>#</th><th>ระบบ</th><th>อุปกรณ์</th><th>การใช้พลังงานเชื้อเพลิง (ชนิดเชื้อเพลง)</th><th>การใช้พลังงานเชื้อเพลิง (เมกะจูล/ปี)</th><th>วิธีการประเมิน</th><th>วิธีการตรวจวัด</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($energyportionheat as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->system }}</td><td>{{ $item->equipment }}</td><td>{{ $item->fuel_consumption_type }}</td><td>{{ $item->fuel_consumption_megajoule }}</td><td>{{ $item->method_assessment }}</td><td>{{ $item->method_check }}</td><td>{{ $item->user_id }}</td><td>{{ $item->energy_report_id }}</td>
+                                        <td>{{ $item->system }}</td><td>{{ $item->equipment }}</td><td>{{ $item->fuel_consumption_type }}</td><td>{{ $item->fuel_consumption_megajoule }}</td><td>{{ $item->method_assessment }}</td><td>{{ $item->method_check }}</td>
                                         <td>
                                             <a href="{{ url('/energy-portion-heat/' . $item->id) }}" title="View EnergyPortionHeat"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/energy-portion-heat/' . $item->id . '/edit') }}" title="Edit EnergyPortionHeat"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

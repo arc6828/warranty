@@ -10,7 +10,7 @@
                     <div class="card-header">ข้อมูลสัดส่วนการใช้พลังงานไฟฟ้า {{ $energyportionelectricity->id }}</div>
                     <div class="card-body">
 
-                        <a href="{{ url('/energy-portion-electricity') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-portion-electricity?energy_report_id='.$energyportionelectricity->energy_report_id) }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <a href="{{ url('/energy-portion-electricity/' . $energyportionelectricity->id . '/edit') }}" title="Edit EnergyPortionElectricity"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
                         <form method="POST" action="{{ url('energyportionelectricity' . '/' . $energyportionelectricity->id) }}" accept-charset="UTF-8" style="display:inline">
