@@ -5,13 +5,14 @@
     }
     </style>
     @section('header','Energy Report # '.$energyreport->factory_name . ' '. $energyreport->year )
-    
-    <h5>Part 1 : ข้อมูลทั่วไป</h5>
+    <h5>ข้อมูลทั้งหมด </h5>
     <li role="presentation">
         <a href="{{ url('/energy-report') }}/{{ $energyreport->id }}">
             Energy Report # {{ $energyreport->id }}
         </a>                    
-    </li>    
+    </li>  
+    <h5>Part 1 : แก้ไขข้อมูลทั่วไป</h5>
+      
     <li role="presentation">
         <a href="{{ url('/energy-committee') }}/{{ $energyreport->energy_committee->id }}/edit">
             Energy Committee
@@ -37,7 +38,7 @@
             Energy Conservation Policy
         </a>                    
     </li>
-    <h5>Part 2 : การผลิต</h5>
+    <h5>Part 2 : แก้ไขข้อมูลการผลิต</h5>
     <li role="presentation">
         <a href="{{ url('/energy-production') }}?energy_report_id={{ $energyreport->id }}">
             Energy Production
@@ -73,7 +74,7 @@
             Energy portion-electricity
         </a>                    
     </li>  
-    <h5>Part 3 : เครื่องจักร</h5>
+    <h5>Part 3 : แก้ไขข้อมูลเครื่องจักร</h5>
     <li role="presentation">
         <a href="{{ url('/energy-machine') }}?energy_report_id={{ $energyreport->id }}">
             Energy Machine

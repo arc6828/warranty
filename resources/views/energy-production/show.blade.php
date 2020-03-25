@@ -38,7 +38,6 @@
                 @php
                     $energyproductionoperation = $energyproduction->energy_production_operations;
                 @endphp
-
                 <div class="card mt-4">
                     <div class="card-header">ข้อมูลการผลิต(รายละเอียด)</div>
                     <div class="card-body">
@@ -95,7 +94,6 @@
                 @php
                     $energyproductiondiagram = $energyproduction->energy_production_diagrams;
                 @endphp
-
                 <div class="card mt-4">
                     <div class="card-header">Energy production diagram</div>
                     <div class="card-body">
@@ -163,7 +161,6 @@
                 @php
                     $energyproductionconsumption = $energyproduction->energy_production_consumptions;
                 @endphp
-
                 <div class="card mt-4">
                     <div class="card-header">Energy production consumption</div>
                     <div class="card-body">
