@@ -19,9 +19,10 @@
                 <div class="card">
                     <div class="card-header">Energy machine</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-machine/create') }}" class="btn btn-success btn-sm" title="Add New EnergyMachine">
+                        <a href="{{ url('/energy-machine/create') }}" class="btn btn-success btn-sm d-none" title="Add New EnergyMachine">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+                        @include('energy-machine/create-modal')
 
                         <form method="GET" action="{{ url('/energy-machine') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">

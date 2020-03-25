@@ -13,7 +13,7 @@
                     <div class="card-header">EnergyProductionConsumption {{ $energyproductionconsumption->id }}</div>
                     <div class="card-body">
 
-                        <a href="{{ url('/energy-production-consumption') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-production/'.$energyproductionconsumption->energy_production_id) }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <a href="{{ url('/energy-production-consumption/' . $energyproductionconsumption->id . '/edit') }}" title="Edit EnergyProductionConsumption"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
                         <form method="POST" action="{{ url('energyproductionconsumption' . '/' . $energyproductionconsumption->id) }}" accept-charset="UTF-8" style="display:inline">

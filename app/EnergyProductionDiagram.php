@@ -31,4 +31,11 @@ class EnergyProductionDiagram extends Model
     {
         return $this->belongsTo('App\EnergyReport','energy_report_id');
     }
+
+    public function  energy_production()
+    {
+        return $this->belongsTo('App\EnergyProduction','energy_production_id');
+    }
+
+    
 }

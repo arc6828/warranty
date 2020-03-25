@@ -36,4 +36,14 @@ class EnergyProduction extends Model
     {
         return $this->hasMany('App\EnergyProductionOperation','energy_production_id');
     }
+
+    public function  energy_production_diagrams()
+    {
+        return $this->hasMany('App\EnergyProductionDiagram','energy_production_id');
+    }
+
+    public function  energy_production_consumptions()
+    {
+        return $this->hasMany('App\EnergyProductionConsumption','energy_production_id');
+    }
 }

@@ -23,23 +23,7 @@ class EnergyMachineEvaluationController extends Controller
         $keyword = $request->get('search');
         $perPage = 25;
 
-        if (!empty($keyword)) {
-            $energymachineevaluation = EnergyMachineEvaluation::where('energy_report_id', $energyreport->id)
-            ->where(function ($query){
-                $query->where('energy_machine_id', 'LIKE', "%$keyword%")
-                ->orWhere('power_consumption_size', 'LIKE', "%$keyword%")
-                ->orWhere('operating_hours', 'LIKE', "%$keyword%")
-                ->orWhere('improvement_potential', 'LIKE', "%$keyword%")
-                ->orWhere('total_score', 'LIKE', "%$keyword%")
-                ->orWhere('priority', 'LIKE', "%$keyword%")
-                ->orWhere('department', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
-            });
-        } else {
-            $energymachineevaluation = EnergyMachineEvaluation::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
-        }
+        $energymachineevaluation = EnergyMachineEvaluation::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
 
         return view('energy-machine-evaluation.index', compact('energymachineevaluation','energyreport'));
     }
@@ -66,9 +50,9 @@ class EnergyMachineEvaluationController extends Controller
         
         $requestData = $request->all();
         
-        EnergyMachineEvaluation::create($requestData);
+        $energymachineevaluation = EnergyMachineEvaluation::create($requestData);
 
-        return redirect('energy-machine-evaluation')->with('flash_message', 'EnergyMachineEvaluation added!');
+        return redirect('energy-machine/'.$energymachineevaluation->energy_machine_id)->with('flash_message', 'EnergyMachineEvaluation added!');
     }
 
     /**
@@ -115,7 +99,7 @@ class EnergyMachineEvaluationController extends Controller
         $energymachineevaluation = EnergyMachineEvaluation::findOrFail($id);
         $energymachineevaluation->update($requestData);
 
-        return redirect('energy-machine-evaluation')->with('flash_message', 'EnergyMachineEvaluation updated!');
+        return redirect('energy-machine/'.$energymachineevaluation->energy_machine_id)->with('flash_message', 'EnergyMachineEvaluation updated!');
     }
 
     /**
@@ -127,8 +111,10 @@ class EnergyMachineEvaluationController extends Controller
      */
     public function destroy($id)
     {
+        
+        $energymachineevaluation = EnergyMachineEvaluation::findOrFail($id);
         EnergyMachineEvaluation::destroy($id);
 
-        return redirect('energy-machine-evaluation')->with('flash_message', 'EnergyMachineEvaluation deleted!');
+        return redirect('energy-machine/'.$energymachineevaluation->energy_machine_id)->with('flash_message', 'EnergyMachineEvaluation deleted!');
     }
 }

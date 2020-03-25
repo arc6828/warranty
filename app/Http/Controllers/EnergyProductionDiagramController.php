@@ -24,19 +24,7 @@ class EnergyProductionDiagramController extends Controller
         $keyword = $request->get('search');
         $perPage = 25;
 
-        if (!empty($keyword)) {
-            $energyproductiondiagram = EnergyProductionDiagram::where('energy_report_id', $energyreport->id)
-                ->where(function ($query){
-                    $query->where('photo_diagram', 'LIKE', "%$keyword%")
-                    ->orWhere('description', 'LIKE', "%$keyword%")
-                    ->orWhere('energy_production_id', 'LIKE', "%$keyword%")
-                    ->orWhere('user_id', 'LIKE', "%$keyword%")
-                    ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                    ->latest()->paginate($perPage);
-                });
-        } else {
-            $energyproductiondiagram = EnergyProductionDiagram::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
-        }
+        $energyproductiondiagram = EnergyProductionDiagram::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
 
         return view('energy-production-diagram.index', compact('energyproductiondiagram','energyreport'));
     }
@@ -67,9 +55,9 @@ class EnergyProductionDiagramController extends Controller
                 ->store('uploads', 'public');
         }
 
-        EnergyProductionDiagram::create($requestData);
+        $energyproductiondiagram = EnergyProductionDiagram::create($requestData);
 
-        return redirect('energy-production-diagram')->with('flash_message', 'EnergyProductionDiagram added!');
+        return redirect('energy-production/'.$energyproductiondiagram->energy_production_id)->with('flash_message', 'EnergyProductionDiagram added!');
     }
 
     /**
@@ -112,7 +100,7 @@ class EnergyProductionDiagramController extends Controller
     {
         
         $requestData = $request->all();
-                if ($request->hasFile('photo_diagram')) {
+        if ($request->hasFile('photo_diagram')) {
             $requestData['photo_diagram'] = $request->file('photo_diagram')
                 ->store('uploads', 'public');
         }
@@ -120,7 +108,7 @@ class EnergyProductionDiagramController extends Controller
         $energyproductiondiagram = EnergyProductionDiagram::findOrFail($id);
         $energyproductiondiagram->update($requestData);
 
-        return redirect('energy-production-diagram')->with('flash_message', 'EnergyProductionDiagram updated!');
+        return redirect('energy-production/'.$energyproductiondiagram->energy_production_id)->with('flash_message', 'EnergyProductionDiagram updated!');
     }
 
     /**
@@ -132,8 +120,9 @@ class EnergyProductionDiagramController extends Controller
      */
     public function destroy($id)
     {
+        $energyproductiondiagram = EnergyProductionDiagram::findOrFail($id);
         EnergyProductionDiagram::destroy($id);
 
-        return redirect('energy-production-diagram')->with('flash_message', 'EnergyProductionDiagram deleted!');
+        return redirect('energy-production/'.$energyproductiondiagram->energy_production_id)->with('flash_message', 'EnergyProductionDiagram deleted!');
     }
 }

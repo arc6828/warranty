@@ -30,17 +30,17 @@
 </div>
 <div class="form-group {{ $errors->has('energy_machine_id') ? 'has-error' : ''}}">
     <label for="energy_machine_id" class="control-label">{{ 'Energy Machine Id' }}</label>
-    <input class="form-control" name="energy_machine_id" type="number" id="energy_machine_id" value="{{ isset($energymachineevaluation->energy_machine_id) ? $energymachineevaluation->energy_machine_id : ''}}" readonly >
+    <input class="form-control" name="energy_machine_id" type="number" id="energy_machine_id" value="{{ isset($energymachineevaluation->energy_machine_id) ? $energymachineevaluation->energy_machine_id : $energymachine->id }}" readonly >
     {!! $errors->first('energy_machine_id', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
     <label for="user_id" class="control-label">{{ 'User Id' }}</label>
-    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energymachineevaluation->user_id) ? $energymachineevaluation->user_id : ''}}" readonly  >
+    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($energymachineevaluation->user_id) ? $energymachineevaluation->user_id : Auth::id() }}" readonly  >
     {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('energy_report_id') ? 'has-error' : ''}}">
     <label for="energy_report_id" class="control-label">{{ 'Enery Report Id' }}</label>
-    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energymachineevaluation->energy_report_id) ? $energymachineevaluation->energy_report_id : ''}}"readonly  >
+    <input class="form-control" name="energy_report_id" type="number" id="energy_report_id" value="{{ isset($energymachineevaluation->energy_report_id) ? $energymachineevaluation->energy_report_id : $energymachine->energy_report_id }}"readonly  >
     {!! $errors->first('energy_report_id', '<p class="help-block">:message</p>') !!}
 </div>
 

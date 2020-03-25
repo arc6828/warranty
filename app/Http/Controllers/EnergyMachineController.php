@@ -23,33 +23,8 @@ class EnergyMachineController extends Controller
         $keyword = $request->get('search');
         $perPage = 25;
 
-        if (!empty($keyword)) {
-            $energymachine = EnergyMachine::where('energy_report_id', $energyreport->id)
-            ->where(function ($query){
-                $query->where('system', 'LIKE', "%$keyword%")
-                ->orWhere('machine_name', 'LIKE', "%$keyword%")
-                ->orWhere('power_type', 'LIKE', "%$keyword%")
-                ->orWhere('spec', 'LIKE', "%$keyword%")
-                ->orWhere('spec_unit', 'LIKE', "%$keyword%")
-                ->orWhere('quantity', 'LIKE', "%$keyword%")
-                ->orWhere('lifetime', 'LIKE', "%$keyword%")
-                ->orWhere('average_active_hours', 'LIKE', "%$keyword%")
-                ->orWhere('electric_power', 'LIKE', "%$keyword%")
-                ->orWhere('heat_power', 'LIKE', "%$keyword%")
-                ->orWhere('fuel_type', 'LIKE', "%$keyword%")
-                ->orWhere('fuel_unit', 'LIKE', "%$keyword%")
-                ->orWhere('performance_spec', 'LIKE', "%$keyword%")
-                ->orWhere('performance_unit', 'LIKE', "%$keyword%")
-                ->orWhere('performance_actual', 'LIKE', "%$keyword%")
-                ->orWhere('performance_actual_unit', 'LIKE', "%$keyword%")
-                ->orWhere('remark', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
-            });
-        } else {
-            $energymachine = EnergyMachine::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
-        }
+        $energymachine = EnergyMachine::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
+        
 
         return view('energy-machine.index', compact('energymachine','energyreport'));
     }
@@ -76,9 +51,9 @@ class EnergyMachineController extends Controller
         
         $requestData = $request->all();
         
-        EnergyMachine::create($requestData);
+        $energymachine = EnergyMachine::create($requestData);
 
-        return redirect('energy-machine')->with('flash_message', 'EnergyMachine added!');
+        return redirect('energy-machine?energy_report_id='.$energymachine->energy_report_id)->with('flash_message', 'EnergyMachine added!');
     }
 
     /**
@@ -125,7 +100,7 @@ class EnergyMachineController extends Controller
         $energymachine = EnergyMachine::findOrFail($id);
         $energymachine->update($requestData);
 
-        return redirect('energy-machine')->with('flash_message', 'EnergyMachine updated!');
+        return redirect('energy-machine?energy_report_id='.$energymachine->energy_report_id)->with('flash_message', 'EnergyMachine updated!');
     }
 
     /**
@@ -137,8 +112,10 @@ class EnergyMachineController extends Controller
      */
     public function destroy($id)
     {
+        
+        $energymachine = EnergyMachine::findOrFail($id);
         EnergyMachine::destroy($id);
 
-        return redirect('energy-machine')->with('flash_message', 'EnergyMachine deleted!');
+        return redirect('energy-machine?energy_report_id='.$energymachine->energy_report_id)->with('flash_message', 'EnergyMachine deleted!');
     }
 }

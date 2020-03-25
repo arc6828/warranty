@@ -31,4 +31,9 @@ class EnergyMachineEvaluation extends Model
     {
         return $this->belongsTo('App\EnergyReport','energy_report_id');
     }
+
+    
+    public function energy_machine(){
+        return $this->belongsTo('App\EnergyMachine','energy_machine_id');
+    }
 }

@@ -1,11 +1,17 @@
 @if(isset($energyreport))
+    <style>
+    h5{
+        margin-top : 20px;
+    }
+    </style>
     @section('header','Energy Report # '.$energyreport->factory_name . ' '. $energyreport->year )
+    
+    <h5>Part 1 : ข้อมูลทั่วไป</h5>
     <li role="presentation">
         <a href="{{ url('/energy-report') }}/{{ $energyreport->id }}">
             Energy Report # {{ $energyreport->id }}
         </a>                    
-    </li>
-    <h5>Part 1</h5>
+    </li>    
     <li role="presentation">
         <a href="{{ url('/energy-committee') }}/{{ $energyreport->energy_committee->id }}/edit">
             Energy Committee
@@ -31,7 +37,7 @@
             Energy Conservation Policy
         </a>                    
     </li>
-    <h5>Part 2</h5>
+    <h5>Part 2 : การผลิต</h5>
     <li role="presentation">
         <a href="{{ url('/energy-production') }}?energy_report_id={{ $energyreport->id }}">
             Energy Production
@@ -67,25 +73,10 @@
             Energy portion-electricity
         </a>                    
     </li>  
-    <h5>Part 3</h5>                                               
-    <li role="presentation">
-        <a href="{{ url('/energy-production-diagram') }}?energy_report_id={{ $energyreport->id }}">
-            Energy Production Diagram
-        </a>                    
-    </li>                                       
-    <li role="presentation">
-        <a href="{{ url('/energy-production-consumption') }}?energy_report_id={{ $energyreport->id }}">
-            Energy Production consumption
-        </a>                    
-    </li>                                       
-    <li role="presentation">
-        <a href="{{ url('/energy-machine-evaluation') }}?energy_report_id={{ $energyreport->id }}">
-            Energy machine-evaluation
-        </a>                    
-    </li>                                       
+    <h5>Part 3 : เครื่องจักร</h5>
     <li role="presentation">
         <a href="{{ url('/energy-machine') }}?energy_report_id={{ $energyreport->id }}">
             Energy Machine
         </a>                    
-    </li>       
+    </li>                                
 @endif

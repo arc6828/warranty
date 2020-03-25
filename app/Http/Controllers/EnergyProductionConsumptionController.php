@@ -22,22 +22,9 @@ class EnergyProductionConsumptionController extends Controller
 
         $keyword = $request->get('search');
         $perPage = 25;
-
-        if (!empty($keyword)) {
-            $energyproductionconsumption = EnergyProductionConsumption::where('energy_report_id', $energyreport->id)
-            ->where(function ($query){
-                $query->where('month', 'LIKE', "%$keyword%")
-                ->orWhere('yield', 'LIKE', "%$keyword%")
-                ->orWhere('consumption_electricity', 'LIKE', "%$keyword%")
-                ->orWhere('consumption_heat', 'LIKE', "%$keyword%")
-                ->orWhere('energy_production_id', 'LIKE', "%$keyword%")
-                ->orWhere('user_id', 'LIKE', "%$keyword%")
-                ->orWhere('energy_report_id', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
-            });
-        } else {
-            $energyproductionconsumption = EnergyProductionConsumption::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
-        }
+        
+        $energyproductionconsumption = EnergyProductionConsumption::where('energy_report_id', $energyreport->id)->latest()->paginate($perPage);
+        
 
         return view('energy-production-consumption.index', compact('energyproductionconsumption','energyreport'));
     }
@@ -64,9 +51,9 @@ class EnergyProductionConsumptionController extends Controller
         
         $requestData = $request->all();
         
-        EnergyProductionConsumption::create($requestData);
+        $energyproductionconsumption = EnergyProductionConsumption::create($requestData);
 
-        return redirect('energy-production-consumption')->with('flash_message', 'EnergyProductionConsumption added!');
+        return redirect('energy-production/'.$energyproductionconsumption->energy_production_id)->with('flash_message', 'EnergyProductionConsumption added!');
     }
 
     /**
@@ -113,7 +100,7 @@ class EnergyProductionConsumptionController extends Controller
         $energyproductionconsumption = EnergyProductionConsumption::findOrFail($id);
         $energyproductionconsumption->update($requestData);
 
-        return redirect('energy-production-consumption')->with('flash_message', 'EnergyProductionConsumption updated!');
+        return redirect('energy-production/'.$energyproductionconsumption->energy_production_id)->with('flash_message', 'EnergyProductionConsumption updated!');
     }
 
     /**
@@ -125,8 +112,9 @@ class EnergyProductionConsumptionController extends Controller
      */
     public function destroy($id)
     {
+        $energyproductionconsumption = EnergyProductionConsumption::findOrFail($id);
         EnergyProductionConsumption::destroy($id);
 
-        return redirect('energy-production-consumption')->with('flash_message', 'EnergyProductionConsumption deleted!');
+        return redirect('energy-production/'.$energyproductionconsumption->energy_production_id)->with('flash_message', 'EnergyProductionConsumption deleted!');
     }
 }

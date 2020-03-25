@@ -12,7 +12,7 @@
                 <div class="card">
                     <div class="card-header">Edit EnergyMachineEvaluation #{{ $energymachineevaluation->id }}</div>
                     <div class="card-body">
-                        <a href="{{ url('/energy-machine-evaluation') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/energy-machine/'.$energymachineevaluation->energy_machine_id) }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
