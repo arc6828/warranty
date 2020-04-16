@@ -52,8 +52,9 @@ class EnergyReportController extends Controller
         } else {
             $energyreport = EnergyReport::latest()->paginate($perPage);
         }
+        $energyreports = $energyreport;
 
-        return view('energy-report.index', compact('energyreport'));
+        return view('energy-report.index', compact('energyreports'));
     }
 
     /**

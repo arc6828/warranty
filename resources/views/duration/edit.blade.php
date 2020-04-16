@@ -1,5 +1,10 @@
 @extends('layouts.app')
-
+@section('adaptivesidebar')
+    @php
+    $energyreport = $duration->energy_report ;
+    @endphp
+    @include('admin/sidebar-boi')
+@endsection
 @section('content')
     <div class="container">
         <div class="row">

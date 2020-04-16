@@ -29,20 +29,6 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::resource('sumpdf', 'SumpdfController');
-Route::resource('table_a', 'Table_aController');
-Route::resource('table_b', 'Table_bController');
-Route::resource('table_c', 'Table_cController');
-Route::resource('duration', 'DurationController');
-Route::resource('schedule', 'ScheduleController');
-Route::resource('table_f', 'Table_fController');
-
-Route::get('sumpdf/{id}/pdf', 'SumpdfController@pdf');
-
-Route::get('/pdf_1-1', 'ExampleController@index');
-Route::get('/pdf_2-1', 'Ex_cController@index');
-Route::get('/pdf_3-1', 'TestController@index');
-Route::get('/pdf_4-1', 'Pdf_fController@index');
 
 
 Route::resource('branch', 'BranchController');
@@ -61,6 +47,8 @@ Route::get('energy/form2', function(){
 Route::get('energy/form3', function(){
     return view('energy/form3');
 });
+
+//ENERGY-REPORT
 Route::middleware(['auth'])->group(function () {        
     //Part1
     Route::get('energy-report/redirect/{page}','EnergyReportController@redirect');
@@ -87,4 +75,23 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('energy-production-consumption', 'EnergyProductionConsumptionController');
     Route::resource('energy-machine-evaluation', 'EnergyMachineEvaluationController');
     Route::resource('energy-machine', 'EnergyMachineController');
+});
+//BOI-REPORT
+Route::middleware(['auth'])->group(function () {        
+    Route::resource('boi-report', 'BoiReportController');
+    Route::resource('sumpdf', 'SumpdfController');
+    Route::resource('table_a', 'Table_aController');
+    Route::resource('table_b', 'Table_bController');
+    Route::resource('table_c', 'Table_cController');
+    Route::resource('duration', 'DurationController');
+    Route::resource('schedule', 'ScheduleController');
+    Route::resource('table_f', 'Table_fController');
+    
+    Route::get('sumpdf/{id}/pdf', 'SumpdfController@pdf');
+    
+    Route::get('/pdf_1-1', 'ExampleController@index');
+    Route::get('/pdf_2-1', 'Ex_cController@index');
+    Route::get('/pdf_3-1', 'TestController@index');
+    Route::get('/pdf_4-1', 'Pdf_fController@index');
+     
 });

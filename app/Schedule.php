@@ -27,4 +27,8 @@ class Schedule extends Model
      */
     protected $fillable = ['menu', 'cost_cons', 'cost_tool', 'cost_install', 'cost_test', 'investment','sumpdf_id'];
 
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','sumpdf_id');
+    }
 }

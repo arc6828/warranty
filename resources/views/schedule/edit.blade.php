@@ -1,8 +1,14 @@
-@extends('layout.main')
-
+@extends('layouts.app')
+@section('adaptivesidebar')
+    @php
+    $energyreport = $schedule->energy_report ;
+    @endphp
+    @include('admin/sidebar-boi')
+@endsection
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
+            @include('admin.sidebar')
 
             <div class="col-md-9">
                 <div class="card">

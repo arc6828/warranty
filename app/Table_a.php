@@ -27,5 +27,9 @@ class Table_a extends Model
      */
     protected $fillable = ['request_number', 'registration_date', 'fullname', 'company', 'production', 'promotion_certificate_number', 'promotion_date','sumpdf_id'];
 
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','sumpdf_id');
+    }
     
 }

@@ -38,6 +38,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+                    <img src="{{ asset('img/logo-team.png') }}" height=50>
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -47,10 +48,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mx-auto">
-                      <li class="mx-4"><a href="{{ url('/') }}/energy-report">Energy</a></li>
-                      <li class="mx-4"><a href="#">Environment</a></li>
-                      <li class="mx-4"><a href="#">Factory</a></li>
-                      <li class="mx-4"><a href="#">BOI</a></li>
+                      
 
                       <li class="mx-4 d-none"><a href="{{ url('/') }}/branch">Branch</a></li>
                       <li class="mx-4 d-none"><a href="{{ url('/') }}/building">Building</a></li>
@@ -71,6 +69,10 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item"><a class="nav-link" href="{{ url('/') }}/energy-report">Energy</a></li>                            
+                            <li class="nav-item "><a class="nav-link" href="{{ url('/') }}/boi-report">BOI</a></li>
+                            <li class="nav-item "><a class="nav-link" href="#">Environment</a></li>
+                            <li class="nav-item "><a class="nav-link" href="#">Factory</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -99,10 +101,11 @@
                     <h2>@yield("header")</h2>
                 </div>
                 <div class="col-lg-3 text-right">
+                @if(isset($energyreport))
                     <button class="btn btn-sm btn-outline-primary" onclick="previous_page()">ก่อนหน้า</button>
                     <span id="nubmer_of_progress"></span>
                     <button class="btn btn-sm btn-primary"  onclick="next_page()">ถัดไป</button>
-                
+                @endif
                 </div>
             </div>
             
@@ -112,6 +115,20 @@
 
         <div class="py-4">
             @yield('content')
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 t">
+                   
+                </div>
+                <div class="col-lg-3 text-right">
+                @if(isset($energyreport))
+                    <button class="btn btn-sm btn-outline-primary" onclick="previous_page()">ก่อนหน้า</button>
+                    <span id="nubmer_of_progress"></span>
+                    <button class="btn btn-sm btn-primary"  onclick="next_page()">ถัดไป</button>
+                @endif
+                </div>
+            </div>
         </div>
     </div>
     <script>

@@ -6,12 +6,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">รายงานจัดการพลังงาน</div>
+                    <div class="card-header">รายงาน BOI</div>
                     <div class="card-body">
                         <a href="{{ url('/energy-report/create') }}" class="btn btn-success btn-sm d-none" title="Add New EnergyReport">
                             <i class="fa fa-plus" aria-hidden="true"></i> สร้างรายงานใหม่
                         </a>
-                        @include('energy-report/create-modal')
+                        @include('boi-report/create-modal')
 
                         <form method="GET" action="{{ url('/energy-report') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
@@ -43,16 +43,16 @@
                                 @foreach($energyreports as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td><a href="{{ url('/energy-report/' . $item->id) }}" >{{ $item->legal_name }}</a></td>
+                                        <td><a href="{{ url('/boi-report/' . $item->id) }}" >{{ $item->legal_name }}</a></td>
                                         <td>{{ $item->factory_name }}</td>
                                         <td>{{ $item->tsic_id }}</td><td>{{ $item->year }}</td>
                                         <td class="d-none">{{ $item->user->name }}</td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>
-                                            <a class="d-none" href="{{ url('/energy-report/' . $item->id) }}" title="View EnergyReport"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a class="d-none" href="{{ url('/energy-report/' . $item->id . '/edit') }}" title="Edit EnergyReport"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a class="d-none" href="{{ url('/boi-report/' . $item->id) }}" title="View EnergyReport"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                            <a class="d-none" href="{{ url('/boi-report/' . $item->id . '/edit') }}" title="Edit EnergyReport"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
-                                            <form class="d-none" method="POST" action="{{ url('/energy-report' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form class="d-none" method="POST" action="{{ url('/boi-report' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete EnergyReport" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>

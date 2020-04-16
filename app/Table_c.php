@@ -27,4 +27,8 @@ class Table_c extends Model
      */
     protected $fillable = ['peetharn', 'cost', 'yield', 'amount', 'efficiency', 'overall', 'equipment', 'mean', 'actual','sumpdf_id'];
 
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','sumpdf_id');
+    }
 }

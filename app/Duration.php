@@ -27,5 +27,9 @@ class Duration extends Model
      */
     protected $fillable = ['duration', 'order_m', 'install_m', 'generate','sumpdf_id'];
 
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','sumpdf_id');
+    }
     
 }

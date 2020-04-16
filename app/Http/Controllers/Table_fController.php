@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Table_f;
+use App\EnergyReport;
 use Illuminate\Http\Request;
 
 class Table_fController extends Controller
@@ -19,22 +20,12 @@ class Table_fController extends Controller
     {
         $keyword = $request->get('search');
         $perPage = 25;
+        
+        $energyreport = EnergyReport::findOrFail($request->get('energy_report_id'));
 
-        if (!empty($keyword)) {
-            $table_f = Table_f::where('country',            'LIKE', "%$keyword%")
-                            ->orWhere('number',             'LIKE', "%$keyword%")
-                            ->orWhere('cost',               'LIKE', "%$keyword%")
-                            ->orWhere('connect',            'LIKE', "%$keyword%")
-                            ->orWhere('wage_company',       'LIKE', "%$keyword%")
-                            ->orWhere('machinery_Imported', 'LIKE', "%$keyword%")
-                            ->orWhere('other',              'LIKE', "%$keyword%")
-                            ->orWhere('total',              'LIKE', "%$keyword%")
-                            ->latest()->paginate($perPage);
-        } else {
-            $table_f = Table_f::latest()->paginate($perPage);
-        }
-
-        return view('table_f.index', compact('table_f'));
+        $table_f = Table_f::where('sumpdf_id', $energyreport->id)->latest()->paginate($perPage);
+                
+        return view('table_f.index', compact('table_f','energyreport'));
     }
 
     /**

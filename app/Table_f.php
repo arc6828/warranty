@@ -27,5 +27,9 @@ class Table_f extends Model
      */
     protected $fillable = ['country', 'number', 'cost', 'connect', 'wage_company', 'machinery_Imported', 'other', 'total','sumpdf_id'];
 
+    public function  energy_report()
+    {
+        return $this->belongsTo('App\EnergyReport','sumpdf_id');
+    }
     
 }

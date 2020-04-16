@@ -105,7 +105,30 @@ class EnergyReport extends Model
     }
 
 
-    
+    //BOI-REPORT
+    public function table_a(){
+        return $this->hasOne('App\Table_a','sumpdf_id');
+    }    
+
+    public function table_b(){
+        return $this->hasOne('App\Table_b','sumpdf_id');
+    }    
+
+    public function table_c(){
+        return $this->hasOne('App\Table_c','sumpdf_id');
+    }    
+
+    public function duration(){
+        return $this->hasOne('App\Duration','sumpdf_id');
+    }    
+
+    public function schedule(){
+        return $this->hasOne('App\Schedule','sumpdf_id');
+    }    
+
+    public function table_fs(){
+        return $this->hasMany('App\Table_f','sumpdf_id');
+    } 
 
 
 
