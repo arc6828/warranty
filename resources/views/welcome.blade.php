@@ -82,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    {{ config('app.name', 'Laravel') }}
+                <img src="{{ asset('img/logo-team.png') }}" height=70> {{ config('app.name', 'Laravel') }}
                 </div>
 
                 <div class="links">
